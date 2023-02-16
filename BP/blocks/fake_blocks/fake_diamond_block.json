@@ -1,16 +1,15 @@
 {
-	"format_version": "1.17.0",
+	"format_version": "1.19.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "hy:fake_diamond_block"
+			"identifier": "hy:fake_diamond_block",
+			"menu_category": {
+				"category": "equipment"
+			}
 		},
 		"components": {
-			"minecraft:entity_collision": false,
+			"minecraft:collision_box":false,
 			"minecraft:map_color": "#000000",
-			"minecraft:creative_category": {
-				"category": "equipment",
-				"group": "equipment"
-			},
 			"minecraft:loot": "loot_tables/blocks/fake_blocks.json"
 		}
 	}
