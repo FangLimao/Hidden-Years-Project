@@ -1,12 +1,8 @@
-import {system} from '@minecraft/sever';
 import {
   ActionFormData,
   MessageFormData,
   ModalFormData
 } from "@minecraft/server-ui";
-system.runInterval(() => {
-	world.sendMessage("Hello World");
-});
 function aboutUI(){
 	/*UI界面 */
 let about_ui = new ActionFormData();
