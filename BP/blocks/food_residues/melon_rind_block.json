@@ -1,0 +1,18 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hy:melon_rind_block"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.melon_rind_block",
+			"minecraft:entity_collision": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "hy_melon_rind_block",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

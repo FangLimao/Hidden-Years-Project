@@ -1,0 +1,21 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hy:high_hammer_machine"
+		},
+		"components": {
+			"minecraft:crafting_table": {
+				"grid_size": 3,
+				"crafting_tags": [
+					"high_hammer_machine"
+				],
+				"custom_description": "tile.hy:high_hammer_machine.name"
+			},
+			"minecraft:creative_category": {
+				"group": "items",
+				"category": "items"
+			}
+		}
+	}
+}

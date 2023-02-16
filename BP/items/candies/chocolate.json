@@ -1,0 +1,40 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hy:chocolate",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 8,
+				"saturation_modifier": "low",
+				"on_consume": {
+					"event": "eat",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "hy_chocolate"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "equipment"
+			},
+			"minecraft:display_name": {
+				"value": "巧克力\n§7§o通过烧炼可可果得来\n§7§o这玩意看起来很好吃，对吧?"
+			}
+		},
+		"events": {
+			"eat": {
+				"add_mob_effect": {
+					"amplifier": 0,
+					"duration": 20,
+					"effect": "strength",
+					"target": "self"
+				}
+			}
+		}
+	}
+}

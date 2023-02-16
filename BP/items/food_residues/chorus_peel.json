@@ -1,0 +1,45 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hy:chorus_peel",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "low"
+			},
+			"minecraft:icon": {
+				"texture": "hy_chorus_peel"
+			},
+			"minecraft:block_placer": {
+				"block": "hy:chorus_peel_block"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {
+			"eat": {
+				"teleport": {
+					"avoid_water": true,
+					"destination": [
+						0,
+						0,
+						0
+					],
+					"land_on_block": false,
+					"max_range": [
+						16,
+						16,
+						16
+					],
+					"target": "self"
+				}
+			}
+		}
+	}
+}

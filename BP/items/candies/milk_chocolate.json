@@ -1,0 +1,40 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hy:milk_chocolate",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 15,
+				"saturation_modifier": "low",
+				"on_consume": {
+					"event": "eat",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "hy_milk_chocolate"
+			},
+			"minecraft:creative_category": {
+				"parent": "equipment"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:display_name": {
+				"value": "牛奶巧克力\n§7§o这玩意看起来更好吃，对吧?"
+			}
+		},
+		"events": {
+			"eat": {
+				"add_mob_effect": {
+					"amplifier": 1,
+					"duration": 35,
+					"effect": "strength",
+					"target": "self"
+				}
+			}
+		}
+	}
+}

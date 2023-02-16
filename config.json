@@ -1,0 +1,43 @@
+{
+	"type": "minecraftBedrock",
+	"name": "Hidden Years",
+	"namespace": "hy",
+	"authors": [
+		"Fang Limao",
+		"Liu Hansen"
+	],
+	"targetVersion": "1.17.0",
+	"description": "pack.description",
+	"experimentalGameplay": {
+		"holidayCreatorFeatures": true,
+		"creationOfCustomBiomes": true,
+		"upcomingCreatorFeatures": true
+	},
+	"bdsProject": false,
+	"packs": {
+		"resourcePack": "./RP",
+		"behaviorPack": "./BP"
+	},
+	"worlds": [
+		"./worlds/*"
+	],
+	"compiler": {
+		"plugins": [
+			"generatorScripts",
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			"formatVersionCorrection",
+			[
+				"simpleRewrite",
+				{
+					"packName": "Hidden Years"
+				}
+			]
+		]
+	}
+}

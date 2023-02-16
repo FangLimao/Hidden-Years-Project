@@ -1,0 +1,18 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hy:deepslate_bubble_gum_ore"
+		},
+		"components": {
+			"minecraft:destroy_time": 3,
+			"minecraft:explosion_resistance": 3,
+			"minecraft:map_color": "#ffffff",
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.ore"
+			},
+			"minecraft:loot": "loot_tables/blocks/bubble_gum_ore.json"
+		}
+	}
+}

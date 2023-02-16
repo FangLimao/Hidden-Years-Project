@@ -1,0 +1,26 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:amethyst_nugget_to_shard"
+		},
+		"tags": [
+			"crafting_table",
+			"low_hammer_machine",
+			"high_hammer_machine"
+		],
+		"key": {
+			"n": {
+				"item": "hy:amethyst_nugget"
+			}
+		},
+		"pattern": [
+			"nnn",
+			"nnn",
+			"nnn"
+		],
+		"result": {
+			"item": "amethyst_shard"
+		}
+	}
+}

@@ -1,0 +1,151 @@
+{
+	"format_version": [
+		1,
+		17,
+		0
+	],
+	"hy:steel_block": {
+		"sound": "copper",
+		"textures": "hy_steel_block"
+	},
+	"hy:steel_ore": {
+		"sound": "stone",
+		"textures": "hy_steel_ore"
+	},
+	"hy:deepslate_steel_ore": {
+		"sound": "stone",
+		"textures": "hy_deepslate_steel_ore"
+	},
+	"hy:industrial_crafting_table": {
+		"sound": "copper",
+		"textures": {
+			"up": "hy_industrial_crafting_table",
+			"side": "hy_industrial_crafting_table_side",
+			"down": "hy_steel_block"
+		}
+	},
+	"hy:low_hammer_machine": {
+		"sound": "wood",
+		"textures": {
+			"up": "crafting_table_top",
+			"side": "hy_low_hammer_machine",
+			"down": "planks"
+		}
+	},
+	"hy:high_hammer_machine": {
+		"sound": "wood",
+		"textures": {
+			"up": "crafting_table_top",
+			"side": "hy_high_hammer_machine",
+			"down": "planks"
+		}
+	},
+	"hy:redstone_light": {
+		"sound": "stone",
+		"textures": "hy_redstone_light"
+	},
+	"hy:mimicry_machine": {
+		"sound": "wood",
+		"textures": {
+			"up": "crafting_table_top",
+			"side": "hy_mimicry_machine",
+			"down": "planks"
+		}
+	},
+	"hy:bubble_gum_ore": {
+		"sound": "stone",
+		"textures": "hy_bubble_gum_ore"
+	},
+	"hy:deepslate_bubble_gum_ore": {
+		"sound": "stone",
+		"textures": "hy_deepslate_bubble_gum_ore"
+	},
+	"hy:melon_rind_block": {
+		"sound": "stone"
+	},
+	"hy:golden_melon_rind_block": {
+		"sound": "stone"
+	},
+	"hy:beetroot_peel_block": {
+		"sound": "stone"
+	},
+	"hy:carrot_peel_block": {
+		"sound": "stone"
+	},
+	"hy:chorus_peel_block": {
+		"sound": "stone"
+	},
+	"hy:fake_stone": {
+		"sound": "anvil",
+		"textures": "stone"
+	},
+	"hy:fake_cobblestone": {
+		"sound": "anvil",
+		"textures": "cobblestone"
+	},
+	"hy:fake_sand": {
+		"sound": "anvil",
+		"textures": "sand"
+	},
+	"hy:fake_tnt": {
+		"sound": "anvil",
+		"textures": {
+			"down": "tnt_bottom",
+			"side": "tnt_side",
+			"up": "tnt_top"
+		}
+	},
+	"hy:fake_sandstone": {
+		"brightness_gamma": 0.7,
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "stone",
+		"textures": {
+			"down": "sandstone_bottom",
+			"side": "sandstone_side",
+			"up": "sandstone_top"
+		}
+	},
+	"hy:deepblue_ore": {
+		"sound": "stone",
+		"textures": "hy_deepblue_ore"
+	},
+	"hy:deepslate_deepblue_ore": {
+		"sound": "stone",
+		"textures": "hy_deepslate_deepblue_ore"
+	},
+	"hy:fake_diamond_block" : {
+      "sound" : "metal",
+      "textures" : "diamond_block"
+   },
+   "hy:fake_netherite_block" : {
+      "sound" : "netherite",
+      "textures" : "netherite_block"
+   },
+   "hy:fake_gold_block" : {
+      "sound" : "metal",
+      "textures" : "gold_block"
+   },
+   "hy:fake_copper_block" : {
+      "isotropic" : false,
+      "sound" : "copper",
+      "textures" : "copper_block"
+    },
+    "hy:fake_iron_block" : {
+      "sound" : "metal",
+      "textures" : "iron_block"
+   },
+   "hy:fake_crafting_table" : {
+      "sound" : "wood",
+      "textures" : {
+         "down" : "crafting_table_bottom",
+         "east" : "crafting_table_side",
+         "north" : "crafting_table_front",
+         "south" : "crafting_table_front",
+         "up" : "crafting_table_top",
+         "west" : "crafting_table_side"
+      }
+   }
+}

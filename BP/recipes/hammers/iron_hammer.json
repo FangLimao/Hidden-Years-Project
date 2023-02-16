@@ -1,0 +1,27 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:iron_hammer"
+		},
+		"tags": [
+			"industrial_crafting_table"
+		],
+		"key": {
+			"n": {
+				"item": "iron_nugget"
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"pattern": [
+			"nnn",
+			" s ",
+			" s "
+		],
+		"result": {
+			"item": "hy:iron_hammer"
+		}
+	}
+}
