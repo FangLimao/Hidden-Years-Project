@@ -2,7 +2,7 @@
 	"format_version": "1.17.0",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "hy:fake_gold_block"
+			"identifier": "hy:fake_prismarine"
 		},
 		"tags": [
 			"crafting_table"
@@ -13,11 +13,12 @@
 				"count": 8
 			},
 			{
-				"item": "gold_ingot"
+				"item": "prismarine",
+				"data":0
 			}
 		],
 		"result": {
-			"item": "hy:fake_gold_block",
+			"item": "hy:fake_prismarine",
 			"count": 16
 		}
 	}

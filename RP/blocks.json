@@ -182,5 +182,19 @@
       "isotropic" : true,
       "sound" : "stone",
       "textures" : "obsidian"
+   },
+   "hy:fake_prismarine" : {
+      "sound" : "stone",
+      "textures" : "prismarine"
+   },
+   "hy:fake_netherrack" : {
+      "isotropic" : true,
+      "sound" : "netherrack",
+      "textures" : "netherrack"
+   },
+   "hy:fake_glowstone" : {
+      "isotropic" : true,
+      "sound" : "glass",
+      "textures" : "glowstone"
    }
 }
