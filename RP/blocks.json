@@ -172,5 +172,9 @@
    "hy:fake_mossy_cobblestone" : {
       "sound" : "stone",
       "textures" : "cobblestone_mossy"
+   },
+   "hy:fake_end_stone" : {
+      "sound" : "stone",
+      "textures" : "end_stone"
    }
 }
