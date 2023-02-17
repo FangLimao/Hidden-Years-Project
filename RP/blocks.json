@@ -147,5 +147,9 @@
          "up" : "crafting_table_top",
          "west" : "crafting_table_side"
       }
+   },
+   "hy:fake_bedrock" : {
+      "sound" : "stone",
+      "textures" : "bedrock"
    }
 }
