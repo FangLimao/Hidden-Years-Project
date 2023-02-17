@@ -164,5 +164,9 @@
          "side" : "redsandstone_side",
          "up" : "redsandstone_top"
       }
+   },
+   "hy:fake_smooth_stone" : {
+      "sound" : "stone",
+      "textures" : "smooth_stone"
    }
 }
