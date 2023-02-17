@@ -2,7 +2,7 @@
 	"format_version": "1.19.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "hy:fake_smoooth_stone",
+			"identifier": "hy:fake_smooth_stone",
 			"menu_category": {
 				"category": "equipment"
 			}
