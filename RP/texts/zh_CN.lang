@@ -111,3 +111,4 @@ tile.hy:fake_crafting_table.name=幻象方块-工作台
 tile.hy:fake_bedrock.name=幻象方块-基岩
 tile.hy:fake_red_sandstone.name=幻象方块-砂岩
 tile.hy:fake_smooth_stone.name=幻象方块-平滑石
+tile.hy:fake_mossy_cobblestone.name=幻象方块-苔石

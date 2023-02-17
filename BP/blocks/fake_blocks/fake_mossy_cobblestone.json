@@ -1,0 +1,16 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hy:fake_mossy_cobblestone",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:collision_box":false,
+			"minecraft:map_color": "#000000",
+			"minecraft:loot": "loot_tables/blocks/fake_blocks.json"
+		}
+	}
+}

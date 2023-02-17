@@ -168,5 +168,9 @@
    "hy:fake_smooth_stone" : {
       "sound" : "stone",
       "textures" : "smooth_stone"
+   },
+   "hy:fake_mossy_cobblestone" : {
+      "sound" : "stone",
+      "textures" : "cobblestone_mossy"
    }
 }
