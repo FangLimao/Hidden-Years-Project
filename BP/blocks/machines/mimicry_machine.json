@@ -1,20 +1,18 @@
 {
-	"format_version": "1.17.0",
+	"format_version": "1.19.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "hy:mimicry_machine"
+			"identifier": "hy:mimicry_machine",
+			"menu_category": {
+				"category": "items"
+			}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"category": "items",
-				"group": "items"
-			},
 			"minecraft:crafting_table": {
-				"grid_size": 3,
 				"crafting_tags": [
 					"mimicry_machine"
 				],
-				"custom_description": "tile.hy:mimicry_machine.name"
+				"table_name": "tile.hy:mimicry_machine.name"
 			}
 		}
 	}

@@ -1,20 +1,18 @@
 {
-	"format_version": "1.17.0",
+	"format_version": "1.19.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "hy:industrial_crafting_table"
+			"identifier": "hy:industrial_crafting_table",
+			"menu_category": {
+				"category": "items"
+			}
 		},
 		"components": {
 			"minecraft:crafting_table": {
-				"grid_size": 3,
 				"crafting_tags": [
 					"industrial_crafting_table"
 				],
-				"custom_description": "tile.hy:industrial_crafting_table.name"
-			},
-			"minecraft:creative_category": {
-				"category": "items",
-				"group": "items"
+				"table_name": "tile.hy:industrial_crafting_table.name"
 			}
 		}
 	}
