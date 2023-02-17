@@ -176,5 +176,11 @@
    "hy:fake_end_stone" : {
       "sound" : "stone",
       "textures" : "end_stone"
+   },
+   "hy:fake_obsidian" : {
+      "brightness_gamma" : 2.0,
+      "isotropic" : true,
+      "sound" : "stone",
+      "textures" : "obsidian"
    }
 }
