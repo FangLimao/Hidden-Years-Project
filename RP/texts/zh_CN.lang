@@ -107,3 +107,4 @@ tile.hy:fake_sand=幻象方块-沙子
 tile.hy:fake_sandstone=幻象方块-砂岩
 tile.hy:fake_stone=幻象方块-石头
 tile.hy:fake_tnt=幻象方块-TNT
+tile.hy:fake_crafting_table=幻象方块-工作台
