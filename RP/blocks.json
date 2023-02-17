@@ -151,5 +151,18 @@
    "hy:fake_bedrock" : {
       "sound" : "stone",
       "textures" : "bedrock"
+   },
+   "hy:fake_red_sandstone" : {
+      "brightness_gamma" : 0.70,
+      "isotropic" : {
+         "down" : true,
+         "up" : true
+      },
+      "sound" : "stone",
+      "textures" : {
+         "down" : "redsandstone_bottom",
+         "side" : "redsandstone_side",
+         "up" : "redsandstone_top"
+      }
    }
 }
