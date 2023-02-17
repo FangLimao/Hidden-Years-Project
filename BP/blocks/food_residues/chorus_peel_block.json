@@ -1,12 +1,12 @@
 {
-	"format_version": "1.17.0",
+	"format_version": "1.19.50",
 	"minecraft:block": {
 		"description": {
 			"identifier": "hy:chorus_peel_block"
 		},
 		"components": {
 			"minecraft:geometry": "geometry.chorus_peel_block",
-			"minecraft:entity_collision": false,
+			"minecraft:collision_box":false,
 			"minecraft:material_instances": {
 				"*": {
 					"texture": "hy_chorus_peel_block",
