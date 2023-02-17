@@ -3,7 +3,7 @@
 	"minecraft:item": {
 		"description": {
 			"identifier": "hy:melon_speckled",
-			"category": "equipment"
+			"category": "Nature"
 		},
 		"components": {
 			"minecraft:creative_category": {

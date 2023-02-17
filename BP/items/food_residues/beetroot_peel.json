@@ -3,7 +3,7 @@
 	"minecraft:item": {
 		"description": {
 			"identifier": "hy:beetroot_peel",
-			"category": "items"
+			"category": "Nature"
 		},
 		"components": {
 			"minecraft:use_duration": 1.6,
