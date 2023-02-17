@@ -96,6 +96,8 @@ item.hy:deepblue_ingot=青蓝锭
 item.hy:deepblue_nugget=青蓝碎片
 item.hy:deepblue_portal=青蓝珍珠
 item.hy:raw_deepblue=青蓝原矿
+tile.hy:deepblue_ore.name=青蓝矿石
+tile.hy:deepslate_deepblue_ore.name=深层青蓝矿石
 
 tile.hy:fake_cobblestone.name=幻象方块-圆石
 tile.hy:fake_copper_block.name=幻象方块-铜块
