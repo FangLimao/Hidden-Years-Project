@@ -226,5 +226,9 @@
    "hy:fake_smooth_basalt" : {
       "sound" : "basalt",
       "textures" : "smooth_basalt"
-   }
+   },
+   "hy:fake_calcite" : {
+	"sound" : "calcite",
+	"textures" : "calcite"
+ }
 }
