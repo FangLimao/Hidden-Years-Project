@@ -196,5 +196,15 @@
       "isotropic" : true,
       "sound" : "glass",
       "textures" : "glowstone"
-   }
+   },
+   
+
+   "hy:fake_blackstone" : {
+	"sound" : "stone",
+	"textures" : {
+	   "down" : "blackstone_top",
+	   "side" : "blackstone",
+	   "up" : "blackstone_top"
+	}
+ }
 }

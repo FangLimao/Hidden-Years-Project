@@ -1,16 +1,17 @@
 {
-	"format_version": "1.19.50",
+	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "hy:fake_iron_block",
-			"menu_category": {
-				"category": "equipment"
-			}
+			"identifier": "hy:fake_iron_block"
 		},
 		"components": {
-			"minecraft:collision_box":false,
+			"minecraft:entity_collision":false,
 			"minecraft:map_color": "#000000",
-			"minecraft:loot": "loot_tables/blocks/fake_blocks.json"
+			"minecraft:loot": "loot_tables/blocks/fake_blocks.json",
+			"minecraft:creative_category":{
+				"category":"equipment",
+				"group":"equipment"
+			}
 		}
 	}
 }
