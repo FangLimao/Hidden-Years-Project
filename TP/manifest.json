@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "优化你的加载提示！\n作者：klpbbs@方漓猫\n请将此包加载至全局资源",
+        "uuid": "c141b03f-7523-4c56-9a82-8a2718bed62c",
+        "min_engine_version": [
+            1,
+            13,
+            0
+        ],
+        "name": "加载提示优化",
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "version": [
+                1,
+                0,
+                0
+            ],
+            "description": "",
+            "type": "resources",
+            "uuid": "12f72c3c-634f-45d1-9d04-7f1a939d306c"
+        }
+    ]
+}
