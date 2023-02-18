@@ -206,5 +206,25 @@
 	   "side" : "blackstone",
 	   "up" : "blackstone_top"
 	}
- }
+ },
+ "hy:fake_basalt" : {
+      "sound" : "basalt",
+      "textures" : {
+         "down" : "basalt_top",
+         "side" : "basalt_side",
+         "up" : "basalt_top"
+      }
+   },
+"hy:fake_polished_basalt" : {
+      "sound" : "basalt",
+      "textures" : {
+         "down" : "polished_basalt_top",
+         "side" : "polished_basalt_side",
+         "up" : "polished_basalt_top"
+      }
+   },
+   "hy:fake_smooth_basalt" : {
+      "sound" : "basalt",
+      "textures" : "smooth_basalt"
+   }
 }

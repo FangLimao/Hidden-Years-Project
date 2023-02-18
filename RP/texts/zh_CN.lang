@@ -117,3 +117,6 @@ tile.hy:fake_mossy_cobblestone.name=幻象方块-苔石
 tile.hy:fake_end_stone.name=幻象方块-末地石
 tile.hy:fake_obsidian.name=幻象方块-黑曜石
 tile.hy:fake_blackstone.name=幻象方块-黑石
+tile.hy:fake_basalt.name=幻象方块-玄武岩
+tile.hy:fake_smooth_basalt.name=幻象方块-平滑玄武岩
+tile.hy:fake_polished_basalt.name=幻象方块-磨制玄武岩	
