@@ -197,8 +197,6 @@
       "sound" : "glass",
       "textures" : "glowstone"
    },
-   
-
    "hy:fake_blackstone" : {
 	"sound" : "stone",
 	"textures" : {
@@ -230,5 +228,42 @@
    "hy:fake_calcite" : {
 	"sound" : "calcite",
 	"textures" : "calcite"
- }
+ },
+
+
+ "hy:fake_deepslate" : {
+      "isotropic" : {
+         "down" : true,
+         "up" : true
+      },
+      "sound" : "deepslate",
+      "textures" : {
+         "down" : "deepslate_top",
+         "side" : "deepslate",
+         "up" : "deepslate_top"
+      }
+   },
+   "hy:fake_chiseled_deepslate" : {
+      "isotropic" : false,
+      "sound" : "deepslate_bricks",
+      "textures" : "chiseled_deepslate"
+   },
+   "hy:fake_polished_deepslate" : {
+      "isotropic" : false,
+      "sound" : "deepslate",
+      "textures" : "polished_deepslate"
+   },
+   "hy:fake_cobbled_deepslate" : {
+      "isotropic" : false,
+      "sound" : "deepslate",
+      "textures" : "cobbled_deepslate"
+   },
+   "hy:fake_tuff" : {
+      "sound" : "tuff",
+      "textures" : "tuff"
+   },
+   "hy:fake_dripstone_block" : {
+      "sound" : "dripstone_block",
+      "textures" : "dripstone_block"
+   }
 }

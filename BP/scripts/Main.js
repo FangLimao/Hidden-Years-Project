@@ -1,3 +1,4 @@
+/* 就只是一个测试
 import {
   ActionFormData,
   MessageFormData,
@@ -16,3 +17,4 @@ form.show(players[0]).then((response) => {
     dimension.runCommand("say I like April too!");
   }
 });
+*/
