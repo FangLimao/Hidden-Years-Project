@@ -265,5 +265,8 @@
    "hy:fake_dripstone_block" : {
       "sound" : "dripstone_block",
       "textures" : "dripstone_block"
+   },
+   "hy:fake_brick_block" : {
+      "textures" : "brick"
    }
 }

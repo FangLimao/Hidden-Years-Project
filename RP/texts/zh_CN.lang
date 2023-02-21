@@ -127,4 +127,5 @@ tile.hy:fake_chiseled_deepslate.name=幻象方块-雕纹深板岩
 tile.hy:fake_fake_prismarine.name=幻象方块-海晶石
 tile.hy:fake_netherrack.name=幻象方块-下界岩
 tile.hy:fake_tuff.name=幻象方块-凝灰岩
-tile.hy:dripstone_block.name=幻象方块-滴水石块
+tile.hy:fake_dripstone_block.name=幻象方块-滴水石块
+tile.hy:fake_brick_block.name=幻象方块-红砖块
