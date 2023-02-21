@@ -268,5 +268,9 @@
    },
    "hy:fake_brick_block" : {
       "textures" : "brick"
+   },
+   "hy:fake_end_bricks" : {
+      "sound" : "stone",
+      "textures" : "end_bricks"
    }
 }

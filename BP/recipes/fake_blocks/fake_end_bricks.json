@@ -1,0 +1,24 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier":"hy:fake_end_bricks" 
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "hy:deepblue_portal",
+				"count": 8
+			},
+			{
+				"item": "fake_end_bricks"
+			}
+		],
+		"result": {
+			"item": "hy:fake_end_bricks",
+			"count": 16
+		}
+	}
+}

@@ -129,3 +129,4 @@ tile.hy:fake_netherrack.name=幻象方块-下界岩
 tile.hy:fake_tuff.name=幻象方块-凝灰岩
 tile.hy:fake_dripstone_block.name=幻象方块-滴水石块
 tile.hy:fake_brick_block.name=幻象方块-红砖块
+tile.hy:fake_end_brick.name=幻象方块-末地石砖
