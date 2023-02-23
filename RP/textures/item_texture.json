@@ -205,6 +205,21 @@
 		},
 		"hy_raw_deepblue": {
 			"textures": "textures/items/deepblue/raw_deepblue"
+		},
+		"hy_deepblue_axe":{
+			"textures":"textures/items/deepblue/deepblue_axe"
+		},
+		"hy_deepblue_hoe":{
+			"textures":"textures/items/deepblue/deepblue_hoe"
+		},
+		"hy_deepblue_pickaxe":{
+			"textures":"textures/items/deepblue/deepblue_pickaxe"
+		},
+		"hy_deepblue_shovel":{
+			"textures":"textures/items/deepblue/deepblue_shovel"
+		},
+		"hy_deepblue_sword":{
+			"textures":"textures/items/deepblue/deepblue_sword"
 		}
 	}
 }
