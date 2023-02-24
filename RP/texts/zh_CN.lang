@@ -136,3 +136,4 @@ tile.hy:fake_dripstone_block.name=幻象方块-滴水石块
 tile.hy:fake_brick_block.name=幻象方块-红砖块
 tile.hy:fake_end_bricks.name=幻象方块-末地石砖
 tile.hy:fake_glowstone.name=幻象方块-萤石
+tile.hy:fake_cobbled_deepslate.name=幻象方块-深板岩圆石
