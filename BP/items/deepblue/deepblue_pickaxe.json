@@ -314,10 +314,12 @@
 				"on_hurt_entity": {
 					"event": "damaged",
 					"target": "self"
-				},
-				"on_not_hurt_entity": {
-					"event":"invisibility",
-					"target":"self"
+				}
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "invisibility",
+					"target": "self"
 				}
 			},
 			"tag:minecraft:is_pickaxe": {}
@@ -337,7 +339,7 @@
 					"type": "magic"
 				}
 			},
-			"invisibility":{
+			"invisibility": {
 				"add_mob_effect": {
 					"effect": "invisibility",
 					"target": "self",

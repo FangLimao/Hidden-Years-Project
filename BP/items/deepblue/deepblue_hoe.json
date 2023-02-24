@@ -10,7 +10,7 @@
 			"minecraft:hand_equipped": true,
 			"minecraft:durability": {
 				"max_durability": 950
-						},
+			},
 			"minecraft:damage": 1,
 			"minecraft:enchantable": {
 				"value": 14,
@@ -29,7 +29,7 @@
 						"items": [
 							"hy:deepblue_hoe"
 						],
-						"repair_amount": "math.random(200,950)"		
+						"repair_amount": "math.random(200,950)"
 					},
 					{
 						"items": [
@@ -198,10 +198,12 @@
 				"on_hurt_entity": {
 					"event": "damaged",
 					"target": "self"
-				},
-				"on_not_hurt_entity": {
-					"event":"invisibility",
-					"target":"self"
+				}
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "invisibility",
+					"target": "self"
 				}
 			},
 			"tag:minecraft:is_hoe": {}
@@ -221,7 +223,7 @@
 					"type": "magic"
 				}
 			},
-			"invisibility":{
+			"invisibility": {
 				"add_mob_effect": {
 					"effect": "invisibility",
 					"target": "self",

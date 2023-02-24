@@ -144,13 +144,14 @@
 				"on_hurt_entity": {
 					"event": "damaged",
 					"target": "self"
-				},
-
-			},
-				"on_not_hurt_entity": {
-					"event":"invisibility",
-					"target":"self"
 				}
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "invisibility",
+					"target": "self"
+				}
+			},
 			"tag:minecraft:is_sword": {},
 			"tag:minecraft:is_tool": {}
 		},
@@ -169,12 +170,12 @@
 					"target": "self"
 				}
 			},
-			"invisibility":{
+			"invisibility": {
 				"add_mob_effect": {
 					"effect": "invisibility",
 					"target": "self",
 					"amplifier": 0,
-					"duration": 5
+					"duration": 10
 				}
 			}
 		}
