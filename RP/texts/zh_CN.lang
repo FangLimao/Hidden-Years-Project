@@ -98,6 +98,11 @@ item.hy:deepblue_portal=幻想珍珠
 item.hy:raw_deepblue=幻象原矿
 tile.hy:deepblue_ore.name=幻象矿石
 tile.hy:deepslate_deepblue_ore.name=深层幻象矿石
+item.hy:deepblue_sword=幻象之剑
+item.hy:deepblue_pickaxe=幻象之镐
+item.hy:deepblue_shovel=幻象之锹
+item.hy:deepblue_axe=幻象之斧
+item.hy:deepblue_hoe=幻象之锄
 
 tile.hy:fake_cobblestone.name=幻象方块-圆石
 tile.hy:fake_copper_block.name=幻象方块-铜块
