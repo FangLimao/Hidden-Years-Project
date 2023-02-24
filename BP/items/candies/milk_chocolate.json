@@ -3,7 +3,7 @@
 	"minecraft:item": {
 		"description": {
 			"identifier": "hy:milk_chocolate",
-			"category": "equipment"
+			"category": "natural"
 		},
 		"components": {
 			"minecraft:use_duration": 1.6,
@@ -19,7 +19,7 @@
 				"texture": "hy_milk_chocolate"
 			},
 			"minecraft:creative_category": {
-				"parent": "equipment"
+				"parent": "natural"
 			},
 			"minecraft:use_animation": "eat",
 			"minecraft:display_name": {
