@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "hy:fake_chiseled_deepslate"
+			"identifier": "hy:fake_cobbled_deepslate"
 		},
 		"components": {
 			"minecraft:entity_collision":false,
