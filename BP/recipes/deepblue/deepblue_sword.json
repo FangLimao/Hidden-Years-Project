@@ -2,17 +2,17 @@
 	"format_version": "1.17.0",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "hy:deepblue_swordl"
+			"identifier": "hy:deepblue_sword"
 		},
 		"tags": [
 			"crafting_table"
 		],
 		"key": {
 			"i": {
-				"item": "hy:deepblue_ingot"
+				"item": "stick"
 			},
 			"s": {
-				"item": "stick"
+				"item": "hy:deepblue_ingot"
 			}
 		},
 		"pattern": [
