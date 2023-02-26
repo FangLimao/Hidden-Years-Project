@@ -137,3 +137,14 @@ tile.hy:fake_brick_block.name=幻象方块-红砖块
 tile.hy:fake_end_bricks.name=幻象方块-末地石砖
 tile.hy:fake_glowstone.name=幻象方块-萤石
 tile.hy:fake_cobbled_deepslate.name=幻象方块-深板岩圆石
+
+item.hy:oak_hammer=橡木锤
+item.hy:acacia_hammer=金合欢木锤
+item.hy:birch_hammer=白桦木锤
+item.hy:cherry_hammer=樱花木锤（实验性玩法）
+item.hy:crimson_hammer=绯红木锤
+item.hy:dark_oak_hammer=深色橡木锤
+item.hy:jungle_hammer=丛林木锤
+item.hy:mangrove_hammer=红树木锤
+item.hy:spruce_hammer=云杉木锤
+item.hy:warped_hammer=诡异木锤
