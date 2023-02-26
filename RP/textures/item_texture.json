@@ -220,6 +220,18 @@
 		},
 		"hy_deepblue_sword":{
 			"textures":"textures/items/deepblue/deepblue_sword"
+		},
+		"hy_acacia_hammer":{
+			"textures":"textures/items/hammers/hy_acacia_hammer"
+		},
+		"hy_birch_hammer":{
+			"textures":"textures/items/hammers/hy_birch_hammer"
+		},
+		"hy_cherry_hammer":{
+			"textures":"textures/items/hammers/hy_cherry_hammer"
+		},
+		"hy_crimson_hammer":{
+			"textures":"textures/items/hammers/hy_crimson_hammer"
 		}
 	}
 }
