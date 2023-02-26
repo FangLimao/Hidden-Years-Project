@@ -1,0 +1,9 @@
+# 忽略打包出的模组文件
+*.mcaddon
+*.mcpack
+*.mcworld
+*.jar
+
+# 忽略压缩文件
+*.zip
+*.7z
