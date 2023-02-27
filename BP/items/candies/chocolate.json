@@ -21,9 +21,6 @@
 			"minecraft:use_animation": "eat",
 			"minecraft:creative_category": {
 				"parent": "natural"
-			},
-			"minecraft:display_name": {
-				"value": "巧克力\n§7§o通过烧炼可可果得来\n§7§o这玩意看起来很好吃，对吧?"
 			}
 		},
 		"events": {

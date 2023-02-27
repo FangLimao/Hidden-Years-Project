@@ -17,9 +17,6 @@
 			"minecraft:icon": {
 				"texture": "hy_amethyst_hammer"
 			},
-			"minecraft:display_name": {
-				"value": "紫水晶锤\n§7§o听说这玩意是用来砸石头的？"
-			},
 			"minecraft:repairable": {
 				"repair_items": [
 					{

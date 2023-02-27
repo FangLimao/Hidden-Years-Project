@@ -21,10 +21,7 @@
 			"minecraft:icon": {
 				"texture": "hy_cotton_candy"
 			},
-			"minecraft:use_animation": "eat",
-			"minecraft:display_name": {
-				"value": "泡泡糖\n§7§o吃了可以飞～起～来～"
-			}
+			"minecraft:use_animation": "eat"
 		},
 		"events": {
 			"eat": {

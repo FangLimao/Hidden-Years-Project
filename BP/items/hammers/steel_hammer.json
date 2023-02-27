@@ -27,9 +27,6 @@
 					}
 				]
 			},
-			"minecraft:display_name": {
-				"value": "钢锤\n§7§o听说这玩意是用来砸三废石的？"
-			},
 			"minecraft:mining_speed": 1,
 			"minecraft:damage": 3,
 			"minecraft:enchantable": {

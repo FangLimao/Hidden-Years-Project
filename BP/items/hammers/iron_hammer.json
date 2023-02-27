@@ -27,9 +27,6 @@
 					}
 				]
 			},
-			"minecraft:display_name": {
-				"value": "铁锤\n§7§o听说要用八十个绿宝石才能从村民那买来这玩意？"
-			},
 			"minecraft:mining_speed": 1,
 			"minecraft:damage": 3,
 			"minecraft:enchantable": {
