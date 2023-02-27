@@ -222,16 +222,34 @@
 			"textures":"textures/items/deepblue/deepblue_sword"
 		},
 		"hy_acacia_hammer":{
-			"textures":"textures/items/hammers/hy_acacia_hammer"
+			"textures":"textures/items/hammers/acacia_hammer"
 		},
 		"hy_birch_hammer":{
-			"textures":"textures/items/hammers/hy_birch_hammer"
+			"textures":"textures/items/hammers/birch_hammer"
 		},
 		"hy_cherry_hammer":{
-			"textures":"textures/items/hammers/hy_cherry_hammer"
+			"textures":"textures/items/hammers/cherry_hammer"
 		},
 		"hy_crimson_hammer":{
-			"textures":"textures/items/hammers/hy_crimson_hammer"
+			"textures":"textures/items/hammers/crimson_hammer"
+		},
+		"hy_dark_oak_hammer":{
+			"textures":"textures/items/hammers/dark_oak_hammer"
+		},
+		"hy_jungle_hammer":{
+			"textures":"textures/items/hammers/jungle_hammer"
+		},
+		"hy_mangrove_hammer":{
+			"textures":"textures/items/hammers/mangrove_hammer"
+		},
+		"hy_oak_hammer":{
+			"textures":"textures/items/hammers/oak_hammer"
+		},
+		"hy_spruce_hammer":{
+			"textures":"textures/items/hammers/spruce_hammer"
+		},
+		"hy_warped_hammer":{
+			"textures":"textures/items/hammers/warped_hammer"
 		}
 	}
 }
