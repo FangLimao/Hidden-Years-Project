@@ -1,6 +1,6 @@
 $formatVersion: 1
 #manifest
-projects/Hidden-Years-Project/BP/manifest.json|1677476949477
+projects/Hidden-Years-Project/BP/manifest.json|1677484114057
 #unknown
 projects/Hidden-Years-Project/BP/pack_icon.png|1677476949513
 projects/Hidden-Years-Project/RP/pack_icon.png|1677476951064
@@ -295,7 +295,7 @@ projects/Hidden-Years-Project/RP/texts/languages.json|1677476951069
 #flipbookTexture
 projects/Hidden-Years-Project/RP/textures/flipbook_textures.json|1677476950900
 #clientManifest
-projects/Hidden-Years-Project/RP/manifest.json|1677476951064|{"uuid":["12da1e14-925c-42c3-93ad-5c3e496f85fd"]}
+projects/Hidden-Years-Project/RP/manifest.json|1677484120712|{"uuid":["12da1e14-925c-42c3-93ad-5c3e496f85fd"]}
 #texture
 projects/Hidden-Years-Project/RP/textures/blocks/candies/deepslate.png|1677476951195
 projects/Hidden-Years-Project/RP/textures/blocks/candies/stone.png|1677476951194

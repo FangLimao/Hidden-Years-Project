@@ -20,7 +20,7 @@
 		"version": [
 			0,
 			0,
-			1004
+			1005
 		]
 	},
 	"modules": [
@@ -45,7 +45,9 @@
 			"entry": "scripts/Main.js"
 		}
 	],
-	"capabilities": ["script_eval"],
+	"capabilities": [
+		"script_eval"
+	],
 	"dependencies": [
 		{
 			"uuid": "12da1e14-925c-42c3-93ad-5c3e496f85fd",
