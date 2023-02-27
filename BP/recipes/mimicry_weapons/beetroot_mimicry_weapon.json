@@ -1,0 +1,27 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:beetroot_mimicry_weapon"
+		},
+		"tags": [
+			"mimicry_machine"
+		],
+		"key": {
+			"a": {
+				"item": "beetroot"
+			},
+			"d": {
+				"item": "diamond_sword"
+			}
+		},
+		"pattern": [
+			" a ",
+			"ada",
+			" a "
+		],
+		"result": {
+			"item": "hy:beetroot_mimicry_weapon"
+		}
+	}
+}

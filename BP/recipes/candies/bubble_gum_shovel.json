@@ -1,0 +1,27 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:bubble_gum_shovel"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"i": {
+				"item": "hy:bubble_gum"
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"pattern": [
+			" i ",
+			" s ",
+			" s "
+		],
+		"result": {
+			"item": "hy:bubble_gum_shovel"
+		}
+	}
+}

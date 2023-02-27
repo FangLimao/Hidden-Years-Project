@@ -1,0 +1,39 @@
+{
+	"type": "minecraftBedrock",
+	"name": "Hidden-Years-Project",
+	"namespace": "bridge",
+	"authors": [
+		"Fang Limao",
+		"Liu Hansen"
+	],
+	"targetVersion": "1.19.60",
+	"description": "§4§l让我们的Minecraft变得更好玩！§r\n§5§o作者：klpbbs@方漓猫，按照MIT协议共享§r\n§3§o支持MCBE1.17+，务必打开实验性玩法",
+	"experimentalGameplay": {},
+	"bdsProject": false,
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	},
+	"worlds": [
+		"./worlds/*"
+	],
+	"compiler": {
+		"plugins": [
+			"generatorScripts",
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			"formatVersionCorrection",
+			[
+				"simpleRewrite",
+				{
+					"packName": "Hidden-Years-Project"
+				}
+			]
+		]
+	}
+}

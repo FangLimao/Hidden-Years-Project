@@ -1,0 +1,23 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "hy:steel_ore_feature"
+		},
+		"count": 8,
+		"replace_rules": [
+			{
+				"places_block": "hy:steel_ore",
+				"may_replace": [
+					"minecraft:stone"
+				]
+			},
+			{
+				"places_block": "hy:deepslate_steel_ore",
+				"may_replace": [
+					"minecraft:deepslate"
+				]
+			}
+		]
+	}
+}

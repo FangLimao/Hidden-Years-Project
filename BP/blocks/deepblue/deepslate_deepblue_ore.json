@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hy:deepslate_deepblue_ore"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:loot": "loot_tables/blocks/deepblue_ore.json",
+			"minecraft:map_color": "#ffffff",
+			"minecraft:creative_category":{
+				"category":"nature",
+				"group":"itemGroup.name.ore"
+			}
+		}
+	}
+}

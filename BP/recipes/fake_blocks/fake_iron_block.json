@@ -1,0 +1,24 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "hy:fake_iron_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "hy:deepblue_portal",
+				"count": 8
+			},
+			{
+				"item": "iron_ingot"
+			}
+		],
+		"result": {
+			"item": "hy:fake_iron_block",
+			"count": 16
+		}
+	}
+}

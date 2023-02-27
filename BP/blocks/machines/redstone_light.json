@@ -1,0 +1,16 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hy:redstone_light"
+		},
+		"components": {
+			"minecraft:block_light_emission":1.0,
+			"minecraft:loot": "loot_tables/blocks/redstone_light.json",
+			"minecraft:creative_category":{
+				"category":"items",
+				"group":"items"
+			}
+		}
+	}
+}

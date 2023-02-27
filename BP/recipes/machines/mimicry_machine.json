@@ -1,0 +1,30 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:mimicry_machine"
+		},
+		"tags": [
+			"industrial_crafting_table"
+		],
+		"key": {
+			"b": {
+				"item": "hy:battery"
+			},
+			"c": {
+				"item": "crafting_table"
+			},
+			"h": {
+				"item": "hy:amethyst_hammer"
+			}
+		},
+		"pattern": [
+			"bhb",
+			"hch",
+			"bhb"
+		],
+		"result": {
+			"item": "hy:mimicry_machine"
+		}
+	}
+}
