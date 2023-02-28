@@ -64,7 +64,7 @@
 					}
 				]
 			},
-			"tag:minecraft:is_pickaxe": {}
+			"tag:hy:is_hammer": {}
 		},
 		"events": {
 			"on_tool_used": {

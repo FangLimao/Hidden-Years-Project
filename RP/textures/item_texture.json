@@ -206,50 +206,50 @@
 		"hy_raw_deepblue": {
 			"textures": "textures/items/deepblue/raw_deepblue"
 		},
-		"hy_deepblue_axe":{
-			"textures":"textures/items/deepblue/deepblue_axe"
+		"hy_deepblue_axe": {
+			"textures": "textures/items/deepblue/deepblue_axe"
 		},
-		"hy_deepblue_hoe":{
-			"textures":"textures/items/deepblue/deepblue_hoe"
+		"hy_deepblue_hoe": {
+			"textures": "textures/items/deepblue/deepblue_hoe"
 		},
-		"hy_deepblue_pickaxe":{
-			"textures":"textures/items/deepblue/deepblue_pickaxe"
+		"hy_deepblue_pickaxe": {
+			"textures": "textures/items/deepblue/deepblue_pickaxe"
 		},
-		"hy_deepblue_shovel":{
-			"textures":"textures/items/deepblue/deepblue_shovel"
+		"hy_deepblue_shovel": {
+			"textures": "textures/items/deepblue/deepblue_shovel"
 		},
-		"hy_deepblue_sword":{
-			"textures":"textures/items/deepblue/deepblue_sword"
+		"hy_deepblue_sword": {
+			"textures": "textures/items/deepblue/deepblue_sword"
 		},
-		"hy_acacia_hammer":{
-			"textures":"textures/items/hammers/acacia_hammer"
+		"hy_acacia_hammer": {
+			"textures": "textures/items/tools/hammers/acacia_hammer"
 		},
-		"hy_birch_hammer":{
-			"textures":"textures/items/hammers/birch_hammer"
+		"hy_birch_hammer": {
+			"textures": "textures/items/hammers/birch_hammer"
 		},
-		"hy_cherry_hammer":{
-			"textures":"textures/items/hammers/cherry_hammer"
+		"hy_cherry_hammer": {
+			"textures": "textures/items/hammers/cherry_hammer"
 		},
-		"hy_crimson_hammer":{
-			"textures":"textures/items/hammers/crimson_hammer"
+		"hy_crimson_hammer": {
+			"textures": "textures/items/hammers/crimson_hammer"
 		},
-		"hy_dark_oak_hammer":{
-			"textures":"textures/items/hammers/dark_oak_hammer"
+		"hy_dark_oak_hammer": {
+			"textures": "textures/items/hammers/dark_oak_hammer"
 		},
-		"hy_jungle_hammer":{
-			"textures":"textures/items/hammers/jungle_hammer"
+		"hy_jungle_hammer": {
+			"textures": "textures/items/hammers/jungle_hammer"
 		},
-		"hy_mangrove_hammer":{
-			"textures":"textures/items/hammers/mangrove_hammer"
+		"hy_mangrove_hammer": {
+			"textures": "textures/items/hammers/mangrove_hammer"
 		},
-		"hy_oak_hammer":{
-			"textures":"textures/items/hammers/oak_hammer"
+		"hy_oak_hammer": {
+			"textures": "textures/items/hammers/oak_hammer"
 		},
-		"hy_spruce_hammer":{
-			"textures":"textures/items/hammers/spruce_hammer"
+		"hy_spruce_hammer": {
+			"textures": "textures/items/hammers/spruce_hammer"
 		},
-		"hy_warped_hammer":{
-			"textures":"textures/items/hammers/warped_hammer"
+		"hy_warped_hammer": {
+			"textures": "textures/items/hammers/warped_hammer"
 		}
 	}
 }
