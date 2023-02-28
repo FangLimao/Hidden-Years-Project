@@ -154,8 +154,7 @@ projects/Hidden-Years-Project/BP/items/tools/swords/deepblue_sword.json|16774769
 projects/Hidden-Years-Project/BP/items/tools/swords/emerald_sword.json|1677476950207|{"identifier":["hy:emerald_sword"],"event":["damaged","on_tool_used"],"eventReference":["damaged","on_tool_used"],"itemTexture":["hy_emerald_sword"],"tag":["minecraft:is_sword","minecraft:is_tool"]}
 projects/Hidden-Years-Project/BP/items/tools/swords/steel_sword.json|1677476950207|{"identifier":["hy:steel_sword"],"event":["damaged","on_tool_used"],"eventReference":["damaged","on_tool_used"],"itemTexture":["hy_steel_sword"],"tag":["minecraft:is_sword","minecraft:is_tool"]}
 projects/Hidden-Years-Project/BP/items/tools/hammers/wooden_hammers/acacia_hammer.json|1677561197843|{"identifier":["hy:acacia_hammer"],"event":["on_tool_used","damaged"],"eventReference":["damaged","on_tool_used"],"itemTexture":["hy_acacia_hammer"],"tag":["hy:is_hammer"]}
-projects/Hidden-Years-Project/BP/items/tools/hammers/wooden_hammers/birch_hammer.json|1677476950284|{"identifier":["hy:acacia_hammer"],"event":["on_tool_used","damaged"],"eventReference":["damaged","on_tool_used"],"itemTexture":["hy_acacia_hammer"],"tag":["hy:is_hammer"]}
-projects/Hidden-Years-Project/BP/items/tools/hammers/birch_hammer.json|1677561506258|{"identifier":["hy:birch_hammer"],"event":["on_tool_used","damaged"],"eventReference":["damaged","on_tool_used"],"itemTexture":["hy_birch_hammer"],"tag":["hy:is_hammer"]}
+projects/Hidden-Years-Project/BP/items/tools/hammers/wooden_hammers/birch_hammer.json|1677561613868|{"identifier":["hy:birch_hammer"],"event":["on_tool_used","damaged"],"eventReference":["damaged","on_tool_used"],"itemTexture":["hy_birch_hammer"],"tag":["hy:is_hammer"]}
 #lootTable
 projects/Hidden-Years-Project/BP/loot_tables/blocks/bubble_gum_ore.json|1677476949606|{"lootTablePath":[]}
 projects/Hidden-Years-Project/BP/loot_tables/blocks/deepblue_ore.json|1677476949606|{"lootTablePath":[]}
