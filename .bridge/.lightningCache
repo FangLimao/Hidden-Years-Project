@@ -1,6 +1,6 @@
 $formatVersion: 1
 #manifest
-projects/Hidden-Years-Project/BP/manifest.json|1677484113385
+projects/Hidden-Years-Project/BP/manifest.json|1677562043932
 #unknown
 projects/Hidden-Years-Project/BP/pack_icon.png|1677476949513
 projects/Hidden-Years-Project/RP/pack_icon.png|1677476951064
@@ -291,7 +291,7 @@ projects/Hidden-Years-Project/BP/recipes/nuggets/to_ingot/steel_nugget_to_ingot.
 #clientBlock
 projects/Hidden-Years-Project/RP/blocks.json|1677476951063|{"identifier":["hy:steel_block","hy:steel_ore","hy:deepslate_steel_ore","hy:industrial_crafting_table","hy:low_hammer_machine","hy:high_hammer_machine","hy:redstone_light","hy:mimicry_machine","hy:bubble_gum_ore","hy:deepslate_bubble_gum_ore","hy:melon_rind_block","hy:golden_melon_rind_block","hy:beetroot_peel_block","hy:carrot_peel_block","hy:chorus_peel_block","hy:fake_stone","hy:fake_cobblestone","hy:fake_sand","hy:fake_tnt","hy:fake_sandstone","hy:deepblue_ore","hy:deepslate_deepblue_ore","hy:fake_diamond_block","hy:fake_netherite_block","hy:fake_gold_block","hy:fake_copper_block","hy:fake_iron_block","hy:fake_crafting_table","hy:fake_bedrock","hy:fake_red_sandstone","hy:fake_smooth_stone","hy:fake_mossy_cobblestone","hy:fake_end_stone","hy:fake_obsidian","hy:fake_prismarine","hy:fake_netherrack","hy:fake_glowstone","hy:fake_blackstone","hy:fake_basalt","hy:fake_polished_basalt","hy:fake_smooth_basalt","hy:fake_calcite","hy:fake_deepslate","hy:fake_chiseled_deepslate","hy:fake_polished_deepslate","hy:fake_cobbled_deepslate","hy:fake_tuff","hy:fake_dripstone_block","hy:fake_brick_block","hy:fake_end_bricks"]}
 #clientManifest
-projects/Hidden-Years-Project/RP/manifest.json|1677484120712|{"uuid":["12da1e14-925c-42c3-93ad-5c3e496f85fd"]}
+projects/Hidden-Years-Project/RP/manifest.json|1677562040898|{"uuid":["12da1e14-925c-42c3-93ad-5c3e496f85fd"]}
 #langDef
 projects/Hidden-Years-Project/RP/texts/languages.json|1677476951069
 #clientLang
