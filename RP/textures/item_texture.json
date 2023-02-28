@@ -225,7 +225,7 @@
 			"textures": "textures/items/tools/hammers/acacia_hammer"
 		},
 		"hy_birch_hammer": {
-			"textures": "textures/items/hammers/birch_hammer"
+			"textures": "textures/items/tools/hammers/birch_hammer"
 		},
 		"hy_cherry_hammer": {
 			"textures": "textures/items/hammers/cherry_hammer"
