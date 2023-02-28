@@ -1,0 +1,14 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "hy:deepslate_bubble_gum_ore_furnace"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "hy:deepslate_bubble_gum_ore",
+		"output": "hy:bubble_gum"
+	}
+}

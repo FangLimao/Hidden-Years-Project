@@ -1,0 +1,23 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hy:kelp_residue",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": "low"
+			},
+			"minecraft:icon": {
+				"texture": "hy_kelp_residue"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		}
+	}
+}

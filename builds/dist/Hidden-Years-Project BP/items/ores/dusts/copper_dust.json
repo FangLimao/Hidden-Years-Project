@@ -1,0 +1,17 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hy:copper_dust",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "hy_copper_dust"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		}
+	}
+}

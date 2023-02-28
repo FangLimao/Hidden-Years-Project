@@ -1,0 +1,26 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hy:carrot_peel",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "low"
+			},
+			"minecraft:block_placer": {
+				"block": "hy:carrot_peel_block"
+			},
+			"minecraft:icon": {
+				"texture": "hy_carrot_peel"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:use_animation": "eat"
+		}
+	}
+}

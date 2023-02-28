@@ -1,0 +1,18 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hy:carrot_peel_block"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.carrot_peel_block",
+			"minecraft:collision_box": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "hy_carrot_peel_block",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

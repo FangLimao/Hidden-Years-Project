@@ -1,0 +1,13 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "hy:chocolate"
+		},
+		"tags": [
+			"furnace"
+		],
+		"input": "cocoa_beans",
+		"output": "hy:chocolate"
+	}
+}

@@ -1,0 +1,255 @@
+{
+	"resource_pack_name": "Hidden Years",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"hy_steel_ingot": {
+			"textures": "textures/items/steels/steel_ingot"
+		},
+		"hy_steel_axe": {
+			"textures": "textures/items/steels/steel_axe"
+		},
+		"hy_steel_hoe": {
+			"textures": "textures/items/steels/steel_hoe"
+		},
+		"hy_steel_pickaxe": {
+			"textures": "textures/items/steels/steel_pickaxe"
+		},
+		"hy_steel_shovel": {
+			"textures": "textures/items/steels/steel_shovel"
+		},
+		"hy_steel_sword": {
+			"textures": "textures/items/steels/steel_sword"
+		},
+		"hy_copper_dust": {
+			"textures": "textures/items/dusts/copper_dust"
+		},
+		"hy_diamond_dust": {
+			"textures": "textures/items/dusts/diamond_dust"
+		},
+		"hy_gold_dust": {
+			"textures": "textures/items/dusts/gold_dust"
+		},
+		"hy_iron_dust": {
+			"textures": "textures/items/dusts/iron_dust"
+		},
+		"hy_netherite_dust": {
+			"textures": "textures/items/dusts/netherite_dust"
+		},
+		"hy_steel_dust": {
+			"textures": "textures/items/dusts/steel_dust"
+		},
+		"hy_iron_hammer": {
+			"textures": "textures/items/hammers/iron_hammer"
+		},
+		"hy_steel_hammer": {
+			"textures": "textures/items/hammers/steel_hammer"
+		},
+		"hy_battery": {
+			"textures": "textures/items/machines/battery"
+		},
+		"hy_diamond_nugget": {
+			"textures": "textures/items/nuggets/diamond_nugget"
+		},
+		"hy_netherite_nugget": {
+			"textures": "textures/items/nuggets/netherite_nugget"
+		},
+		"hy_steel_nugget": {
+			"textures": "textures/items/nuggets/steel_nugget"
+		},
+		"hy_amethyst_hammer": {
+			"textures": "textures/items/hammers/amethyst_hammer"
+		},
+		"hy_amethyst_nugget": {
+			"textures": "textures/items/nuggets/amethyst_nugget"
+		},
+		"bamboo": {
+			"textures": "textures/items/bamboo"
+		},
+		"hy_honey_sugar": {
+			"textures": "textures/items/sugars/honey_sugar"
+		},
+		"hy_maltose": {
+			"textures": "textures/items/sugars/maltose"
+		},
+		"hy_caramel": {
+			"textures": "textures/items/sugars/caramel"
+		},
+		"hy_brown_sugar": {
+			"textures": "textures/items/sugars/brown_sugar"
+		},
+		"hy_cotton_candy": {
+			"textures": "textures/items/candies/cotton_candy"
+		},
+		"hy_bubble_gum_axe": {
+			"textures": "textures/items/candies/iron_axe"
+		},
+		"hy_bubble_gum_hoe": {
+			"textures": "textures/items/candies/iron_hoe"
+		},
+		"hy_bubble_gum_pickaxe": {
+			"textures": "textures/items/candies/iron_pickaxe"
+		},
+		"hy_bubble_gum_shovel": {
+			"textures": "textures/items/candies/iron_shovel"
+		},
+		"hy_bubble_gum_sword": {
+			"textures": "textures/items/candies/iron_sword"
+		},
+		"hy_chocolate": {
+			"textures": "textures/items/candies/chocolate"
+		},
+		"hy_milk_chocolate": {
+			"textures": "textures/items/candies/milk_chocolate"
+		},
+		"hy_apple_core": {
+			"textures": "textures/items/food_residues/apple_core"
+		},
+		"hy_beetroot_peel": {
+			"textures": "textures/items/food_residues/beetroot_peel"
+		},
+		"hy_carrot_peel": {
+			"textures": "textures/items/food_residues/carrot_peel"
+		},
+		"hy_chorus_peel": {
+			"textures": "textures/items/food_residues/chorus_peel"
+		},
+		"hy_kelp_residue": {
+			"textures": "textures/items/food_residues/kelp_residue"
+		},
+		"hy_melon_speckled": {
+			"textures": "textures/items/food_residues/melon_speckled"
+		},
+		"hy_melon": {
+			"textures": "textures/items/food_residues/melon"
+		},
+		"hy_golden_melon_dart": {
+			"textures": "textures/items/darts/golden_melon_dart"
+		},
+		"hy_amethyst_pickaxe": {
+			"textures": "textures/items/other_pickaxes/amethyst_pickaxe"
+		},
+		"hy_andesite_pickaxe": {
+			"textures": "textures/items/other_pickaxes/andesite_pickaxe"
+		},
+		"hy_diorite_pickaxe": {
+			"textures": "textures/items/other_pickaxes/diorite_pickaxe"
+		},
+		"hy_granite_pickaxe": {
+			"textures": "textures/items/other_pickaxes/granite_pickaxe"
+		},
+		"hy_tuff_pickaxe": {
+			"textures": "textures/items/other_pickaxes/tuff_pickaxe"
+		},
+		"hy_anvil_pickaxe": {
+			"textures": "textures/items/other_pickaxes/anvil_pickaxe"
+		},
+		"hy_blackstone_pickaxe": {
+			"textures": "textures/items/other_pickaxes/blackstone_pickaxe"
+		},
+		"hy_golden_blackstone_pickaxe": {
+			"textures": "textures/items/other_pickaxes/golden_blackstone_pickaxe"
+		},
+		"hy_acacia_pickaxe": {
+			"textures": "textures/items/wood_pickaxes/acacia_pickaxe"
+		},
+		"hy_big_oak_pickaxe": {
+			"textures": "textures/items/wood_pickaxes/big_oak_pickaxe"
+		},
+		"hy_birch_pickaxe": {
+			"textures": "textures/items/wood_pickaxes/birch_pickaxe"
+		},
+		"hy_crimson_pickaxe": {
+			"textures": "textures/items/wood_pickaxes/crimson_pickaxe"
+		},
+		"hy_jungle_pickaxe": {
+			"textures": "textures/items/wood_pickaxes/jungle_pickaxe"
+		},
+		"hy_mangrove_pickaxe": {
+			"textures": "textures/items/wood_pickaxes/mangrove_pickaxe"
+		},
+		"hy_spruce_pickaxe": {
+			"textures": "textures/items/wood_pickaxes/spruce_pickaxe"
+		},
+		"hy_warped_pickaxe": {
+			"textures": "textures/items/wood_pickaxes/warped_pickaxe"
+		},
+		"hy_emerald_ingot": {
+			"textures": "textures/items/emeralds/emerald_ingot"
+		},
+		"hy_emerald_axe": {
+			"textures": "textures/items/emeralds/emerald_axe"
+		},
+		"hy_emerald_hoe": {
+			"textures": "textures/items/emeralds/emerald_hoe"
+		},
+		"hy_emerald_pickaxe": {
+			"textures": "textures/items/emeralds/emerald_pickaxe"
+		},
+		"hy_emerald_shovel": {
+			"textures": "textures/items/emeralds/emerald_shovel"
+		},
+		"hy_emerald_sword": {
+			"textures": "textures/items/emeralds/emerald_sword"
+		},
+		"hy_deepblue_portal": {
+			"textures": "textures/items/deepblue/deepblue_portal"
+		},
+		"hy_deepblue_dust": {
+			"textures": "textures/items/deepblue/deepblue_dust"
+		},
+		"hy_deepblue_ingot": {
+			"textures": "textures/items/deepblue/deepblue_ingot"
+		},
+		"hy_deepblue_nugget": {
+			"textures": "textures/items/deepblue/deepblue_nugget"
+		},
+		"hy_raw_deepblue": {
+			"textures": "textures/items/deepblue/raw_deepblue"
+		},
+		"hy_deepblue_axe":{
+			"textures":"textures/items/deepblue/deepblue_axe"
+		},
+		"hy_deepblue_hoe":{
+			"textures":"textures/items/deepblue/deepblue_hoe"
+		},
+		"hy_deepblue_pickaxe":{
+			"textures":"textures/items/deepblue/deepblue_pickaxe"
+		},
+		"hy_deepblue_shovel":{
+			"textures":"textures/items/deepblue/deepblue_shovel"
+		},
+		"hy_deepblue_sword":{
+			"textures":"textures/items/deepblue/deepblue_sword"
+		},
+		"hy_acacia_hammer":{
+			"textures":"textures/items/hammers/acacia_hammer"
+		},
+		"hy_birch_hammer":{
+			"textures":"textures/items/hammers/birch_hammer"
+		},
+		"hy_cherry_hammer":{
+			"textures":"textures/items/hammers/cherry_hammer"
+		},
+		"hy_crimson_hammer":{
+			"textures":"textures/items/hammers/crimson_hammer"
+		},
+		"hy_dark_oak_hammer":{
+			"textures":"textures/items/hammers/dark_oak_hammer"
+		},
+		"hy_jungle_hammer":{
+			"textures":"textures/items/hammers/jungle_hammer"
+		},
+		"hy_mangrove_hammer":{
+			"textures":"textures/items/hammers/mangrove_hammer"
+		},
+		"hy_oak_hammer":{
+			"textures":"textures/items/hammers/oak_hammer"
+		},
+		"hy_spruce_hammer":{
+			"textures":"textures/items/hammers/spruce_hammer"
+		},
+		"hy_warped_hammer":{
+			"textures":"textures/items/hammers/warped_hammer"
+		}
+	}
+}

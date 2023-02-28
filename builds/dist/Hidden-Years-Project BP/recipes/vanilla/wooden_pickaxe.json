@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:wooden_pickaxe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			" # ",
+			" # "
+		],
+		"key": {
+			"#": {
+				"item": "stick"
+			},
+			"X": {
+				"item": "planks",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "wooden_pickaxe"
+		},
+		"priority": -1
+	}
+}
