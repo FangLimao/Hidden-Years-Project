@@ -1,7 +1,7 @@
 {
 	"type": "minecraftBedrock",
 	"name": "Hidden-Years-Project",
-	"namespace": "bridge",
+	"namespace": "hy",
 	"authors": [
 		"Fang Limao",
 		"Liu Hansen"
