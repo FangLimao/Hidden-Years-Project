@@ -1,0 +1,29 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:birch_hammer"
+		},
+		"tags": [
+			"industrial_crafting_table",
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "planks",
+				"data": 2
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"pattern": [
+			"###",
+			" # ",
+			" s "
+		],
+		"result": {
+			"item": "hy:birch_hammer"
+		}
+	}
+}
