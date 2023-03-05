@@ -13,14 +13,14 @@
 		"description": /**"§4§l让我们的Minecraft变得更好玩！§r\n§5§o作者：klpbbs@方漓猫，按照MIT协议共享§r\n§3§o支持MCBE1.17+，务必打开实验性玩法",**/ "§4§l让我们的Minecraft变得更好玩！§r\n§5§o作者：klpbbs@方漓猫，按照MIT协议共享§r\n§4§o不稳定的构建版",
 		"min_engine_version": [
 			1,
-			17,
-			0
+			19,
+			20
 		],
 		"uuid": "2a2805a4-b094-4bb5-8bdf-5e874b133a32",
 		"version": [
 			0,
 			0,
-			1007
+			1008
 		]
 	},
 	"modules": [
@@ -30,7 +30,7 @@
 			"version": [
 				0,
 				0,
-				1007
+				1008
 			]
 		},
 		{
@@ -54,7 +54,7 @@
 			"version": [
 				0,
 				0,
-				1007
+				1008
 			]
 		},
 		{

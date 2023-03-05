@@ -25,12 +25,8 @@
 					"target": "self"
 				}
 			},
-			"minecraft:enchantable": {
-				"value": 2,
-				"slot": "pickaxe"
-			},
 			"minecraft:digger": {
-				"use_efficiency": true,
+				"use_efficiency": false,
 				"destroy_speeds": [
 					{
 						"block": {
