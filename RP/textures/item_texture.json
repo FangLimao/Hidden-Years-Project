@@ -262,6 +262,18 @@
 		},
 		"hy_oxidized_copper_hammer": {
 			"textures": "textures/items/tools/hammers/copper_hammers/oxidized_copper_hammer"
+		},
+		"hy_diamond_hammer": {
+			"textures": "textures/items/tools/hammers/metal_hammers/diamond_hammer"
+		},
+		"hy_gold_hammer": {
+			"textures": "textures/items/tools/hammers/metal_hammers/gold_hammer"
+		},
+		"hy_netherite_hammer": {
+			"textures": "textures/items/tools/hammers/metal_hammers/netherite_hammer"
+		},
+		"hy_stone_hammer": {
+			"textures": "textures/items/tools/hammers/metal_hammers/stone_hammer"
 		}
 	}
 }

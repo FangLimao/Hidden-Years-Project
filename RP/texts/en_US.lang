@@ -127,3 +127,7 @@ item.hy:exposed_copper_hammer=exposed copper hammer
 item.hy:weathered_copper_hammer=weathered copper hammer
 item.hy:oxidized_copper_hammer=oxidized copper hammer
 item.hy:waxed_copper_hammer=Waxed Copper Hammer
+item.hy:diamond_hammer=diamond hammer
+item.hy:gold_hammer=gold hammer
+item.hy:netherite_hammer=netherite hammer
+item.hy:stone_hammer=stone hammer
