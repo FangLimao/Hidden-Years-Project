@@ -5,19 +5,20 @@
 			"identifier": "hy:amethyst_hammer"
 		},
 		"tags": [
-			"industrial_crafting_table"
+			"industrial_crafting_table",
+			"crafting_table"
 		],
 		"key": {
-			"n": {
-				"item": "hy:amethyst_nugget"
+			"#": {
+				"item": "amethyst_shard"
 			},
 			"s": {
 				"item": "stick"
 			}
 		},
 		"pattern": [
-			"nnn",
-			" s ",
+			"###",
+			"###",
 			" s "
 		],
 		"result": {

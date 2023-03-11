@@ -6,11 +6,19 @@
 			"Liu Hansen"
 		],
 		"license": "MIT",
-		"url": "https://gitee.com/harain/hidden-years"
+		"url": "https://gitee.com/harain/hidden-years",
+		"generated_with": {
+			"bridge": [
+				"2.6.0"
+			],
+			"dash": [
+				"0.10.8"
+			]
+		}
 	},
 	"header": {
-		"name": /**"§3§l隐藏之年§r§oAlpha",**/ "§3§l隐藏之年§r§4构建版",
-		"description": /**"§4§l让我们的Minecraft变得更好玩！§r\n§5§o作者：klpbbs@方漓猫，按照MIT协议共享§r\n§3§o支持MCBE1.17+，务必打开实验性玩法",**/ "§4§l让我们的Minecraft变得更好玩！§r\n§5§o作者：klpbbs@方漓猫，按照MIT协议共享§r\n§4§o不稳定的构建版",
+		"name": "§3§l隐藏之年§r§4构建版",
+		"description": "§4§l让我们的Minecraft变得更好玩！§r\n§5§o作者：klpbbs@方漓猫，按照MIT协议共享§r\n§4§o不稳定的构建版",
 		"min_engine_version": [
 			1,
 			19,
@@ -20,7 +28,7 @@
 		"version": [
 			0,
 			0,
-			1008
+			1009
 		]
 	},
 	"modules": [
@@ -30,7 +38,7 @@
 			"version": [
 				0,
 				0,
-				1008
+				1009
 			]
 		},
 		{
@@ -54,7 +62,7 @@
 			"version": [
 				0,
 				0,
-				1008
+				1009
 			]
 		},
 		{

@@ -8,16 +8,16 @@
 			"industrial_crafting_table"
 		],
 		"key": {
-			"n": {
-				"item": "hy:steel_nugget"
+			"#": {
+				"item": "hy:steel_ingot"
 			},
 			"s": {
 				"item": "stick"
 			}
 		},
 		"pattern": [
-			"nnn",
-			" s ",
+			"###",
+			"###",
 			" s "
 		],
 		"result": {

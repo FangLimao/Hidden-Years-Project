@@ -250,6 +250,18 @@
 		},
 		"hy_warped_hammer": {
 			"textures": "textures/items/tools/hammers/wooden_hammers/warped_hammer"
+		},
+		"hy_copper_hammer": {
+			"textures": "textures/items/tools/hammers/copper_hammers/copper_hammer"
+		},
+		"hy_exposed_copper_hammer": {
+			"textures": "textures/items/tools/hammers/copper_hammers/exposed_copper_hammer"
+		},
+		"hy_weathered_copper_hammer": {
+			"textures": "textures/items/tools/hammers/copper_hammers/weathered_copper_hammer"
+		},
+		"hy_oxidized_copper_hammer": {
+			"textures": "textures/items/tools/hammers/copper_hammers/oxidized_copper_hammer"
 		}
 	}
 }
