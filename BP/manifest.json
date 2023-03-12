@@ -9,7 +9,7 @@
 		"url": "https://fanglimao.github.io/mods/Hidden-Years"
 	},
 	"header": {
-		"name": "§3§l隐藏之年§r§4Alpha",
+		"name": "§3§l隐藏之年§r§2Alpha",
 		"description": "§4§l让我们的Minecraft变得更好玩！§r\n§5§o作者：klpbbs@方漓猫，按照MIT协议共享§r",
 		"min_engine_version": [
 			1,
@@ -20,7 +20,7 @@
 		"version": [
 			0,
 			6,
-			0
+			1
 		]
 	},
 	"modules": [
@@ -30,40 +30,18 @@
 			"version": [
 				0,
 				6,
-				0
+				1
 			]
-		} /*,
-		{
-			"uuid": "239c134f-67bf-4738-9bcc-8c69d31b1f72",
-			"version": [
-				1,
-				0,
-				0
-			],
-			"type": "script",
-			"language": "javascript",
-			"entry": "scripts/Main.js"
-		}*/
+		}
 	],
-	/*"capabilities": [
-		"script_eval"
-	],*/
 	"dependencies": [
 		{
 			"uuid": "12da1e14-925c-42c3-93ad-5c3e496f85fd",
 			"version": [
 				0,
 				6,
-				0
+				1
 			]
-		} /*,
-		{
-			"module_name": "@minecraft/server",
-			"version": "1.1.0-beta"
-		},
-		{
-			"module_name": "@minecraft/server-ui",
-			"version": "1.0.0-beta"
-		}*/
+		}
 	]
 }
