@@ -1,0 +1,47 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Fang Limao",
+			"Liu Hansen"
+		],
+		"license": "MIT",
+		"url": "https://fanglimao.github.io/mods/Hidden-Years"
+	},
+	"header": {
+		"name": "§3§l隐藏之年§r§2Alpha",
+		"description": "§7§oAlpha 0.7.0§r\n§4§l让我们的Minecraft变得更好玩！§r\n§5§o作者：klpbbs@方漓猫，按照MIT协议共享§r",
+		"min_engine_version": [
+			1,
+			17,
+			0
+		],
+		"uuid": "2a2805a4-b094-4bb5-8bdf-5e874b133a32",
+		"version": [
+			0,
+			0,
+			1100
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "8e3593f4-ea97-4a85-9cad-1657723c4f99",
+			"version": [
+				0,
+				0,
+				1100
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "12da1e14-925c-42c3-93ad-5c3e496f85fd",
+			"version": [
+				0,
+				0,
+				1100
+			]
+		}
+	]
+}

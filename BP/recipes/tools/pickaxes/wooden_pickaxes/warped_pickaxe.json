@@ -1,0 +1,27 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:warped_pickaxe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"p": {
+				"item": "warped_planks"
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"pattern": [
+			"ppp",
+			" s ",
+			" s "
+		],
+		"result": {
+			"item": "hy:warped_wood_pickaxe"
+		}
+	}
+}

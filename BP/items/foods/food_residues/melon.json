@@ -1,0 +1,26 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hy:melon",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "low"
+			},
+			"minecraft:icon": {
+				"texture": "hy_melon"
+			},
+			"minecraft:block_placer": {
+				"block": "hy:melon_rind_block"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		}
+	}
+}

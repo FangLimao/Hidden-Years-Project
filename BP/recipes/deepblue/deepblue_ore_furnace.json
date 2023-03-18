@@ -1,0 +1,14 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "hy:deepblue_ore_furnace"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "hy:deepblue_ore",
+		"output": "hy:raw_deepblue"
+	}
+}

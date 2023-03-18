@@ -1,0 +1,14 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "hy:steel_ore_furnace"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "hy:steel_ore",
+		"output": "hy:steel_ingot"
+	}
+}
