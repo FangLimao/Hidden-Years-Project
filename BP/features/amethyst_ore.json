@@ -2,18 +2,18 @@
 	"format_version": "1.17.0",
 	"minecraft:ore_feature": {
 		"description": {
-			"identifier": "hy:steel_ore_feature"
+			"identifier": "hy:amethyst_ore"
 		},
-		"count": 8,
+		"count": 4,
 		"replace_rules": [
 			{
-				"places_block": "hy:steel_ore",
+				"places_block": "hy:amethyst_ore",
 				"may_replace": [
 					"stone"
 				]
 			},
 			{
-				"places_block": "hy:deepslate_steel_ore",
+				"places_block": "hy:deepslate_amethyst_ore",
 				"may_replace": [
 					"deepslate"
 				]

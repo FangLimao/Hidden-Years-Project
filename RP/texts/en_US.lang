@@ -141,3 +141,5 @@ item.hy:amethyst_helmet=amethyst Helmet
 item.hy:amethyst_chestplate=amethyst Chestplate
 item.hy:amethyst_leggings=amethyst Leggings
 item.hy:amethyst_boots=amethyst Boots
+tile.hy:amethyst_ore.name=amethyst ore
+tile.hy:deepslate_amethyst_ore.name=deepslate amethyst ore

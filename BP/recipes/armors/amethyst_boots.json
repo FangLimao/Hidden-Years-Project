@@ -1,0 +1,23 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "hy:amethyst_boots"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "X X",
+            "X X"
+        ],
+        "key": {
+            "X": {
+                "item": "hy:amethyst_ingot"
+            }
+        },
+        "result": {
+            "item": "hy:amethyst_boots"
+        }
+    }
+}

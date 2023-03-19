@@ -57,6 +57,12 @@
 		},
 		"hy_deepslate_deepblue_ore": {
 			"textures": "textures/blocks/deepblue/deepslate_deepblue_ore"
+		},
+		"hy_amethyst_ore": {
+			"textures": "textures/blocks/ores/amethyst_ore"
+		},
+		"hy_deepslate_amethyst_ore": {
+			"textures": "textures/blocks/ores/deepslate_amethyst_ore"
 		}
 	}
 }

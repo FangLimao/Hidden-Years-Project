@@ -7,35 +7,15 @@
 		"count": 9,
 		"replace_rules": [
 			{
-				"places_block": {
-					"name": "hy:deepblue_ore",
-					"states": {}
-				},
+				"places_block": "hy:deepblue_ore",
 				"may_replace": [
-					{
-						"name": "minecraft:stone",
-						"states": {
-							"stone_type": "stone"
-						}
-					},
-					{
-						"name": "minecraft:stone",
-						"states": {
-							"stone_type": "andesite"
-						}
-					},
-					{
-						"name": "minecraft:stone",
-						"states": {
-							"stone_type": "granite"
-						}
-					},
-					{
-						"name": "minecraft:stone",
-						"states": {
-							"stone_type": "diorite"
-						}
-					}
+					"stone"
+				]
+			},
+			{
+				"places_block": "hy:deepslate_deepblue_ore",
+				"may_replace": [
+					"deepslate"
 				]
 			}
 		]

@@ -2,7 +2,7 @@
 	"format_version": "1.13.0",
 	"minecraft:feature_rules": {
 		"description": {
-			"identifier": "hy:overworld_underground_bubble_gum_ore",
+			"identifier": "hy:overworld_underground_amethyst_ore",
 			"places_feature": "hy:amethyst_ore"
 		},
 		"conditions": {

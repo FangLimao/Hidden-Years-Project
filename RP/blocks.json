@@ -116,161 +116,167 @@
 		"sound": "stone",
 		"textures": "hy_deepslate_deepblue_ore"
 	},
-	"hy:fake_diamond_block" : {
-      "sound" : "metal",
-      "textures" : "diamond_block"
-   },
-   "hy:fake_netherite_block" : {
-      "sound" : "netherite",
-      "textures" : "netherite_block"
-   },
-   "hy:fake_gold_block" : {
-      "sound" : "metal",
-      "textures" : "gold_block"
-   },
-   "hy:fake_copper_block" : {
-      "isotropic" : false,
-      "sound" : "copper",
-      "textures" : "copper_block"
-    },
-    "hy:fake_iron_block" : {
-      "sound" : "metal",
-      "textures" : "iron_block"
-   },
-   "hy:fake_crafting_table" : {
-      "sound" : "wood",
-      "textures" : {
-         "down" : "crafting_table_bottom",
-         "east" : "crafting_table_side",
-         "north" : "crafting_table_front",
-         "south" : "crafting_table_front",
-         "up" : "crafting_table_top",
-         "west" : "crafting_table_side"
-      }
-   },
-   "hy:fake_bedrock" : {
-      "sound" : "stone",
-      "textures" : "bedrock"
-   },
-   "hy:fake_red_sandstone" : {
-      "brightness_gamma" : 0.70,
-      "isotropic" : {
-         "down" : true,
-         "up" : true
-      },
-      "sound" : "stone",
-      "textures" : {
-         "down" : "redsandstone_bottom",
-         "side" : "redsandstone_side",
-         "up" : "redsandstone_top"
-      }
-   },
-   "hy:fake_smooth_stone" : {
-      "sound" : "stone",
-      "textures" : "smooth_stone"
-   },
-   "hy:fake_mossy_cobblestone" : {
-      "sound" : "stone",
-      "textures" : "cobblestone_mossy"
-   },
-   "hy:fake_end_stone" : {
-      "sound" : "stone",
-      "textures" : "end_stone"
-   },
-   "hy:fake_obsidian" : {
-      "brightness_gamma" : 2.0,
-      "isotropic" : true,
-      "sound" : "stone",
-      "textures" : "obsidian"
-   },
-   "hy:fake_prismarine" : {
-      "sound" : "stone",
-      "textures" : "prismarine"
-   },
-   "hy:fake_netherrack" : {
-      "isotropic" : true,
-      "sound" : "netherrack",
-      "textures" : "netherrack"
-   },
-   "hy:fake_glowstone" : {
-      "isotropic" : true,
-      "sound" : "glass",
-      "textures" : "glowstone"
-   },
-   "hy:fake_blackstone" : {
-	"sound" : "stone",
-	"textures" : {
-	   "down" : "blackstone_top",
-	   "side" : "blackstone",
-	   "up" : "blackstone_top"
+	"hy:fake_diamond_block": {
+		"sound": "metal",
+		"textures": "diamond_block"
+	},
+	"hy:fake_netherite_block": {
+		"sound": "netherite",
+		"textures": "netherite_block"
+	},
+	"hy:fake_gold_block": {
+		"sound": "metal",
+		"textures": "gold_block"
+	},
+	"hy:fake_copper_block": {
+		"isotropic": false,
+		"sound": "copper",
+		"textures": "copper_block"
+	},
+	"hy:fake_iron_block": {
+		"sound": "metal",
+		"textures": "iron_block"
+	},
+	"hy:fake_crafting_table": {
+		"sound": "wood",
+		"textures": {
+			"down": "crafting_table_bottom",
+			"east": "crafting_table_side",
+			"north": "crafting_table_front",
+			"south": "crafting_table_front",
+			"up": "crafting_table_top",
+			"west": "crafting_table_side"
+		}
+	},
+	"hy:fake_bedrock": {
+		"sound": "stone",
+		"textures": "bedrock"
+	},
+	"hy:fake_red_sandstone": {
+		"brightness_gamma": 0.7,
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "stone",
+		"textures": {
+			"down": "redsandstone_bottom",
+			"side": "redsandstone_side",
+			"up": "redsandstone_top"
+		}
+	},
+	"hy:fake_smooth_stone": {
+		"sound": "stone",
+		"textures": "smooth_stone"
+	},
+	"hy:fake_mossy_cobblestone": {
+		"sound": "stone",
+		"textures": "cobblestone_mossy"
+	},
+	"hy:fake_end_stone": {
+		"sound": "stone",
+		"textures": "end_stone"
+	},
+	"hy:fake_obsidian": {
+		"brightness_gamma": 2,
+		"isotropic": true,
+		"sound": "stone",
+		"textures": "obsidian"
+	},
+	"hy:fake_prismarine": {
+		"sound": "stone",
+		"textures": "prismarine"
+	},
+	"hy:fake_netherrack": {
+		"isotropic": true,
+		"sound": "netherrack",
+		"textures": "netherrack"
+	},
+	"hy:fake_glowstone": {
+		"isotropic": true,
+		"sound": "glass",
+		"textures": "glowstone"
+	},
+	"hy:fake_blackstone": {
+		"sound": "stone",
+		"textures": {
+			"down": "blackstone_top",
+			"side": "blackstone",
+			"up": "blackstone_top"
+		}
+	},
+	"hy:fake_basalt": {
+		"sound": "basalt",
+		"textures": {
+			"down": "basalt_top",
+			"side": "basalt_side",
+			"up": "basalt_top"
+		}
+	},
+	"hy:fake_polished_basalt": {
+		"sound": "basalt",
+		"textures": {
+			"down": "polished_basalt_top",
+			"side": "polished_basalt_side",
+			"up": "polished_basalt_top"
+		}
+	},
+	"hy:fake_smooth_basalt": {
+		"sound": "basalt",
+		"textures": "smooth_basalt"
+	},
+	"hy:fake_calcite": {
+		"sound": "calcite",
+		"textures": "calcite"
+	},
+	"hy:fake_deepslate": {
+		"isotropic": {
+			"down": true,
+			"up": true
+		},
+		"sound": "deepslate",
+		"textures": {
+			"down": "deepslate_top",
+			"side": "deepslate",
+			"up": "deepslate_top"
+		}
+	},
+	"hy:fake_chiseled_deepslate": {
+		"isotropic": false,
+		"sound": "deepslate_bricks",
+		"textures": "chiseled_deepslate"
+	},
+	"hy:fake_polished_deepslate": {
+		"isotropic": false,
+		"sound": "deepslate",
+		"textures": "polished_deepslate"
+	},
+	"hy:fake_cobbled_deepslate": {
+		"isotropic": false,
+		"sound": "deepslate",
+		"textures": "cobbled_deepslate"
+	},
+	"hy:fake_tuff": {
+		"sound": "tuff",
+		"textures": "tuff"
+	},
+	"hy:fake_dripstone_block": {
+		"sound": "dripstone_block",
+		"textures": "dripstone_block"
+	},
+	"hy:fake_brick_block": {
+		"textures": "brick"
+	},
+	"hy:fake_end_bricks": {
+		"sound": "stone",
+		"textures": "end_bricks"
+	},
+	"hy:amethyst_ore": {
+		"sound": "stone",
+		"textures": "hy_amethyst_ore"
+	},
+	"hy:deepslate_amethyst_ore": {
+		"sound": "stone",
+		"textures": "hy_deepslate_amethyst_ore"
 	}
- },
- "hy:fake_basalt" : {
-      "sound" : "basalt",
-      "textures" : {
-         "down" : "basalt_top",
-         "side" : "basalt_side",
-         "up" : "basalt_top"
-      }
-   },
-"hy:fake_polished_basalt" : {
-      "sound" : "basalt",
-      "textures" : {
-         "down" : "polished_basalt_top",
-         "side" : "polished_basalt_side",
-         "up" : "polished_basalt_top"
-      }
-   },
-   "hy:fake_smooth_basalt" : {
-      "sound" : "basalt",
-      "textures" : "smooth_basalt"
-   },
-   "hy:fake_calcite" : {
-	"sound" : "calcite",
-	"textures" : "calcite"
- },
-
-
- "hy:fake_deepslate" : {
-      "isotropic" : {
-         "down" : true,
-         "up" : true
-      },
-      "sound" : "deepslate",
-      "textures" : {
-         "down" : "deepslate_top",
-         "side" : "deepslate",
-         "up" : "deepslate_top"
-      }
-   },
-   "hy:fake_chiseled_deepslate" : {
-      "isotropic" : false,
-      "sound" : "deepslate_bricks",
-      "textures" : "chiseled_deepslate"
-   },
-   "hy:fake_polished_deepslate" : {
-      "isotropic" : false,
-      "sound" : "deepslate",
-      "textures" : "polished_deepslate"
-   },
-   "hy:fake_cobbled_deepslate" : {
-      "isotropic" : false,
-      "sound" : "deepslate",
-      "textures" : "cobbled_deepslate"
-   },
-   "hy:fake_tuff" : {
-      "sound" : "tuff",
-      "textures" : "tuff"
-   },
-   "hy:fake_dripstone_block" : {
-      "sound" : "dripstone_block",
-      "textures" : "dripstone_block"
-   },
-   "hy:fake_brick_block" : {
-      "textures" : "brick"
-   },
-   "hy:fake_end_bricks" : {
-      "sound" : "stone",
-      "textures" : "end_bricks"
-   }
 }
