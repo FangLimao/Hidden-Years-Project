@@ -204,11 +204,24 @@
 		},
 		"events": {
 			"on_tool_used": {
-				"damage": {
-					"amount": 1,
-					"target": "self",
-					"type": "magic"
-				}
+				"randomize": [
+					{
+						"damage": {
+							"amount": 1,
+							"target": "self",
+							"type": "magic"
+						},
+						"weight": 120
+					},
+					{
+						"damage": {
+							"amount": 50,
+							"target": "self",
+							"type": "magic"
+						},
+						"weight": 1
+					}
+				]
 			},
 			"damaged": {
 				"damage": {

@@ -71,11 +71,24 @@
 		},
 		"events": {
 			"damaged": {
-				"damage": {
-					"type": "magic",
-					"amount": 1,
-					"target": "self"
-				}
+				"randomize": [
+					{
+						"damage": {
+							"amount": 1,
+							"target": "self",
+							"type": "magic"
+						},
+						"weight": 120
+					},
+					{
+						"damage": {
+							"amount": 50,
+							"target": "self",
+							"type": "magic"
+						},
+						"weight": 1
+					}
+				]
 			},
 			"on_tool_used": {
 				"damage": {
