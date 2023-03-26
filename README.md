@@ -1,6 +1,6 @@
 <h1 align="center">欢迎来到</h1>
 <h1 align="center">隐藏之年</h1>
-![输入图片说明](%E9%9A%90%E8%97%8F%E4%B9%8B%E5%B9%B4%20BP/pack_icon.png)
+![输入图片说明](/隐藏之年BP/pack_icon.png)
 
 ## 下载
 - [点我下载](/assets/mods/latest.mcaddon)
