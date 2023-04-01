@@ -4,9 +4,9 @@
 ![输入图片说明](assets/hammersmashedits.png)
 
 ## 下载
-- [点我下载](/assets/mods/latest.mcaddon)
+- [点我下载](https://fanglimao.github.io/assets/mods/latest.mcaddon)
 - gitee（需登录）：[点我下载](https://gitee.com/harain/Hidden-Years-Project/releases)
-- 云盘（更新较慢）：[点我下载](https://gitee.com/harain/Hidden-Years-Project/releases)
+- 云盘（更新较慢）：[点我下载](https://pan.huang1111.cn/s/N6m8H1)
 
 ## 这是什么？
 『隐藏之年』，一适用于Minecraft基岩版的附加包（即所谓“游戏模组”），其完全按照MIT授权协议提供，在不断的更新下，将逐渐成为一款功能强大的附加包。
