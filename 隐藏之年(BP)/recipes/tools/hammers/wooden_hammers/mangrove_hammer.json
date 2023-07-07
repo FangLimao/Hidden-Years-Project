@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:mangrove_hammer"
+		},
+		"tags": [
+			"industrial_crafting_table",
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "mangrove_planks"
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"pattern": [
+			"###",
+			"###",
+			" s "
+		],
+		"result": {
+			"item": "hy:mangrove_hammer"
+		}
+	}
+}

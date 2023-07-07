@@ -1,0 +1,17 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "hy:fake_crafting_table"
+		},
+		"components": {
+			"minecraft:entity_collision":false,
+			"minecraft:map_color": "#000000",
+			"minecraft:loot": "loot_tables/blocks/fake_blocks.json",
+			"minecraft:creative_category":{
+				"category":"equipment",
+				"group":"equipment"
+			}
+		}
+	}
+}

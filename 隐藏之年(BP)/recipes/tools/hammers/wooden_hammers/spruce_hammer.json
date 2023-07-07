@@ -1,0 +1,29 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "hy:spruce_hammer"
+		},
+		"tags": [
+			"industrial_crafting_table",
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "planks",
+				"data": 1
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"pattern": [
+			"###",
+			"###",
+			" s "
+		],
+		"result": {
+			"item": "hy:spruce_hammer"
+		}
+	}
+}

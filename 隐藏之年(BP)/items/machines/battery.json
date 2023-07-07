@@ -1,0 +1,20 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "hy:battery",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "hy_battery"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:display_name": {
+				"value": "电池\n§7§o为红石灯提供能量！"
+			}
+		}
+	}
+}
