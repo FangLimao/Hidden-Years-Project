@@ -1,17 +1,31 @@
 {
-	"format_version": "1.17.0",
-	"minecraft:block": {
-		"description": {
-			"identifier": "hy:deepblue_ore"
-		},
-		"components": {
-			"minecraft:destroy_time": 0.5,
-			"minecraft:loot": "loot_tables/blocks/deepblue_ore.json",
-			"minecraft:map_color": "#ffffff",
-			"minecraft:creative_category":{
-				"category":"nature",
-				"group":"itemGroup.name.ore"
-			}
-		}
-	}
+    "format_version": "1.17.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "hy:deepblue_ore"
+        },
+        "components": {
+            "minecraft:destroy_time": 0.5,
+            "minecraft:loot": "loot_tables/blocks/deepblue_ore.json",
+            "minecraft:map_color": "#ffffff",
+            "minecraft:on_player_destroyed": {
+                "event": "hy.pick_up_xp",
+                "target": "self"
+            },
+            "minecraft:creative_category": {
+                "category": "nature",
+                "group": "itemGroup.name.ore"
+            }
+        },
+        "events": {
+            "hy.pick_up_xp": {
+                "run_command": {
+                    "command": [
+                        "function core/default_ore_xp"
+                    ],
+                    "target": "self"
+                }
+            }
+        }
+    }
 }
