@@ -1,62 +1,68 @@
 {
-	"num_mip_levels": 4,
-	"padding": 8,
-	"resource_pack_name": "Hidden Years",
-	"texture_name": "atlas.terrain",
-	"texture_data": {
-		"hy_steel_block": {
-			"textures": "textures/blocks/steels/steel_block"
-		},
-		"hy_steel_ore": {
-			"textures": "textures/blocks/steels/steel_ore"
-		},
-		"hy_deepslate_steel_ore": {
-			"textures": "textures/blocks/steels/deepslate_steel_ore"
-		},
-		"hy_industrial_crafting_table": {
-			"textures": "textures/blocks/machines/Industrial_crafting_table_top"
-		},
-		"hy_industrial_crafting_table_side": {
-			"textures": "textures/blocks/machines/Industrial_crafting_table_front"
-		},
-		"hy_low_hammer_machine": {
-			"textures": "textures/blocks/machines/hammers/hammer_machine"
-		},
-		"hy_high_hammer_machine": {
-			"textures": "textures/blocks/machines/hammers/high_hammer_machine"
-		},
-		"hy_redstone_light": {
-			"textures": "textures/blocks/machines/redstone_lamp_on"
-		},
-		"hy_mimicry_machine": {
-			"textures": "textures/blocks/machines/mimicry_machine"
-		},
-		"hy_bubble_gum_ore": {
-			"textures": "textures/blocks/candies/stone"
-		},
-		"hy_deepslate_bubble_gum_ore": {
-			"textures": "textures/blocks/candies/deepslate"
-		},
-		"hy_melon_rind_block": {
-			"textures": "textures/blocks/food_residues/melon_rind"
-		},
-		"hy_golden_melon_rind_block": {
-			"textures": "textures/blocks/food_residues/golden_melon_rind"
-		},
-		"hy_beetroot_peel_block": {
-			"textures": "textures/blocks/food_residues/beetroot_peel"
-		},
-		"hy_carrot_peel_block": {
-			"textures": "textures/blocks/food_residues/carrot_peel"
-		},
-		"hy_chorus_peel_block": {
-			"textures": "textures/blocks/food_residues/chorus_peel"
-		},
-		"hy_deepblue_ore": {
-			"textures": "textures/blocks/deepblue/deepblue_ore"
-		},
-		"hy_deepslate_deepblue_ore": {
-			"textures": "textures/blocks/deepblue/deepslate_deepblue_ore"
-		}
-	}
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "Hidden Years",
+    "texture_name": "atlas.terrain",
+    "texture_data": {
+        "hy_steel_block": {
+            "textures": "textures/blocks/steels/steel_block"
+        },
+        "hy_steel_ore": {
+            "textures": "textures/blocks/steels/steel_ore"
+        },
+        "hy_deepslate_steel_ore": {
+            "textures": "textures/blocks/steels/deepslate_steel_ore"
+        },
+        "hy_industrial_crafting_table": {
+            "textures": "textures/blocks/machines/Industrial_crafting_table_top"
+        },
+        "hy_industrial_crafting_table_side": {
+            "textures": "textures/blocks/machines/Industrial_crafting_table_front"
+        },
+        "hy_low_hammer_machine": {
+            "textures": "textures/blocks/machines/hammers/hammer_machine"
+        },
+        "hy_high_hammer_machine": {
+            "textures": "textures/blocks/machines/hammers/high_hammer_machine"
+        },
+        "hy_redstone_light": {
+            "textures": "textures/blocks/machines/redstone_lamp_on"
+        },
+        "hy_mimicry_machine": {
+            "textures": "textures/blocks/machines/mimicry_machine"
+        },
+        "hy_bubble_gum_ore": {
+            "textures": "textures/blocks/candies/stone"
+        },
+        "hy_deepslate_bubble_gum_ore": {
+            "textures": "textures/blocks/candies/deepslate"
+        },
+        "hy_melon_rind_block": {
+            "textures": "textures/blocks/food_residues/melon_rind"
+        },
+        "hy_golden_melon_rind_block": {
+            "textures": "textures/blocks/food_residues/golden_melon_rind"
+        },
+        "hy_beetroot_peel_block": {
+            "textures": "textures/blocks/food_residues/beetroot_peel"
+        },
+        "hy_carrot_peel_block": {
+            "textures": "textures/blocks/food_residues/carrot_peel"
+        },
+        "hy_chorus_peel_block": {
+            "textures": "textures/blocks/food_residues/chorus_peel"
+        },
+        "hy_deepblue_ore": {
+            "textures": "textures/blocks/deepblue/deepblue_ore"
+        },
+        "hy_deepslate_deepblue_ore": {
+            "textures": "textures/blocks/deepblue/deepslate_deepblue_ore"
+        },
+        "hy.fuel_metal_ore": {
+            "textures": "textures/blocks/ores/fuel_metal_ore"
+        },
+        "hy.deepslate_fuel_metal_ore": {
+            "textures": "textures/blocks/ores/deepslate_fuel_metal_ore"
+        }
+    }
 }
