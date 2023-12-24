@@ -18,7 +18,7 @@
 本模组版权由方漓猫及星屹工作室共同持有，按照MIT协议提供，可自由地使用、转载、二次开发，只需附上以下许可证：
 
 ```
-Copyright © 2023 方漓猫＆星屹工作室
+Copyright © 2023-2024 方漓猫＆星屹工作室
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
