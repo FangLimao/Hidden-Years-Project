@@ -3,56 +3,26 @@
     {
       "groups": [
         {
-          "num_to_select": 3,
-          "trades": [
-            {
-              "max_uses": 16,
-              "wants": [{ "item": "hy:diamond_coin", "quantity": 5 }],
-              "gives": [{ "item": "enchanted_golden_apple", "quantity": 2 }]
-            },
-            {
-              "max_uses": 16,
-              "wants": [{ "item": "hy:diamond_coin", "quantity": 15 }],
-              "gives": [{ "item": "ender_eye", "quantity": 13 }]
-            },
-            {
-              "max_uses": 8,
-              "wants": [{ "item": "hy:stack_of_diamond_coin", "quantity": 5 }],
-              "gives": [{ "item": "end_crystal", "quantity": 1 }]
-            },
-            {
-              "max_uses": 16,
-              "wants": [{ "item": "hy:stack_of_diamond_coin", "quantity": 15 }],
-              "gives": [{ "item": "nether_star", "quantity": 1 }]
-            },
-            {
-              "max_uses": 16,
-              "wants": [{ "item": "hy:stack_of_diamond_coin", "quantity": 20 }],
-              "gives": [{ "item": "mob_spawner", "quantity": 1 }]
-            }
-          ]
-        },
-        {
-          "num_to_select": 2,
+          "num_to_select": 4,
           "trades": [
             {
               "wants": [
                 {
-                  "item": "hy:diamond_coin",
-                  "quantity": 30,
+                  "item": "hy:stack_of_diamond_coin",
+                  "quantity": 8,
                   "price_multiplier": 0.05
                 }
               ],
               "gives": [{ "item": "netherite_scrap", "quantity": 1 }],
-              "trader_exp": 2,
-              "max_uses": 16,
+              "trader_exp": 4,
+              "max_uses": 6,
               "reward_exp": true
             },
             {
               "wants": [
                 {
-                  "item": "hy:diamond_coin",
-                  "quantity": 52,
+                  "item": "hy:stack_of_diamond_coin",
+                  "quantity": 9,
                   "price_multiplier": 0.05
                 }
               ],
@@ -60,8 +30,33 @@
                 { "item": "netherite_upgrade_smithing_template", "quantity": 1 }
               ],
               "trader_exp": 2,
-              "max_uses": 16,
+              "max_uses": 6,
               "reward_exp": true
+            },
+			{
+              "max_uses": 6,
+              "wants": [{ "item": "hy:diamond_coin", "quantity": 25 }],
+              "gives": [{ "item": "enchanted_golden_apple", "quantity": 2 }]
+            },
+            {
+              "max_uses": 6,
+              "wants": [{ "item": "hy:diamond_coin", "quantity": 30 }],
+              "gives": [{ "item": "ender_eye", "quantity": 5 }]
+            },
+            {
+              "max_uses": 6,
+              "wants": [{ "item": "hy:stack_of_diamond_coin", "quantity": 5 }],
+              "gives": [{ "item": "end_crystal", "quantity": 1 }]
+            },
+            {
+              "max_uses": 1,
+              "wants": [{ "item": "hy:stack_of_diamond_coin", "quantity": 25 }],
+              "gives": [{ "item": "nether_star", "quantity": 1 }]
+            },
+            {
+              "max_uses": 1,
+              "wants": [{ "item": "hy:stack_of_diamond_coin", "quantity": 30 }],
+              "gives": [{ "item": "mob_spawner", "quantity": 1 }]
             }
           ]
         }
