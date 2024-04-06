@@ -16,15 +16,36 @@
               ],
               "gives": [{ "item": "turtle_helmet", "quantity": 1 }],
               "trader_exp": 2,
-              "max_uses": 16,
+              "max_uses": 6,
               "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
+            },
+			{
+              "wants": [
+                {
+                  "item": "hy:gold_coin",
+                  "quantity": 3,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [{ "item": "shield", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 4,
+              "reward_exp": true
+            },
+			{
+              "wants": [
+                {
+                  "item": "hy:gold_coin",
+                  "quantity": 6,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [{ "item": "bell", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 2,
+              "reward_exp": true
+            },
+			{
               "wants": [
                 {
                   "item": "hy:gold_coin",
@@ -34,49 +55,13 @@
               ],
               "gives": [{ "item": "coal", "quantity": 10 }],
               "trader_exp": 2,
-              "max_uses": 16,
+              "max_uses": 6,
               "reward_exp": true
             }
           ]
         },
         {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "hy:gold_coin",
-                  "quantity": 7,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [{ "item": "shield", "quantity": 1 }],
-              "trader_exp": 2,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "hy:gold_coin",
-                  "quantity": 10,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [{ "item": "bell", "quantity": 1 }],
-              "trader_exp": 2,
-              "max_uses": 16,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 4,
+          "num_to_select": 2,
           "trades": [
             {
               "wants": [
@@ -88,7 +73,7 @@
               ],
               "gives": [{ "item": "iron_helmet", "quantity": 1 }],
               "trader_exp": 1,
-              "max_uses": 12,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
@@ -101,7 +86,7 @@
               ],
               "gives": [{ "item": "iron_boots", "quantity": 1 }],
               "trader_exp": 1,
-              "max_uses": 12,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
@@ -114,7 +99,7 @@
               ],
               "gives": [{ "item": "iron_chestplate", "quantity": 1 }],
               "trader_exp": 1,
-              "max_uses": 12,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
@@ -127,7 +112,7 @@
               ],
               "gives": [{ "item": "iron_leggings", "quantity": 1 }],
               "trader_exp": 1,
-              "max_uses": 12,
+              "max_uses": 4,
               "reward_exp": true
             }
           ]
@@ -138,13 +123,31 @@
       "total_exp_required": 10,
       "groups": [
         {
-          "num_to_select": 4,
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "iron_ingot",
+                  "quantity": 10,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [{ "item": "hy:gold_coin", "quantity": 3 }],
+              "trader_exp": 2,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        },
+		{
+          "num_to_select": 2,
           "trades": [
             {
               "wants": [
                 {
                   "item": "hy:gold_coin",
-                  "quantity": 6,
+                  "quantity": 4,
                   "price_multiplier": 0.2
                 }
               ],
@@ -162,14 +165,14 @@
                 }
               ],
               "trader_exp": 1,
-              "max_uses": 12,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
               "wants": [
                 {
                   "item": "hy:gold_coin",
-                  "quantity": 6,
+                  "quantity": 4,
                   "price_multiplier": 0.2
                 }
               ],
@@ -187,14 +190,14 @@
                 }
               ],
               "trader_exp": 1,
-              "max_uses": 12,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
               "wants": [
                 {
                   "item": "hy:gold_coin",
-                  "quantity": 8,
+                  "quantity": 6,
                   "price_multiplier": 0.2
                 }
               ],
@@ -212,14 +215,14 @@
                 }
               ],
               "trader_exp": 1,
-              "max_uses": 12,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
               "wants": [
                 {
                   "item": "hy:gold_coin",
-                  "quantity": 8,
+                  "quantity": 6,
                   "price_multiplier": 0.2
                 }
               ],
@@ -237,7 +240,7 @@
                 }
               ],
               "trader_exp": 1,
-              "max_uses": 12,
+              "max_uses": 4,
               "reward_exp": true
             }
           ]
@@ -253,80 +256,71 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:bucket:10",
+                  "item": "lava_bucket",
                   "quantity": 1,
                   "price_multiplier": 0.05
                 }
               ],
-              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "gives": [{ "item": "hy:gold_coin", "quantity": 1 }],
               "trader_exp": 20,
-              "max_uses": 12,
+              "max_uses": 6,
               "reward_exp": true
             }
           ]
         },
         {
-          "num_to_select": 1,
+          "num_to_select": 3,
           "trades": [
             {
               "wants": [
                 {
-                  "item": "minecraft:diamond",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
-              "trader_exp": 20,
-              "max_uses": 12,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 1,
+                  "item": "hy:gold_coin",
+                  "quantity": 6,
                   "price_multiplier": 0.2
                 }
               ],
-              "gives": [
-                { "item": "minecraft:chainmail_helmet", "quantity": 1 }
-              ],
-              "trader_exp": 10,
-              "max_uses": 12,
+              "gives": [{ "item": "diamond_helmet", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 4,
+                  "item": "hy:gold_coin",
+                  "quantity": 6,
                   "price_multiplier": 0.2
                 }
               ],
-              "gives": [
-                { "item": "minecraft:chainmail_chestplate", "quantity": 1 }
-              ],
-              "trader_exp": 10,
-              "max_uses": 12,
+              "gives": [{ "item": "diamond_boots", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 4,
               "reward_exp": true
             },
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 5,
+                  "item": "hy:gold_coin",
+                  "quantity": 8,
                   "price_multiplier": 0.2
                 }
               ],
-              "gives": [{ "item": "minecraft:shield", "quantity": 1 }],
-              "trader_exp": 10,
-              "max_uses": 12,
+              "gives": [{ "item": "diamond_chestplate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 4,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "hy:gold_coin",
+                  "quantity": 8,
+                  "price_multiplier": 0.2
+                }
+              ],
+              "gives": [{ "item": "diamond_leggings", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 4,
               "reward_exp": true
             }
           ]
@@ -337,59 +331,63 @@
       "total_exp_required": 150,
       "groups": [
         {
-          "num_to_select": 1,
+          "num_to_select": 2,
           "trades": [
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 14,
-                  "price_multiplier": 0.2
+                  "item": "hy:gold_coin",
+                  "quantity": 17,
+                  "price_multiplier": 0.05
                 }
               ],
-              "gives": [
-                {
-                  "item": "minecraft:diamond_leggings",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "enchant_with_levels",
-                      "treasure": false,
-                      "levels": { "min": 5, "max": 19 }
-                    }
-                  ]
-                }
-              ],
-              "trader_exp": 15,
-              "max_uses": 3,
+              "gives": [{ "item": "netherite_upgrade_smithing_template", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 5,
               "reward_exp": true
             },
-            {
+			{
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.2
+                  "item": "hy:gold_coin",
+                  "quantity": 15,
+                  "price_multiplier": 0.05
                 }
               ],
-              "gives": [
+              "gives": [{ "item": "	eye_armor_trim_smithing_template", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 5,
+              "reward_exp": true
+            },
+			{
+              "wants": [
                 {
-                  "item": "minecraft:diamond_boots",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "enchant_with_levels",
-                      "treasure": false,
-                      "levels": { "min": 5, "max": 19 }
-                    }
-                  ]
+                  "item": "hy:gold_coin",
+                  "quantity": 22,
+                  "price_multiplier": 0.05
                 }
               ],
-              "trader_exp": 15,
-              "max_uses": 3,
+              "gives": [{ "item": "vex_armor_trim_smithing_template", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 5,
+              "reward_exp": true
+            },
+			{
+              "wants": [
+                {
+                  "item": "hy:gold_coin",
+                  "quantity": 25,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [{ "item": "host_armor_trim_smithing_template", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 5,
               "reward_exp": true
             }
           ]
+        }
+        ]
         }
       ]
     },
@@ -397,12 +395,12 @@
       "total_exp_required": 250,
       "groups": [
         {
-          "num_to_select": 1,
+          "num_to_select": 3,
           "trades": [
-            {
+           {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
+                  "item": "hy:gold_coin",
                   "quantity": 8,
                   "price_multiplier": 0.2
                 }
@@ -427,8 +425,8 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 16,
+                  "item": "hy:gold_coin",
+                  "quantity": 14,
                   "price_multiplier": 0.2
                 }
               ],
@@ -448,9 +446,57 @@
               "trader_exp": 30,
               "max_uses": 3,
               "reward_exp": true
+            },
+			{
+              "wants": [
+                {
+                  "item": "hy:gold_coin",
+                  "quantity": 14,
+                  "price_multiplier": 0.2
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_leggings",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": { "min": 5, "max": 19 }
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 3,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "hy:gold_coin",
+                  "quantity": 8,
+                  "price_multiplier": 0.2
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_boots",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": { "min": 5, "max": 19 }
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 3,
+              "reward_exp": true
             }
-          ]
-        }
       ]
     }
   ]
