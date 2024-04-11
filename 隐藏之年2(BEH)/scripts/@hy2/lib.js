@@ -1,5 +1,16 @@
-import { world, system, EquipmentSlot } from "@minecraft/server";
-import { ActionFormData, ModalFormData } from "@minecraft/server-ui";
+import {
+  EquipmentSlot,
+  system,
+  world,
+  Entity,
+  Player,
+  ItemStack,
+} from "@minecraft/server";
+import {
+  MessageFormData,
+  ActionFormData,
+  ActionFormResponse,
+} from "@minecraft/server-ui";
 
 // 代码来自于myQuestApi 略加修改 添加了对中文的和多本任务书的支持
 export function questUi(questData) {
@@ -157,30 +168,38 @@ export function questUi(questData) {
   };
 }
 
+/**
+ * 生成一个 0~10 的整数。
+ * @returns {number} 一个 0~10 的整数。
+ */
 export function getRandomChance() {
-  let randomChance = Math.ceil(Math.random() * 10);
+  const randomChance = Math.ceil(Math.random() * 10);
   console.warn("[Rainy API]Random chance is " + randomChance);
   return randomChance;
 }
 
-export function getEquipmentItem(entity) {
-  let equipmentItem = entity
-    ?.getComponent("minecraft:equippable")
-    ?.getEquipment(EquipmentSlot.Mainhand);
-  return equipmentItem;
+/**
+ * 获取生物右手中的物品堆。
+ * @param {Entity | Player} entity 被查询的生物
+ * @return {ItemStack | undefined} 右手中的物品堆。
+ */
+export function getMainHandItem(entity) {
+  return entity
+    .getComponent("minecraft:equippable")
+    .getEquipment(EquipmentSlot.Mainhand);
 }
 
-export function getEquipmentItemTypeId(entity) {
-  let equipmentItem = entity
-    ?.getComponent("minecraft:equippable")
-    ?.getEquipment(EquipmentSlot.Mainhand);
-  return equipmentItem.typeId;
-}
-
+/**
+ * 移除特殊效果
+ * @param {Entity | Player} entity 被清除效果的生物
+ * @param {string} effectType 要移除的效果（或一类效果）。
+ */
 export function clearEffect(entity, effectType) {
   switch (effectType) {
     case "all":
-      entity.runCommand("effect @s clear");
+      entity.getEffects().forEach((effectType) => {
+        entity.removeEffect(effectType.typeId);
+      });
       break;
     case "bad":
       entity.removeEffect("slowness");
@@ -220,11 +239,17 @@ export function clearEffect(entity, effectType) {
   }
 }
 
-export function consumeDurability(item, value, player) {
-  let durability = item.getComponent("minecraft:durability");
+/**
+ * 损坏物品。
+ * @param {ItemStack} item 被损坏的物品。
+ * @param {number} value 要移除的耐久。
+ * @param {Entity} entity 破坏工具的生物。
+ */
+export function consumeDurability(item, value, entity) {
+  const durability = item.getComponent("minecraft:durability");
   if (durability === undefined) return item;
   if (durability.damage + value >= durability.maxDurability) {
-    player?.playSound("random.break");
+    entity.dimension.playSound("random.break", entity.location, {});
     return undefined;
   } else {
     durability.damage += value;
@@ -232,24 +257,32 @@ export function consumeDurability(item, value, player) {
   }
 }
 
-export function applyImitationDamage(player) {
-  let RANDOM_CHANCE = getRandomChance();
-  switch (RANDOM_CHANCE) {
+/**
+ * 使用仿制工具时使生物受伤。
+ * @param {Entity | Player} entity 使用仿制工具的生物。
+ */
+export function applyImitationDamage(entity) {
+  const isPlayer = entity instanceof Player;
+  switch (getRandomChance()) {
     case 1:
-      player?.applyDamage(2);
-      player?.sendMessage([
-        {
-          translate: "hy.message.imitation_damage.1",
-        },
-      ]);
+      entity.applyDamage(2);
+      if (isPlayer) {
+        entity.sendMessage([
+          {
+            translate: "hy.message.imitation_damage.1",
+          },
+        ]);
+      }
       break;
     case 2:
-      player?.applyDamage(8);
-      player?.sendMessage([
-        {
-          translate: "hy.message.imitation_damage.2",
-        },
-      ]);
+      entity.applyDamage(8);
+      if (isPlayer) {
+        entity.sendMessage([
+          {
+            translate: "hy.message.imitation_damage.2",
+          },
+        ]);
+      }
       break;
     default:
       break;

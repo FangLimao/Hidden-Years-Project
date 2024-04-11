@@ -1,4 +1,4 @@
-import { world, ItemStack } from "@minecraft/server";
+import { world, Player } from "@minecraft/server";
 import {
   MessageFormData,
   ActionFormData,
@@ -12,6 +12,10 @@ import {
   modItemData,
 } from "@hy2/mod-data.js";
 
+/**
+ * 显示书的 ui。
+ * @param {Player} player 向该玩家显示 ui。
+ */
 function showBookStory(player) {
   const story = new ActionFormData()
     .title("隐藏的故事")

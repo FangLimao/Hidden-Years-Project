@@ -1,12 +1,15 @@
-import { system, world } from "@minecraft/server";
-import { clearEffect, getRandomChance } from "@hy2/lib.js";
+import { system, world, Player } from "@minecraft/server";
+import { clearEffect, getRandomChance } from "./lib.js";
 
 system.afterEvents.scriptEventReceive.subscribe((event) => {
   const PLAYER = event.sourceEntity;
+  if (!(PLAYER instanceof Player)) {
+    console.error("[hy2]This script event should be called by a player.");
+    return;
+  }
   switch (event.id) {
     case "hy:ruby_boardsword":
-      let RANDOM_EXP = getRandomChance();
-      PLAYER.addExperience(RANDOM_EXP);
+      PLAYER.addExperience(getRandomChance());
       world.playSound("random.orb", PLAYER.location);
       break;
     case "hy:candy":
@@ -32,8 +35,7 @@ system.afterEvents.scriptEventReceive.subscribe((event) => {
           PLAYER.addLevels(2);
           break;
         case "marshmallow":
-          let RANDOM_CHANCE = getRandomChance();
-          if (RANDOM_CHANCE > 5) {
+          if (getRandomChance() > 5) {
             PLAYER.addEffect("levitation", 100);
           }
           break;
@@ -117,7 +119,7 @@ system.afterEvents.scriptEventReceive.subscribe((event) => {
       break;
     case "hy:medicine":
       console.error(
-        "[hy2]This script event is deprecated,please use event `hy:medicine_poison`",
+        "[hy2]This script event is deprecated,please use event `hy:medicine_potion`",
       );
       break;
     case "hy:ruby_apple":

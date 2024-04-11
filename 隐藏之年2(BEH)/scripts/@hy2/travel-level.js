@@ -1,26 +1,15 @@
-import { world } from "@minecraft/server";
+import { Player, world } from "@minecraft/server";
 
 world.afterEvents.entityDie.subscribe((event) => {
+  const DAMAGING_ENTITY = event.damageSource.damagingEntity;
   if (
     event.deadEntity.typeId === "hy:king_of_ruby" &&
-    event.damageSource.damagingEntity.typeId === "minecraft:player"
+    DAMAGING_ENTITY instanceof Player &&
+    DAMAGING_ENTITY.getDynamicProperty("hy:unlock_tl") !== true
   ) {
-    if (
-      event.damageSource.damagingEntity.getDynamicProperty("hy:unlock_tl") !==
-      true
-    ) {
-      event.damageSource.damagingEntity.setDynamicProperty(
-        "hy:unlock_tl",
-        true,
-      );
-      event.damageSource.damagingEntity.sendMessage([
-        { translate: "hy.message.unlock_level" },
-      ]);
-      event.damageSource.damagingEntity.setDynamicProperty(
-        "hy:travel_level",
-        0,
-      );
-    }
+    DAMAGING_ENTITY.setDynamicProperty("hy:unlock_tl", true);
+    DAMAGING_ENTITY.sendMessage([{ translate: "hy.message.unlock_level" }]);
+    DAMAGING_ENTITY.setDynamicProperty("hy:travel_level", 0);
   }
 });
 

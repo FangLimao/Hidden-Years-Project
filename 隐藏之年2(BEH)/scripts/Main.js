@@ -1,4 +1,4 @@
-import { world, ItemStack, EquipmentSlot } from "@minecraft/server";
+import { world, EquipmentSlot, Player } from "@minecraft/server";
 import { modItemData, mainQuest } from "@hy2/mod-data.js";
 import * as hyapi from "@hy2/lib.js";
 import "@hy2/event.js";
@@ -12,6 +12,7 @@ const VERSION_CODE = 2105;
 const LEAST_VERSION_CODE = world.getDynamicProperty("hy:version_code");
 
 world.afterEvents.playerSpawn.subscribe((event) => {
+  const PLAYER = event.player;
   if (VERSION_CODE !== LEAST_VERSION_CODE) {
     world.sendMessage([{ translate: "hy.update.index" }]);
     world.sendMessage([{ translate: "hy.update.version" }]);
@@ -19,22 +20,26 @@ world.afterEvents.playerSpawn.subscribe((event) => {
     world.setDynamicProperty("hy:version_code", VERSION_CODE);
   }
   if (event.player.getDynamicProperty("hy:get:quest") !== true) {
-    event.player.runCommandAsync("give @s hy:quest_book");
-    event.player.setDynamicProperty("hy:get_quest", true);
+    PLAYER.runCommandAsync("give @s hy:quest_book");
+    PLAYER.setDynamicProperty("hy:get_quest", true);
   }
 });
 
 world.afterEvents.playerBreakBlock.subscribe((event) => {
   const BLOCK = event.brokenBlockPermutation;
   const PLAYER = event.player;
-  let ITEM = hyapi.getEquipmentItem(PLAYER);
+  const DIMENSION = PLAYER.dimension;
   if (BLOCK.hasTag("hy:suspicious_ores") === true) {
     let RANDOM_CHANCE = hyapi.getRandomChance();
     if (RANDOM_CHANCE <= 8) {
-      PLAYER.dimension.spawnEntity("silverfish", PLAYER.location);
-      PLAYER.dimension.spawnEntity("silverfish", PLAYER.location);
+      DIMENSION.spawnEntity("silverfish", PLAYER.location);
+      DIMENSION.spawnEntity("silverfish", PLAYER.location);
     } else {
-      PLAYER.dimension.spawnEntity("hy:oldb", PLAYER.location);
+      DIMENSION.createExplosion(PLAYER.location, 3, {
+        allowUnderwater: false,
+        breaksBlocks: true,
+        causesFire: false,
+      });
     }
   }
   if (BLOCK.hasTag("hy:custom_ores") === true) {
@@ -45,20 +50,24 @@ world.afterEvents.playerBreakBlock.subscribe((event) => {
 
 // 法术爆发与法术精通
 world.afterEvents.entityHitEntity.subscribe((event) => {
-  let ITEM = hyapi.getEquipmentItem(event.damagingEntity);
+  const PLAYER = event.damagingEntity;
+  if (!(PLAYER instanceof Player)) {
+    return;
+  }
+  const ITEM = hyapi.getMainHandItem(PLAYER);
   if (ITEM?.typeId === "hy:ruby_boardsword") {
-    let RANDOM_EXP = hyapi.getRandomChance();
-    event.damagingEntity.addExperience(RANDOM_EXP);
+    PLAYER.addExperience(hyapi.getRandomChance());
   }
 });
 
 world.afterEvents.itemUse.subscribe((event) => {
   const PLAYER = event.source;
-  if (event.itemStack.hasTag("hy:magic_explode") === true) {
+  const ITEM = event.itemStack;
+  if (ITEM.hasTag("hy:magic_explode") === true) {
     if (PLAYER.level > 1) {
       PLAYER.addLevels(-1);
       PLAYER.runCommandAsync("function api/aoe/all");
-      switch (event.itemStack.typeId) {
+      switch (ITEM.typeId) {
         case "hy:diamond_bone":
         case "hy:gold_bone":
         case "hy:iron_bone":
@@ -93,6 +102,7 @@ world.afterEvents.itemUse.subscribe((event) => {
 
 world.afterEvents.itemUse.subscribe((event) => {
   const PLAYER = event.source;
+  const DIMENSION = PLAYER.dimension;
   switch (event.itemStack.typeId) {
     case "hy:medicine_1":
       PLAYER.addEffect("darkness");
@@ -100,38 +110,28 @@ world.afterEvents.itemUse.subscribe((event) => {
       PLAYER.removeEffect("night_vision");
       break;
     case "hy:ruby_bag":
-      PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
+      PLAYER.getComponent("minecraft:equippable")?.setEquipment(
         EquipmentSlot.Mainhand,
         undefined,
       );
-      let RANDOM_CHANCE = hyapi.getRandomChance();
-      switch (RANDOM_CHANCE) {
+      switch (hyapi.getRandomChance()) {
         case 1:
         case 2:
-          PLAYER.dimension.spawnItem(
-            modItemData.diamondBlockReward,
-            PLAYER.location,
-          );
+          DIMENSION.spawnItem(modItemData.diamondBlockReward, PLAYER.location);
           break;
         case 3:
         case 4:
         case 5:
-          PLAYER.dimension.spawnItem(
-            modItemData.goldBlockReward,
-            PLAYER.location,
-          );
+          DIMENSION.spawnItem(modItemData.goldBlockReward, PLAYER.location);
           break;
         case 6:
-          PLAYER.dimension.spawnItem(modItemData.scrapReward, PLAYER.location);
+          DIMENSION.spawnItem(modItemData.scrapReward, PLAYER.location);
           break;
         case 7:
-          PLAYER.dimension.spawnItem(
-            modItemData.templateReward,
-            PLAYER.location,
-          );
+          DIMENSION.spawnItem(modItemData.templateReward, PLAYER.location);
           break;
         default:
-          PLAYER.dimension.spawnItem(modItemData.appleReward, PLAYER.location);
+          DIMENSION.spawnItem(modItemData.appleReward, PLAYER.location);
       }
       break;
     case "hy:experience_calamity_bag":
@@ -139,11 +139,10 @@ world.afterEvents.itemUse.subscribe((event) => {
         EquipmentSlot.Mainhand,
         undefined,
       );
-      PLAYER.dimension.spawnEntity("hy:king_of_ruby", PLAYER.location);
+      DIMENSION.spawnEntity("hy:king_of_ruby", PLAYER.location);
       break;
     case "hy:ruby_runes":
-      let RANDOM_LEVEL = hyapi.getRandomChance();
-      PLAYER.addLevels(RANDOM_LEVEL);
+      PLAYER.addLevels(hyapi.getRandomChance());
       world.playSound("random.orb", PLAYER.location);
       PLAYER.addEffect("fire_resistance", 1200);
       PLAYER.addEffect("resistance", 1200);
@@ -183,9 +182,13 @@ world.afterEvents.itemUseOn.subscribe((event) => {
 });
 
 world.afterEvents.entityHitEntity.subscribe((event) => {
-  let ITEM = hyapi.getEquipmentItem(event.damagingEntity);
-  if (event.damagingEntity.typeId === "hy:king_of_ruby") {
-    event.hitEntity.runCommand("xp -15 @s");
+  const ITEM = hyapi.getMainHandItem(event.damagingEntity);
+  const HIT_ENTITY = event.hitEntity;
+  if (
+    event.damagingEntity.typeId === "hy:king_of_ruby" &&
+    HIT_ENTITY instanceof Player
+  ) {
+    HIT_ENTITY.addExperience(-15);
   }
   if (ITEM?.hasTag("hy:imitation_tools")) {
     hyapi.applyImitationDamage(event.damagingEntity);
