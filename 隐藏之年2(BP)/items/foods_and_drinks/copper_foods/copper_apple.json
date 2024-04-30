@@ -22,9 +22,7 @@
       },
       "minecraft:hover_text_color": "aqua",
       "minecraft:tags": {
-        "tags": [
-          "hy:copper_foods"
-        ]
+        "tags": ["hy:copper_foods"]
       }
     }
   }
