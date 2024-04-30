@@ -1,38 +1,24 @@
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.80",
   "minecraft:item": {
     "description": {
       "identifier": "hy:chocolate_paste",
-      "category": "equipment"
+      "menu_category": {
+        "group": "itemGroup.name.miscFood",
+        "category": "equipment"
+      }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "hy.chocolate_paste"
-      },
+      "minecraft:icon": "hy.chocolate_paste",
       "minecraft:display_name": {
         "value": "hy.item.chocolate_paste"
-      },
-      "minecraft:creative_category": {
-        "parent": "itemGroup.name.miscFood",
-        "category": "equipment"
       },
       "minecraft:use_animation": "eat",
       "minecraft:use_duration": 1.4,
       "minecraft:food": {
         "nutrition": 10,
         "can_always_eat": true,
-        "saturation_modifier": 0.6,
-        "on_consume": {
-          "event": "hy.on_eat",
-          "target": "self"
-        }
-      }
-    },
-    "events": {
-      "hy.on_eat": {
-        "run_command": {
-          "command": ["scriptevent hy:candy chocolate_paste"]
-        }
+        "saturation_modifier": 0.6
       }
     }
   }

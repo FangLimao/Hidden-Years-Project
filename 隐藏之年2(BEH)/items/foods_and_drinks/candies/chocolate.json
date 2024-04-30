@@ -1,20 +1,17 @@
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.80",
   "minecraft:item": {
     "description": {
       "identifier": "hy:chocolate",
-      "category": "equipment"
+      "menu_category": {
+        "group": "itemGroup.name.miscFood",
+        "category": "equipment"
+      }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "hy.chocolate"
-      },
+      "minecraft:icon": "hy.chocolate",
       "minecraft:display_name": {
         "value": "hy.item.chocolate"
-      },
-      "minecraft:creative_category": {
-        "parent": "itemGroup.name.miscFood",
-        "category": "equipment"
       },
       "minecraft:use_animation": "eat",
       "minecraft:use_duration": 1.4,
