@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "hy:medicine_pack",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:icon": "hy.medicines.medicine_pack",
+      "minecraft:durability": {
+        "max_durability": 5
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:display_name": {
+        "value": "hy.item.medicines.medicine_pack"
+      },
+      "minecraft:cooldown": {
+        "category": "hy.medicine_pack",
+        "duration": 30
+      },
+      "minecraft:tags": {
+        "tags": [
+          "hy:durability_use"
+        ]
+      }
+    }
+  }
+}

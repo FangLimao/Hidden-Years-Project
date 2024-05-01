@@ -269,7 +269,28 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
         PLAYER.addEffect("health_boost", 600, {
           amplifier: 4,
         });
+        break;      
+      default:
         break;
+    }
+  }
+});
+
+/** 道具相关
+ * 为物品添加`hy:durability_use`设置为由耐久值控制使用次数的物品
+ *  @todo 为物品添加此类标签
+ */
+mc.world.afterEvents.itemUse.subscribe((event) => {
+  const ITEM: mc.ItemStack = event.itemStack;
+  const PLAYER: mc.Player = event.source;
+  if (ITEM.hasTag("hy:durability_use")) {
+    const NEW_ITEM = hy.consumeDurability(ITEM, 1, PLAYER);
+    PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
+      mc.EquipmentSlot.Mainhand,
+      NEW_ITEM,
+    );
+    /** 在这下面添加物品的使用效果 */
+    switch (ITEM.typeId) {
       case "hy:bandage":
         PLAYER.addEffect("regeneration", 1200);
         PLAYER.addEffect("resistance", 600);
@@ -282,7 +303,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
         PLAYER.addEffect("fire_resistance", 600);
         PLAYER.addEffect("instant_health", 10);
         PLAYER.playSound("use.cloth");
-        break;
+        break;   
       default:
         break;
     }
