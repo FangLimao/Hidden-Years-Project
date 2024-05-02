@@ -21,7 +21,7 @@ for (let i = 0; i <= 10; i++) {
   hy.createLetterForm(
     hytext.HyLetterTitle[i],
     hytext.HyLetterBody[i],
-    `hy:letter_${i}`,
+    `hy:letter_${i}`
   );
 }
 
@@ -33,7 +33,7 @@ mc.world.afterEvents.playerSpawn.subscribe((event) => {
     hydata.HyRewardTypes.questBook1st.lockMode = mc.ItemLockMode.inventory;
     PLAYER.dimension.spawnItem(
       hydata.HyRewardTypes.questBook1st,
-      PLAYER.location,
+      PLAYER.location
     );
     PLAYER.addTag("hy:get_quest_book");
   }
@@ -48,13 +48,13 @@ mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
     const NEW_ITEM = hy.consumeDurability(ITEM, 1, ENTITY);
     ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM,
+      NEW_ITEM
     );
   } else if (ITEM?.hasTag("hy:custom_weapons")) {
     const NEW_ITEM = hy.consumeDurability(ITEM, 2, ENTITY);
     ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM,
+      NEW_ITEM
     );
   }
   if (ITEM?.hasTag("hy:imitation_tools")) {
@@ -69,14 +69,14 @@ mc.world.afterEvents.entityHitEntity.subscribe((event) => {
     const NEW_ITEM = hy.consumeDurability(ITEM, 1);
     ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM,
+      NEW_ITEM
     );
   }
   if (ITEM?.hasTag("hy:custom_tools")) {
     const NEW_ITEM = hy.consumeDurability(ITEM, 2);
     ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM,
+      NEW_ITEM
     );
   }
   if (ITEM?.hasTag("hy:imitation_tools")) {
@@ -103,7 +103,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
       hy.startCooldown(NEW_ITEM, PLAYER);
       PLAYER.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM,
+        NEW_ITEM
       );
       PLAYER.addLevels(-1);
       const ALL_OPTION: mc.EntityQueryOptions = {
@@ -127,7 +127,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
             PLAYER.dimension,
             SKELETON_OPINION,
             "weakness",
-            300,
+            300
           );
           break;
         case "hy:flash_metal_boardsword":
@@ -163,7 +163,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
             PLAYER.dimension,
             ARTHROPOD_OPINION,
             "weakness",
-            300,
+            300
           );
           break;
         case "hy:amethyst_boardsword":
@@ -206,7 +206,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
   if (ITEM.hasTag("hy:single_use")) {
     PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      undefined,
+      undefined
     );
     /** 在这下面添加物品的使用效果 */
     switch (ITEM.typeId) {
@@ -216,7 +216,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
           case 2:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.diamondBlock,
-              PLAYER.location,
+              PLAYER.location
             );
             break;
           case 3:
@@ -224,25 +224,25 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
           case 5:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.goldBlock,
-              PLAYER.location,
+              PLAYER.location
             );
             break;
           case 6:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.scrap,
-              PLAYER.location,
+              PLAYER.location
             );
             break;
           case 7:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.template,
-              PLAYER.location,
+              PLAYER.location
             );
             break;
           default:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.apple,
-              PLAYER.location,
+              PLAYER.location
             );
         }
         break;
@@ -269,7 +269,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
         PLAYER.addEffect("health_boost", 600, {
           amplifier: 4,
         });
-        break;      
+        break;
       default:
         break;
     }
@@ -287,7 +287,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
     const NEW_ITEM = hy.consumeDurability(ITEM, 1, PLAYER);
     PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM,
+      NEW_ITEM
     );
     /** 在这下面添加物品的使用效果 */
     switch (ITEM.typeId) {
@@ -303,7 +303,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
         PLAYER.addEffect("fire_resistance", 600);
         PLAYER.addEffect("instant_health", 10);
         PLAYER.playSound("use.cloth");
-        break;   
+        break;
       default:
         break;
     }
@@ -438,7 +438,10 @@ mc.world.afterEvents.itemCompleteUse.subscribe((event) => {
       PLAYER.addEffect("fatal_poison", 1200);
       break;
     case "hy:mineral_fuel_metal":
-      PLAYER.dimension.spawnItem(hydata.HyRewardTypes.nightmareFuel,PLAYER.location);
+      PLAYER.dimension.spawnItem(
+        hydata.HyRewardTypes.nightmareFuel,
+        PLAYER.location
+      );
       PLAYER.addEffect("fatal_poison", 800, {
         amplifier: 1,
       });
@@ -465,7 +468,13 @@ mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
   if (BLOCK.hasTag("hy:experience_ores")) {
     PLAYER.dimension.spawnEntity("xp_orb", PLAYER.location);
   }
-  /** 使用`hy:custom_ores`标签来标记一个方块为可疑的矿石 */
+  /** 使用`hy:need_crowbar`标签来标记一个方块需要撬棍才能生成掉落物
+   * @todo 为方块添加此类标签
+   */
+  if (BLOCK.hasTag("hy:need_crowbar") && ITEM.hasTag("minecraft:is_pickaxe")) {
+    PLAYER.sendMessage([{ translate: "hy.message.need_crowbar" }]);
+  }
+  /** 使用`hy:suspicious_ores`标签来标记一个方块为可疑的矿石 */
   if (
     BLOCK.hasTag("hy:suspicious_ores") &&
     ITEM.hasTag("minecraft:is_pickaxe")
