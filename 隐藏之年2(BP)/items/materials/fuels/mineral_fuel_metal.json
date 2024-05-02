@@ -10,9 +10,9 @@
     "components": {
       "minecraft:use_animation": "eat",
       "minecraft:use_modifiers": {
-       "use_duration": 1.6,
-       "movement_modifier": 0.5
-     },
+        "use_duration": 1.6,
+        "movement_modifier": 0.5
+      },
       "minecraft:food": {
         "nutrition": 8,
         "saturation_modifier": 0.8
@@ -26,9 +26,7 @@
       "minecraft:icon": "hy.fuel_metal",
       "minecraft:glint": true,
       "minecraft:tags": {
-        "tags": [
-          "hy:fuel_metal"
-        ]
+        "tags": ["hy:fuel_metal"]
       }
     }
   }

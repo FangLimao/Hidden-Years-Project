@@ -24,20 +24,9 @@
         "duration": 500
       },
       "minecraft:on_use": {
-        "on_use": {
-          "event": "hy.on_use",
-          "target": "self"
-        }
       },
-      "minecraft:hover_text_color": "light_purple"
-    },
-    "events": {
-      "hy.on_use": {
-        "damage": {
-          "type": "magic",
-          "amount": 1
-        }
-      }
+      "minecraft:hover_text_color": "light_purple",
+      "tag:hy:single_use": {}
     }
   }
 }

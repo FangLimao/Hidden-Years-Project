@@ -21,9 +21,7 @@
         "duration": 30
       },
       "minecraft:tags": {
-        "tags": [
-          "hy:durability_use"
-        ]
+        "tags": ["hy:durability_use"]
       }
     }
   }

@@ -21,10 +21,7 @@
         "duration": 20
       },
       "minecraft:tags": {
-        "tags": [
-         "hy:medicine_poison",
-         "hy:durability_use"
-        ]        
+        "tags": ["hy:medicine_poison", "hy:durability_use"]
       }
     }
   }

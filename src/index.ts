@@ -21,7 +21,7 @@ for (let i = 0; i <= 10; i++) {
   hy.createLetterForm(
     hytext.HyLetterTitle[i],
     hytext.HyLetterBody[i],
-    `hy:letter_${i}`
+    `hy:letter_${i}`,
   );
 }
 
@@ -33,7 +33,7 @@ mc.world.afterEvents.playerSpawn.subscribe((event) => {
     hydata.HyRewardTypes.questBook1st.lockMode = mc.ItemLockMode.inventory;
     PLAYER.dimension.spawnItem(
       hydata.HyRewardTypes.questBook1st,
-      PLAYER.location
+      PLAYER.location,
     );
     PLAYER.addTag("hy:get_quest_book");
   }
@@ -48,13 +48,13 @@ mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
     const NEW_ITEM = hy.consumeDurability(ITEM, 1, ENTITY);
     ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM
+      NEW_ITEM,
     );
   } else if (ITEM?.hasTag("hy:custom_weapons")) {
     const NEW_ITEM = hy.consumeDurability(ITEM, 2, ENTITY);
     ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM
+      NEW_ITEM,
     );
   }
   if (ITEM?.hasTag("hy:imitation_tools")) {
@@ -69,14 +69,14 @@ mc.world.afterEvents.entityHitEntity.subscribe((event) => {
     const NEW_ITEM = hy.consumeDurability(ITEM, 1);
     ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM
+      NEW_ITEM,
     );
   }
   if (ITEM?.hasTag("hy:custom_tools")) {
     const NEW_ITEM = hy.consumeDurability(ITEM, 2);
     ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM
+      NEW_ITEM,
     );
   }
   if (ITEM?.hasTag("hy:imitation_tools")) {
@@ -101,18 +101,18 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
     hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "nausea", 600, {
       amplifier: 1,
     });
-    hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "wither", 6);   
+    hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "wither", 6);
     PLAYER.removeTag("hy.tetanus_attacker");
   }
   /** 法器相关
-  * 通过`hy:magic_explode`来使一个物品可以进行法术爆发/精通
-  * 法术爆发/精通的实现
-  * 法术爆发是指在限定范围内(12格)对所有生物造成限定伤害(10点)
-  * 法术精通是指在更远的范围内(20格)对精通的生物造成限定伤害(8点) 并给予其虚弱15s
-  * 法术精通与爆发同时进行 需要玩家有1级经验
-  * 每次爆发消耗1耐久、15经验 并且有类型为`hy.magic_explode`的5秒冷却
-  * 爆发开始后5秒内玩家不受任何原因的爆发伤害
-  */  
+   * 通过`hy:magic_explode`来使一个物品可以进行法术爆发/精通
+   * 法术爆发/精通的实现
+   * 法术爆发是指在限定范围内(12格)对所有生物造成限定伤害(10点)
+   * 法术精通是指在更远的范围内(20格)对精通的生物造成限定伤害(8点) 并给予其虚弱15s
+   * 法术精通与爆发同时进行 需要玩家有1级经验
+   * 每次爆发消耗1耐久、15经验 并且有类型为`hy.magic_explode`的5秒冷却
+   * 爆发开始后5秒内玩家不受任何原因的爆发伤害
+   */
   if (ITEM.hasTag("hy:magic_explode")) {
     if (PLAYER.level > 1) {
       PLAYER.addTag("hy.magic_explode");
@@ -120,7 +120,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
       hy.startCooldown(NEW_ITEM, PLAYER);
       PLAYER.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM
+        NEW_ITEM,
       );
       PLAYER.addLevels(-1);
       const ALL_OPTION: mc.EntityQueryOptions = {
@@ -144,7 +144,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
             PLAYER.dimension,
             SKELETON_OPINION,
             "weakness",
-            300
+            300,
           );
           break;
         case "hy:flash_metal_boardsword":
@@ -180,7 +180,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
             PLAYER.dimension,
             ARTHROPOD_OPINION,
             "weakness",
-            300
+            300,
           );
           break;
         case "hy:amethyst_boardsword":
@@ -223,7 +223,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
   if (ITEM.hasTag("hy:single_use")) {
     PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      undefined
+      undefined,
     );
     /** 在这下面添加物品的使用效果 */
     switch (ITEM.typeId) {
@@ -233,7 +233,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
           case 2:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.diamondBlock,
-              PLAYER.location
+              PLAYER.location,
             );
             break;
           case 3:
@@ -241,25 +241,25 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
           case 5:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.goldBlock,
-              PLAYER.location
+              PLAYER.location,
             );
             break;
           case 6:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.scrap,
-              PLAYER.location
+              PLAYER.location,
             );
             break;
           case 7:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.template,
-              PLAYER.location
+              PLAYER.location,
             );
             break;
           default:
             PLAYER.dimension.spawnItem(
               hydata.HyRewardTypes.apple,
-              PLAYER.location
+              PLAYER.location,
             );
         }
         break;
@@ -304,7 +304,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
     const NEW_ITEM = hy.consumeDurability(ITEM, 1, PLAYER);
     PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
       mc.EquipmentSlot.Mainhand,
-      NEW_ITEM
+      NEW_ITEM,
     );
     /** 在这下面添加物品的使用效果 */
     switch (ITEM.typeId) {
@@ -457,7 +457,7 @@ mc.world.afterEvents.itemCompleteUse.subscribe((event) => {
     case "hy:mineral_fuel_metal":
       PLAYER.dimension.spawnItem(
         hydata.HyRewardTypes.nightmareFuel,
-        PLAYER.location
+        PLAYER.location,
       );
       PLAYER.addEffect("fatal_poison", 800, {
         amplifier: 1,

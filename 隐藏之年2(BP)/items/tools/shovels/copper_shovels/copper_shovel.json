@@ -61,8 +61,7 @@
       "minecraft:creative_category": {
         "parent": "itemGroup.name.shovel"
       },
-      "minecraft:weapon": {
-      },
+      "minecraft:weapon": {},
       "tag:minecraft:is_shovel": {},
       "tag:hy:custom_tools": {}
     },

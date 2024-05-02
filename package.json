@@ -4,7 +4,8 @@
   "description": "A Minecraft addon",
   "private": true,
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --format=esm --external:@minecraft/server --external:@minecraft/server-ui --minify-whitespace --minify-syntax \"--outfile=./隐藏之年2(BP)/scripts/index.js\""
+    "build": "esbuild src/index.ts --bundle --format=esm --external:@minecraft/server --external:@minecraft/server-ui --minify-whitespace --minify-syntax \"--outfile=./隐藏之年2(BP)/scripts/index.js\"",
+    "prettier_build": "tsc && prettier --write ."
   },
   "author": "FangLimao",
   "license": "BSD-3-Clause",

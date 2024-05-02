@@ -25,9 +25,7 @@
         "using_converts_to": "glass_bottle"
       },
       "minecraft:tags": {
-       "tags": [
-        "hy:medicine_potion"
-       ]
+        "tags": ["hy:medicine_potion"]
       }
     }
   }

@@ -12,7 +12,7 @@
       "minecraft:icon": "hy.ruby_apple",
       "minecraft:display_name": {
         "value": "hy.item.ruby_apple"
-      },      
+      },
       "minecraft:use_animation": "eat",
       "minecraft:use_duration": 1.4,
       "minecraft:food": {

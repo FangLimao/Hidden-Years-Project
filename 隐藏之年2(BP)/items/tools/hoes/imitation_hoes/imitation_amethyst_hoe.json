@@ -114,8 +114,7 @@
           }
         ]
       },
-      "minecraft:weapon": {
-      },
+      "minecraft:weapon": {},
       "tag:hy:imitation_tools": {},
       "tag:minecraft:is_hoe": {},
       "tag:hy:custom_tools": {}

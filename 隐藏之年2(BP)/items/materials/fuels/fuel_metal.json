@@ -10,9 +10,9 @@
     "components": {
       "minecraft:use_animation": "eat",
       "minecraft:use_modifiers": {
-       "use_duration": 1.6,
-       "movement_modifier": 0.5
-     },
+        "use_duration": 1.6,
+        "movement_modifier": 0.5
+      },
       "minecraft:display_name": {
         "value": "hy.item.fuel_metal"
       },
@@ -23,9 +23,7 @@
       },
       "minecraft:icon": "hy.fuel_metal",
       "minecraft:tags": {
-        "tags": [
-          "hy:fuel_metal"
-        ]
+        "tags": ["hy:fuel_metal"]
       }
     }
   }

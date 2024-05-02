@@ -25,9 +25,7 @@
       },
       "minecraft:icon": "hy.fuel_metal",
       "minecraft:tags": {
-        "tags": [
-          "hy:fuel_metal"
-        ]
+        "tags": ["hy:fuel_metal"]
       }
     }
   }
