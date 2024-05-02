@@ -12,9 +12,7 @@ mc.system.runInterval(() => {
   });
 }, 18000);
 
-/** 处理阅读物及任务书
- * @todo 迁移数驱文件
- */
+/** 处理阅读物及任务书 */
 hy.createQuestBook(hydata.HyQuest1st);
 hy.createStoryForm("hy:story_book");
 for (let i = 0; i <= 10; i++) {
@@ -214,9 +212,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
 });
 
 /** 道具相关
- * 为物品添加`hy:single_use`设置为只能使用一次的物品
- *  @todo 为物品添加此类标签
- */
+ * 为物品添加`hy:single_use`设置为只能使用一次的物品 */
 mc.world.afterEvents.itemUse.subscribe((event) => {
   const ITEM: mc.ItemStack = event.itemStack;
   const PLAYER: mc.Player = event.source;
@@ -294,9 +290,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
 });
 
 /** 道具相关
- * 为物品添加`hy:durability_use`设置为由耐久值控制使用次数的物品
- *  @todo 为物品添加此类标签
- */
+ * 为物品添加`hy:durability_use`设置为由耐久值控制使用次数的物品 */
 mc.world.afterEvents.itemUse.subscribe((event) => {
   const ITEM: mc.ItemStack = event.itemStack;
   const PLAYER: mc.Player = event.source;

@@ -14,20 +14,6 @@
       },
       "minecraft:creative_category": {
         "parent": "items"
-      },
-      "minecraft:on_use": {
-        "on_use": {
-          "event": "hy.summon_lightning_bolt",
-          "target": "self"
-        }
-      }
-    },
-    "events": {
-      "hy.summon_lightning_bolt": {
-        "run_command": {
-          "command": ["function gameplay/items/metal_star"],
-          "target": "self"
-        }
       }
     }
   }
