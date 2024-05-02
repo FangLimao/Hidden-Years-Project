@@ -84,16 +84,7 @@ mc.world.afterEvents.entityHitEntity.subscribe((event) => {
   }
 });
 
-/** 范围伤害
- * 法器相关
- * 通过`hy:magic_explode`来使一个物品可以进行法术爆发/精通
- * 法术爆发/精通的实现
- * 法术爆发是指在限定范围内(12格)对所有生物造成限定伤害(10点)
- * 法术精通是指在更远的范围内(20格)对精通的生物造成限定伤害(8点) 并给予其虚弱15s
- * 法术精通与爆发同时进行 需要玩家有1级经验
- * 每次爆发消耗1耐久、15经验 并且有类型为`hy.magic_explode`的5秒冷却
- * 爆发开始后5秒内玩家不受任何原因的爆发伤害
- */
+/** 范围伤害 */
 mc.world.afterEvents.itemUse.subscribe((event) => {
   const PLAYER = event.source;
   const ITEM = event.itemStack;
@@ -110,8 +101,18 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
     hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "nausea", 600, {
       amplifier: 1,
     });
-    hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "wither", 6);
+    hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "wither", 6);   
+    PLAYER.removeTag("hy.tetanus_attacker");
   }
+  /** 法器相关
+  * 通过`hy:magic_explode`来使一个物品可以进行法术爆发/精通
+  * 法术爆发/精通的实现
+  * 法术爆发是指在限定范围内(12格)对所有生物造成限定伤害(10点)
+  * 法术精通是指在更远的范围内(20格)对精通的生物造成限定伤害(8点) 并给予其虚弱15s
+  * 法术精通与爆发同时进行 需要玩家有1级经验
+  * 每次爆发消耗1耐久、15经验 并且有类型为`hy.magic_explode`的5秒冷却
+  * 爆发开始后5秒内玩家不受任何原因的爆发伤害
+  */  
   if (ITEM.hasTag("hy:magic_explode")) {
     if (PLAYER.level > 1) {
       PLAYER.addTag("hy.magic_explode");
