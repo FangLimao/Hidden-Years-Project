@@ -84,7 +84,8 @@ mc.world.afterEvents.entityHitEntity.subscribe((event) => {
   }
 });
 
-/** 法器相关
+/** 范围伤害
+ * 法器相关
  * 通过`hy:magic_explode`来使一个物品可以进行法术爆发/精通
  * 法术爆发/精通的实现
  * 法术爆发是指在限定范围内(12格)对所有生物造成限定伤害(10点)
@@ -95,10 +96,25 @@ mc.world.afterEvents.entityHitEntity.subscribe((event) => {
  */
 mc.world.afterEvents.itemUse.subscribe((event) => {
   const PLAYER = event.source;
-  if (event.itemStack.hasTag("hy:magic_explode") === true) {
+  const ITEM = event.itemStack;
+  /** 破伤风伤害 */
+  if (ITEM.hasTag("hy:tetanus_item")) {
+    PLAYER.addTag("hy.tetanus_attacker");
+    const TETANUS_OPINION: mc.EntityQueryOptions = {
+      location: PLAYER.location,
+      maxDistance: 4,
+      excludeTags: ["hy.tetanus_attacker"],
+      excludeFamilies: ["noaoe"],
+    };
+    hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "poison", 300);
+    hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "nausea", 600, {
+      amplifier: 1,
+    });
+    hy.affectEntities(PLAYER.dimension, TETANUS_OPINION, "wither", 6);
+  }
+  if (ITEM.hasTag("hy:magic_explode")) {
     if (PLAYER.level > 1) {
       PLAYER.addTag("hy.magic_explode");
-      let ITEM = hy.getEquipmentItem(PLAYER);
       const NEW_ITEM = hy.consumeDurability(ITEM, 1, PLAYER);
       hy.startCooldown(NEW_ITEM, PLAYER);
       PLAYER.getComponent("minecraft:equippable")?.setEquipment(
@@ -113,7 +129,7 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
         excludeFamilies: ["noaoe"],
       };
       hy.damageEntities(PLAYER.dimension, ALL_OPTION, 10);
-      switch (event.itemStack.typeId) {
+      switch (ITEM.typeId) {
         case "hy:diamond_bone":
         case "hy:gold_bone":
         case "hy:iron_bone":
