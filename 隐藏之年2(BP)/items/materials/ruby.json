@@ -1,19 +1,16 @@
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.80",
   "minecraft:item": {
     "description": {
       "identifier": "hy:ruby",
-      "category": "items"
+      "menu_category": {
+        "category": "items"
+      }
     },
     "components": {
-      "minecraft:icon": {
-        "texture": "hy.ruby"
-      },
+      "minecraft:icon": "hy.ruby",
       "minecraft:display_name": {
         "value": "hy.item.ruby"
-      },
-      "minecraft:creative_category": {
-        "category": "items"
       },
       "minecraft:hover_text_color": "yellow"
     }
