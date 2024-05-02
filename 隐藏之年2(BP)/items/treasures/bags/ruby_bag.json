@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.60",
+  "format_version": "1.20.80",
   "minecraft:item": {
     "description": {
       "identifier": "hy:ruby_bag",
@@ -13,7 +13,12 @@
       "minecraft:display_name": {
         "value": "hy.item.ruby_bag"
       },
-      "minecraft:hover_text_color": "yellow"
+      "minecraft:hover_text_color": "yellow",
+      "minecraft:tags": {
+        "tags": [
+         "hy:single_use"
+        ]
+      }
     }
   }
 }

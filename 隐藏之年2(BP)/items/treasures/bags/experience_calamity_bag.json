@@ -1,5 +1,5 @@
 {
-  "format_version": "1.20.60",
+  "format_version": "1.20.80",
   "minecraft:item": {
     "description": {
       "identifier": "hy:experience_calamity_bag",
@@ -13,7 +13,12 @@
       "minecraft:display_name": {
         "value": "hy.item.calamity_bag.experience"
       },
-      "minecraft:hover_text_color": "light_purple"
+      "minecraft:hover_text_color": "light_purple",
+      "minecraft:tags": {
+        "tags": [
+         "hy:single_use"
+        ]
+      }
     }
   }
 }
