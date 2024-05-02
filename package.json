@@ -1,17 +1,18 @@
 {
-  "name": "HiddenYears2",
+  "name": "hy2",
   "version": "1.0.0",
   "description": "A Minecraft addon",
   "private": true,
   "scripts": {
-    "build": "tsc && prettier --write ."
+    "build": "esbuild src/index.ts --bundle --format=esm --external:@minecraft/server --external:@minecraft/server-ui --minify-whitespace --minify-syntax \"--outfile=./隐藏之年2(BP)/scripts/index.js\""
   },
   "author": "FangLimao",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@minecraft/server": "^1.11.0-beta.1.20.80-stable",
-    "@minecraft/server-ui": "^1.2.0-beta.1.20.80-stable",
-    "@minecraft/vanilla-data": "^1.20.80",
-    "typescript": "^5.4.3"
+    "@minecraft/server": "1.11.0-beta.1.20.80-stable",
+    "@minecraft/server-ui": "1.2.0-beta.1.20.80-stable",
+    "@minecraft/vanilla-data": "1.20.80",
+    "typescript": "^5.4.5",
+    "esbuild": "^0.20.2"
   }
 }

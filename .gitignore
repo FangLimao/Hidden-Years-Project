@@ -5,9 +5,10 @@ builds
 logs/
 node_modules/
 output/
-隐藏之年2(BP)/scripts
+**/*.js
 
 package-lock.json
+pnpm-lock.yaml
 
 
 *.mcpack
