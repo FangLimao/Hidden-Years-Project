@@ -315,6 +315,34 @@ mc.world.afterEvents.itemUse.subscribe((event) => {
         PLAYER.addEffect("instant_health", 10);
         PLAYER.playSound("use.cloth");
         break;
+      case "hy:copper_horn":
+        PLAYER.addTag("hy.horn_user");
+        const HORN_OPINION: mc.EntityQueryOptions = {
+          location: PLAYER.location,
+          maxDistance: 20,
+          excludeTags: ["hy.horn_user"],
+          excludeFamilies: ["noaoe"],
+        };
+        if (PLAYER.isSneaking) {
+          PLAYER.dimension.playSound("copper_horn.sneak", PLAYER.location);
+          hy.affectEntities(PLAYER.dimension, HORN_OPINION, "slowness", 300, {
+            amplifier: 2,
+          });
+          PLAYER.removeEffect("slowness");
+          PLAYER.addEffect("speed", 300, {
+            amplifier: 2,
+          });
+        } else {
+          PLAYER.dimension.playSound("copper_horn.walk", PLAYER.location);
+          hy.affectEntities(PLAYER.dimension, HORN_OPINION, "speed", 300, {
+            amplifier: 2,
+          });
+          PLAYER.removeEffect("speed");
+          PLAYER.addEffect("slowness", 300, {
+            amplifier: 2,
+          });
+        }
+        break;
       default:
         break;
     }

@@ -23,8 +23,7 @@
         "category": "hy.badge_cooldown",
         "duration": 100
       },
-      "minecraft:on_use": {
-      },
+      "minecraft:on_use": {},
       "minecraft:hover_text_color": "light_purple",
       "tag:hy:single_use": {}
     }
