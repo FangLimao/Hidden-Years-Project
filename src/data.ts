@@ -67,6 +67,7 @@ export const HyRewardTypes = {
   scrap: new mc.ItemStack("minecraft:netherite_scrap"),
   template: new mc.ItemStack("minecraft:netherite_upgrade_smithing_template"),
   apple: new mc.ItemStack("minecraft:enchanted_golden_apple", 5),
+  nightmareFuel : new mc.ItemStack("hy:nightmare_fuel_metal", 2),
 };
 
 /**

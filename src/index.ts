@@ -438,6 +438,7 @@ mc.world.afterEvents.itemCompleteUse.subscribe((event) => {
       PLAYER.addEffect("fatal_poison", 1200);
       break;
     case "hy:mineral_fuel_metal":
+      PLAYER.dimension.spawnItem(hydata.HyRewardTypes.nightmareFuel,PLAYER.location);
       PLAYER.addEffect("fatal_poison", 800, {
         amplifier: 1,
       });

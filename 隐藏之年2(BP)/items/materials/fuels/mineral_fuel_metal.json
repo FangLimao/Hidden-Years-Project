@@ -1,19 +1,21 @@
 {
-  "format_version": "1.20.0",
+  "format_version": "1.20.80",
   "minecraft:item": {
     "description": {
       "identifier": "hy:mineral_fuel_metal",
-      "category": "items"
+      "menu_category": {
+        "category": "items"
+      }
     },
     "components": {
       "minecraft:use_animation": "eat",
-      "minecraft:use_duration": 1.4,
+      "minecraft:use_modifiers": {
+       "use_duration": 1.6,
+       "movement_modifier": 0.5
+     },
       "minecraft:food": {
         "nutrition": 8,
-        "saturation_modifier": 0.8,
-        "on_consume": {
-          "event": "hy.on_eat"
-        }
+        "saturation_modifier": 0.8
       },
       "minecraft:display_name": {
         "value": "hy.item.mineral_fuel_metal"
@@ -21,30 +23,11 @@
       "minecraft:fuel": {
         "duration": 1000
       },
-      "minecraft:icon": {
-        "texture": "hy.fuel_metal"
-      },
-      "minecraft:creative_category": {
-        "category": "items"
-      },
-      "minecraft:foil": true,
-      "tag:hy:fuel_metal": {},
-      "tag:dict:fuels": {},
-      "tag:dict:fuels.metal": {}
-    },
-    "events": {
-      "hy.on_eat": {
-        "sequence": [
-          {
-            "run_command": {
-              "command": ["give @s hy:nightmare_fuel_metal 2"]
-            }
-          },
-          {
-            "run_command": {
-              "command": ["scriptevent hy:fuel_metal mineral"]
-            }
-          }
+      "minecraft:icon": "hy.fuel_metal",
+      "minecraft:glint": true,
+      "minecraft:tags": {
+        "tags": [
+          "hy:fuel_metal"
         ]
       }
     }
