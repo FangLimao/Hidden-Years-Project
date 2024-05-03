@@ -10,9 +10,7 @@
         "category": "hy.magic_explode",
         "duration": 10
       },
-      "minecraft:on_use": {
-        
-      },
+      "minecraft:on_use": {},
       "minecraft:hover_text_color": "yellow",
       "minecraft:display_name": {
         "value": "hy.item.amethyst_boardsword"
@@ -112,9 +110,7 @@
           }
         ]
       },
-      "minecraft:weapon": {
-        
-      },
+      "minecraft:weapon": {},
       "tag:hy:custom_weapons": {},
       "tag:hy:magic_explode": {},
       "tag:minecraft:is_sword": {},

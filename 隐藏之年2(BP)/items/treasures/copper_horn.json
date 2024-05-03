@@ -23,8 +23,7 @@
       "minecraft:icon": {
         "texture": "hy.copper_horn"
       },
-      "minecraft:on_use": {
-      },
+      "minecraft:on_use": {},
       "tag:hy:durability_use": {}
     }
   }

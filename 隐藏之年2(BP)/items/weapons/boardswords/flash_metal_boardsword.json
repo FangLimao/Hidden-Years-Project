@@ -113,12 +113,8 @@
           }
         ]
       },
-      "minecraft:weapon": {
-        
-      },
-      "minecraft:on_use": {
-        
-      },
+      "minecraft:weapon": {},
+      "minecraft:on_use": {},
       "tag:hy:custom_weapons": {},
       "tag:hy:magic_explode": {},
       "tag:minecraft:is_sword": {},

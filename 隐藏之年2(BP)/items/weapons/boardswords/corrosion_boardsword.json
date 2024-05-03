@@ -11,9 +11,7 @@
         "duration": 10
       },
       "minecraft:hover_text_color": "yellow",
-      "minecraft:on_use": {
-        
-      },
+      "minecraft:on_use": {},
       "minecraft:display_name": {
         "value": "hy.item.corrosion_boardsword"
       },
@@ -116,9 +114,7 @@
           }
         ]
       },
-      "minecraft:weapon": {
-        
-      },
+      "minecraft:weapon": {},
       "tag:hy:custom_weapons": {},
       "tag:hy:magic_explode": {},
       "tag:minecraft:is_sword": {},

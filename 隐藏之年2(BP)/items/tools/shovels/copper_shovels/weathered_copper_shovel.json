@@ -64,7 +64,8 @@
       "minecraft:weapon": {},
       "tag:minecraft:is_shovel": {},
       "tag:hy:custom_tools": {},
-      "tag:hy:weathered_item": {}
+      "tag:hy:weathered_item": {},
+      "tag:hy:corrosive_tools": {}
     },
     "events": {
       "on_tool_used": {

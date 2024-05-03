@@ -101,10 +101,10 @@
           }
         ]
       },
-      "minecraft:weapon": {
-      },
+      "minecraft:weapon": {},
       "tag:minecraft:is_tool": {},
-      "tag:hy:custom_weapons": {}
+      "tag:hy:custom_weapons": {},
+      "tag:hy:corrosive_tools": {}
     }
   }
 }

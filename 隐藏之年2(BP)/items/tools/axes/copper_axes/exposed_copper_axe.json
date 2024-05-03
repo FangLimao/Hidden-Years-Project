@@ -209,7 +209,8 @@
       },
       "tag:minecraft:is_axe": {},
       "tag:hy:custom_tools": {},
-      "tag:hy:exposed_item": {}
+      "tag:hy:exposed_item": {},
+      "tag:hy:corrosive_tools": {}
     },
     "events": {
       "on_tool_used": {
