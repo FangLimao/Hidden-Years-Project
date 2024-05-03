@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "esbuild src/index.ts --bundle --format=esm --external:@minecraft/server --external:@minecraft/server-ui --minify-whitespace --minify-syntax \"--outfile=./隐藏之年2(BP)/scripts/index.js\"",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "test": "tsc --noEmit"
   },
   "author": "FangLimao",
   "license": "BSD-3-Clause",

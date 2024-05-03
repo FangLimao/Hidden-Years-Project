@@ -17,7 +17,9 @@ hy.createQuestBook(hydata.HyQuest1st);
 hy.createStoryForm("hy:story_book");
 for (let i = 0; i <= 10; i++) {
   hy.createLetterForm(
+    // @ts-ignore
     hytext.HyLetterTitle[i],
+    // @ts-ignore
     hytext.HyLetterBody[i],
     `hy:letter_${i}`,
   );
@@ -545,7 +547,7 @@ mc.world.afterEvents.entityHitEntity.subscribe((event) => {
   const ATTACKER = event.damagingEntity;
   const TARGET = event.hitEntity;
   const ITEM = hy.getEquipmentItem(ATTACKER);
-  switch (ITEM.typeId) {
+  switch (ITEM?.typeId) {
     case "hy:ruby_boardsword":
       /** 红宝石阔剑会给予玩家经验值 */
       if (ATTACKER instanceof mc.Player) ATTACKER.addExperience(hy.rand(4, 0));
