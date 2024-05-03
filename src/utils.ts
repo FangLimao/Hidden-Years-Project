@@ -6,8 +6,8 @@
 import * as mc from "@minecraft/server";
 import * as mcui from "@minecraft/server-ui";
 import * as hydata from "./data.js";
-import * as hytext from "./text.js";
 import { QuestBook } from "./data.js";
+import * as hytext from "./text.js";
 
 /**
  * 让物品堆开始冷却
@@ -43,7 +43,7 @@ export function damageEntities(
 /**
  * 在特定维度筛选实体并赋予其状态效果
  * @param dimension 实体所在维度
- * @param damageOption 实体的类型
+ * @param affectOption 实体的类型
  * @param effectType 效果类型
  * @param duration 效果持续时长
  * @param effectOption 效果选项
@@ -64,7 +64,7 @@ export function affectEntities(
 
 /**
  * 造成仿制伤害
- * @param player 被造成伤害的玩家
+ * @param entity 使用了仿制工具的实体
  * @since v0.1.0
  */
 export function applyImitationDamage(entity: mc.Entity) {
@@ -203,6 +203,7 @@ export function consumeDurability(
   if (durability === undefined) return itemStack;
   if (durability.damage + value >= durability.maxDurability) {
     if (itemStack.hasTag("hy:corrosive_tools")) {
+      // @ts-ignore
       return hydata.HyCorrosionMap[itemStack.typeId.replace("hy:", "")];
     }
     if (entity instanceof mc.Player) {
@@ -222,10 +223,9 @@ export function consumeDurability(
  * @since v0.1.0
  */
 export function getEquipmentItem(entity: mc.Entity) {
-  let equipmentItem = entity
+  return entity
     ?.getComponent("minecraft:equippable")
     ?.getEquipment(mc.EquipmentSlot.Mainhand);
-  return equipmentItem;
 }
 
 /**
@@ -302,7 +302,7 @@ export function createStoryForm(typeId: string) {
 
 /**
  * 生成一本任务书
- * @param questData 任务书具体的数据
+ * @param data 任务书具体的数据
  * @author dave
  * @since v0.1.0
  */
@@ -350,8 +350,8 @@ export function createQuestBook(data: QuestBook) {
         ) {
           for (let i = 0; i < 36; i++) {
             const inventoryItem = player
-              .getComponent("inventory")
-              .container.getItem(i);
+              ?.getComponent("inventory")
+              ?.container?.getItem(i);
             if (
               inventoryItem &&
               inventoryItem.typeId === data.questItems[numberId - 1]
@@ -378,7 +378,7 @@ export function createQuestBook(data: QuestBook) {
     const form = new mcui.ActionFormData()
       .title(data.title)
       .button(data.buttonAbout);
-    const LIST = new Array();
+    const LIST = [];
     let COUNT = 0;
     for (const thisItems of data.questItems) {
       const hasTag = player.hasTag(thisItems);
