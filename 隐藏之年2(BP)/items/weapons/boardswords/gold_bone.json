@@ -56,6 +56,7 @@
           "target": "self"
         }
       },
+      "tag:hy:custom_weapons": {},
       "tag:hy:magic_explode": {},
       "tag:minecraft:is_tool": {},
       "tag:dict:materials.bone": {},
