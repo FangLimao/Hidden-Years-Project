@@ -115,18 +115,95 @@ export const HyRewardTypes = {
 
 export const HyQuest1st: QuestBook = {
   typeId: "hy:quest_book",
-  title: {translate: "hy.quest.title1"},
-  description: {translate: "hy.quest.body1"},
-  questItems: [
-  ],
-  rewardItems: [
-    
-  ],
+  title: { translate: "hy.quest.title1" },
+  description: { translate: "hy.quest.body1" },
+  questItems: [],
+  rewardItems: [],
   questName: [
-    
+    { translate: "hy.quest.stick.title" },
+    { translate: "hy.quest.over_metal_ingot.title" },
+    { translate: "hy.quest.iron_ingot.title" },
+    { translate: "hy.quest.copper_ingot.title" },
+    { translate: "hy.quest.iron_hammer.title" },
+    { translate: "hy.quest.iron_crowbar.title" },
+    { translate: "hy.quest.iron_knife.title" },
+    { translate: "hy.quest.iron_dagger.title" },
+    { translate: "hy.quest.iron_sword.title" },
+    { translate: "hy.quest.fuel_metal.title" },
+    { translate: "hy.quest.nightmare_fuel_metal.title" },
+    { translate: "hy.quest.steel_ingot.title" },
+    { translate: "hy.quest.end0.title" },
+    { translate: "hy.quest.obsidian.title" },
+    { translate: "hy.quest.gold_ingot.title" },
+    { translate: "hy.quest.ghast_tear.title" },
+    { translate: "hy.quest.netherite_scrap.title" },
+    { translate: "hy.quest.lodestone.title" },
+    { translate: "hy.quest.respawn_anchor.title" },
+    { translate: "hy.quest.blaze_rod.title" },
+    { translate: "hy.quest.end1.title" },
+    { translate: "hy.quest.ender_pearl.title" },
+    { translate: "hy.quest.dragon_breath.title" },
+    { translate: "hy.quest.end2.title" },
+    { translate: "hy.quest.ruby.title" },
+    { translate: "hy.quest.ruby_chestplate.title" },
+    { translate: "hy.quest.ruby_bag.title" },
+    { translate: "hy.quest.end3.title" },
   ],
   questDescription: [
-    
+    [{ translate: "hy.quest.stick.body" }],
+    [{ translate: "hy.quest.over_metal_ingot.body" }],
+    [{ translate: "hy.quest.iron_ingot.body" }],
+    [{ translate: "hy.quest.copper_ingot.body" }],
+    [{ translate: "hy.quest.iron_hammer.body" }],
+    [{ translate: "hy.quest.iron_crowbar.body" }],
+    [{ translate: "hy.quest.iron_knife.body" }],
+    [{ translate: "hy.quest.iron_dagger.body" }],
+    [{ translate: "hy.quest.iron_sword.body" }],
+    [{ translate: "hy.quest.fuel_metal.body" }],
+    [{ translate: "hy.quest.nightmare_fuel_metal.body" }],
+    [{ translate: "hy.quest.steel_ingot.body" }],
+    [
+      { translate: "hy.quest.end0.body0" },
+      { text: "\n" },
+      { translate: "hy.quest.end0.body1" },
+      { text: "\n" },
+      { translate: "hy.quest.end0.body2" },
+      { text: "\n" },
+      { translate: "hy.quest.end0.body3" },
+    ],
+    [{ translate: "hy.quest.obsidian.body" }],
+    [{ translate: "hy.quest.gold_ingot.body" }],
+    [{ translate: "hy.quest.ghast_tear.body" }],
+    [{ translate: "hy.quest.netherite_scrap.body" }],
+    [{ translate: "hy.quest.lodestone.body" }],
+    [{ translate: "hy.quest.respawn_anchor.body" }],
+    [{ translate: "hy.quest.blaze_rod.body" }],
+    [
+      { translate: "hy.quest.end1.body0" },
+      { text: "\n" },
+      { translate: "hy.quest.end1.body1" },
+      { text: "\n" },
+      { translate: "hy.quest.end1.body2" },
+    ],
+    [{ translate: "hy.quest.ender_pearl.body" }],
+    [{ translate: "hy.quest.dragon_breath.body" }],
+    [
+      { translate: "hy.quest.end2.body0" },
+      { text: "\n" },
+      { translate: "hy.quest.end2.body1" },
+      { text: "\n" },
+      { translate: "hy.quest.end2.body2" },
+    ],
+    [{ translate: "hy.quest.ruby.body" }],
+    [{ translate: "hy.quest.ruby_chestplate.body" }],
+    [{ translate: "hy.quest.ruby_bag.body" }],
+    [
+      { translate: "hy.quest.end3.body0" },
+      { text: "\n" },
+      { translate: "hy.quest.end3.body1" },
+      { text: "\n" },
+      { translate: "hy.quest.end3.body2" },
+    ],
   ],
 };
 
@@ -135,27 +212,26 @@ export const HyQuest1st: QuestBook = {
  */
 export const HyQuest2nd: QuestBook = {
   typeId: "hy:quest_book2",
-  title: {translate: "hy.quest.title2"},
-  description: {translate: "hy.quest.body2"},
+  title: { translate: "hy.quest.title2" },
+  description: { translate: "hy.quest.body2" },
   questItems: [
-    ["hy:copper_apple", {translate: "hy.item.copper_apple"}],
-    ["hy:metal_star", {translate: "hy.item.metal_star"}],
-    ["hy:copper_essence", {translate: "hy.item.copper_essence"}]
+    ["hy:copper_apple", { translate: "hy.item.copper_apple" }],
+    ["hy:metal_star", { translate: "hy.item.metal_star" }],
+    ["hy:copper_essence", { translate: "hy.item.copper_essence" }],
   ],
   rewardItems: [
-    ["golden_apple", 3,{translate: "item.golden_apple.name"}],
-    ["hy:diamond_coin",9, {translate: "hy.item.diamond_coin"}],
-    ["dirt",12, {translate: "	tile.dirt.default.name"}]
+    ["golden_apple", 3, { translate: "item.golden_apple.name" }],
+    ["hy:diamond_coin", 9, { translate: "hy.item.diamond_coin" }],
+    ["dirt", 12, { translate: "	tile.dirt.default.name" }],
   ],
   questName: [
-    {translate: "hy.quest.copper_apple.title"},
-    {translate: "hy.quest.metal_star.title"},
-    {translate: "hy.quest.copper_essence.title"}
+    { translate: "hy.quest.copper_apple.title" },
+    { translate: "hy.quest.metal_star.title" },
+    { translate: "hy.quest.copper_essence.title" },
   ],
   questDescription: [
-    [{translate: "hy.quest.copper_apple.body"}],
-    [{translate: "hy.quest.metal_star.body"}],
-    [{translate: "hy.quest.copper_essence.body"}]
+    [{ translate: "hy.quest.copper_apple.body" }],
+    [{ translate: "hy.quest.metal_star.body" }],
+    [{ translate: "hy.quest.copper_essence.body" }],
   ],
 };
-

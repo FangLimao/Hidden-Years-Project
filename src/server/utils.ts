@@ -295,14 +295,14 @@ export function createStoryForm(typeId: string) {
             const storySection1 = new mcui.ActionFormData()
               .title(hyData.HyStoryTitle.section1)
               .body(hyData.HyStoryBody.section1)
-              .button("确定");
+              .button({ translate: "gui.ok" });
             storySection1.show(PLAYER);
             break;
           case 2:
             const storySection2 = new mcui.ActionFormData()
               .title(hyData.HyStoryTitle.section2)
               .body(hyData.HyStoryBody.section2)
-              .button("确定");
+              .button({ translate: "gui.ok" });
             storySection2.show(PLAYER);
             break;
           default:
