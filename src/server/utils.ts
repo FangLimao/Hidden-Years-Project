@@ -331,7 +331,7 @@ export function createQuestBook(data: QuestBook) {
     const form = new mcui.ActionFormData()
       .title(data.title)
       .body(data.description)
-      .button(data.buttonBack);
+      .button({translate: "gui.back"});
     form.show(player).then((response) => {
       if (response.selection === 0) {
         formMain(player);
@@ -340,33 +340,35 @@ export function createQuestBook(data: QuestBook) {
   };
   const formSelection = (player: mc.Player, numberId: number) => {
     const form2 = new mcui.ActionFormData().title(data.title);
-    if (player.hasTag(data.questItems[numberId - 1])) {
+    if (player.hasTag(data.questItems[numberId - 1][0])) {
       form2
         .body(
           `${data.questDescription[numberId - 1]}\n\n§e需要物品: §r${
-            data.questItemName[numberId - 1]
+            data.questItems[numberId - 1][1]
           }\n§e奖励物品: §r${
-            data.rewardItemName[numberId - 1]
+            data.rewardItems[numberId - 1][1]
           }\n§e状态: §r已完成`,
         )
-        .button(data.buttonBack);
+        .button({translate: "gui.back"});
     } else {
       form2
         .body(
           `${data.questDescription[numberId - 1]}\n\n§e需要物品: §r${
-            data.questItemName[numberId - 1]
+            data.questItems[numberId - 1][1]
           }\n§e奖励物品: §r${
-            data.rewardItemName[numberId - 1]
+            data.rewardItems[numberId - 1][2] 
+          }× ${
+            data.rewardItems[numberId - 1][1] 
           }\n§e状态: §r未完成`,
-        )
-        .button(data.buttonBack)
-        .button(data.buttonCheck);
+          )    
+        .button({translate: "gui.back"})
+        .button({translate: "gui.check"});
     }
     form2.show(player).then((response2) => {
       if (!response2.canceled) {
         if (
           response2.selection === 1 &&
-          !player.hasTag(data.questItems[numberId - 1])
+          !player.hasTag(data.questItems[numberId - 1][0])
         ) {
           for (let i = 0; i < 36; i++) {
             const inventoryItem = player
@@ -374,7 +376,7 @@ export function createQuestBook(data: QuestBook) {
               ?.container?.getItem(i);
             if (
               inventoryItem &&
-              inventoryItem.typeId === data.questItems[numberId - 1]
+              inventoryItem.typeId === data.questItems[numberId - 1][0]
             ) {
               const REWARD = new mc.ItemStack(
                 `${data.rewardItems[numberId - 1][0]}`,
@@ -383,7 +385,7 @@ export function createQuestBook(data: QuestBook) {
               player.dimension.spawnItem(REWARD, player.location);
               player.playSound(`random.levelup`);
               player.sendMessage(`你完成了 ${data.questName[numberId - 1]}`);
-              player.addTag(data.questItems[numberId - 1]);
+              player.addTag(data.questItems[numberId - 1][0]);
               break;
             }
           }
@@ -397,10 +399,10 @@ export function createQuestBook(data: QuestBook) {
   const formMain = (player: mc.Player) => {
     const form = new mcui.ActionFormData()
       .title(data.title)
-      .button(data.buttonAbout);
+      .button({translate: "gui.about"});
     const LIST = [];
     let COUNT = 0;
-    for (const thisItems of data.questItems) {
+    for (const thisItems of data.questItems[COUNT][0]) {
       const hasTag = player.hasTag(thisItems);
       const title = data.questName[COUNT];
       const button = hasTag ? title + "\n §2已完成" : title;
