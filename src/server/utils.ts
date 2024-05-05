@@ -10,6 +10,27 @@ import { QuestBook } from "./data.js";
 import * as hytext from "./text.js";
 
 /**
+ * 获取物品栏中指定物品的数量
+ * @param container 要检查的物品栏
+ * @param item 物品Id
+ * @author RawDiamondMC <RawDiamondMC@outlook.com>
+ * @since v0.1.0
+ */
+export function getItemAmountInContainer(
+  container: mc.Container,
+  item: string,
+) {
+  let amount: number = 0;
+  for (let slot = 0; slot < container.size; slot++) {
+    const itemStack: undefined | mc.ItemStack = container.getItem(slot);
+    if (itemStack?.typeId === item) {
+      amount++;
+    }
+  }
+  return amount;
+}
+
+/**
  * 让物品堆开始冷却
  * @param itemStack 要冷却的物品
  * @param player 触发冷却的玩家

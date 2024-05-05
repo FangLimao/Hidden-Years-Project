@@ -23,7 +23,8 @@
         "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'hy:is_crowbar')"
       },
       "tag:hy:custom_ores": {},
-      "tag:minecraft:stone_pick_diggable": {}
+      "tag:minecraft:stone_pick_diggable": {},
+      "tag:hy:need_crowbar": {}
     },
     "events": {
       "hy.spawn_loot": {
