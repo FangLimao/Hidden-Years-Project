@@ -8,8 +8,6 @@ import {
   MessageFormResponse,
 } from "@minecraft/server-ui";
 import * as mc from "@minecraft/server";
-import * as hytext from "./text.js";
-import * as hyApi from "./utils.js";
 
 /**
  * 任务书的配置

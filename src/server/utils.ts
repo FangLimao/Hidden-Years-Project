@@ -5,9 +5,8 @@
  */
 import * as mc from "@minecraft/server";
 import * as mcui from "@minecraft/server-ui";
-import * as hydata from "./data.js";
+import * as hyData from "./data.js";
 import { QuestBook } from "./data.js";
-import * as hytext from "./text.js";
 
 /**
  * 获取物品栏中指定物品的数量
@@ -225,7 +224,7 @@ export function consumeDurability(
   if (durability.damage + value >= durability.maxDurability) {
     if (itemStack.hasTag("hy:corrosive_tools")) {
       // @ts-ignore
-      return hydata.HyCorrosionMap[itemStack.typeId.replace("hy:", "")];
+      return hyData.HyCorrosionMap[itemStack.typeId.replace("hy:", "")];
     }
     if (entity instanceof mc.Player) {
       entity.playSound("random.break");
@@ -280,29 +279,29 @@ export function createStoryForm(typeId: string) {
       const story = new mcui.ActionFormData()
         .title("隐藏的故事")
         .body("这本书记载了一些模糊的上古旧事……\n请选择章节")
-        .button(hytext.HyStoryTitle.section0)
-        .button(hytext.HyStoryTitle.section1)
-        .button(hytext.HyStoryTitle.section2);
+        .button(hyData.HyStoryTitle.section0)
+        .button(hyData.HyStoryTitle.section1)
+        .button(hyData.HyStoryTitle.section2);
       story.show(PLAYER).then((response) => {
         switch (response.selection) {
           case 0:
             const storySection0 = new mcui.ActionFormData()
-              .title(hytext.HyStoryTitle.section0)
-              .body(hytext.HyStoryBody.section0)
-              .button("确定");
+              .title(hyData.HyStoryTitle.section0)
+              .body(hyData.HyStoryBody.section0)
+              .button({translate: "gui.ok"});
             storySection0.show(PLAYER);
             break;
           case 1:
             const storySection1 = new mcui.ActionFormData()
-              .title(hytext.HyStoryTitle.section1)
-              .body(hytext.HyStoryBody.section1)
+              .title(hyData.HyStoryTitle.section1)
+              .body(hyData.HyStoryBody.section1)
               .button("确定");
             storySection1.show(PLAYER);
             break;
           case 2:
             const storySection2 = new mcui.ActionFormData()
-              .title(hytext.HyStoryTitle.section2)
-              .body(hytext.HyStoryBody.section2)
+              .title(hyData.HyStoryTitle.section2)
+              .body(hyData.HyStoryBody.section2)
               .button("确定");
             storySection2.show(PLAYER);
             break;
@@ -312,7 +311,7 @@ export function createStoryForm(typeId: string) {
       });
       if (!PLAYER.hasTag("hy:get_first_letter")) {
         PLAYER.dimension.spawnItem(
-          hydata.HyRewardTypes.letter1st,
+          hyData.HyRewardTypes.letter1st,
           PLAYER.location,
         );
         PLAYER.addTag("hy:get_first_letter");

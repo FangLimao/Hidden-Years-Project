@@ -1,5 +1,4 @@
 import * as mc from "@minecraft/server";
-import { HyLetterTitle, HyLetterBody } from "./text.js";
 import * as hyApi from "./utils.js";
 import * as hyData from "./data.js";
 

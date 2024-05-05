@@ -1,6 +1,4 @@
 import * as mc from "@minecraft/server";
-import * as hyApi from "./utils.js";
-import * as hyData from "./data.js";
 
 export function systemMonitor() {
   /** 清除铜食物食用次数 */
