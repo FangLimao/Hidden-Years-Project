@@ -2,8 +2,10 @@ import * as mc from "@minecraft/server";
 import * as hyApi from "./utils.js";
 import * as hyData from "./data.js";
 
-export function entitySpawnMonitor() {
-  /** 玩家生成时检测的事件，即是否给予任务书 */
+/**
+ * 监听玩家生成事件
+ */
+export function playerSpawnMonitor() {
   mc.world.afterEvents.playerSpawn.subscribe((event) => {
     const PLAYER = event.player;
     if (!PLAYER.hasTag("hy:get_quest_book")) {
@@ -18,6 +20,9 @@ export function entitySpawnMonitor() {
   });
 }
 
+/**
+ * 监听实体事件
+ */
 export function entityEventsMonitor() {
   mc.world.afterEvents.entityDie.subscribe((event) => {
     const ENTITY = event.deadEntity;

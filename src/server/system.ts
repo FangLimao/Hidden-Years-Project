@@ -1,5 +1,8 @@
 import * as mc from "@minecraft/server";
 
+/**
+ * 监听系统事件
+ */
 export function systemMonitor() {
   /** 清除铜食物食用次数 */
   mc.system.runInterval(() => {

@@ -1,7 +1,7 @@
 import * as mc from "@minecraft/server";
 
 /**
- * 任务书的配置
+ * 隐藏之年任务书的配置
  * @interface
  */
 export interface QuestBook {
@@ -75,6 +75,9 @@ export const enum HyStoryBody {
   section2 = "§l新的世界§r\n「主世界」，新家的名字。\n平原之上，\n山脉河流点缀于此，\n飞鸟禽兽穿行林间。\n\n人类——\n撬走，\n貌似刚刚形成的「浅层矿石」、\n埋藏不知多久的「地心矿石」，\n建造起，\n地上归人居住的「村庄」、\n地下供鬼栖息的「祀城」，\n发现，\n物不美价却廉的「仿制材料」、\n既可以食用，又可以作为燃料的「燃金」\n\n——世上欣欣向荣，充盈着希望的光辉\n吗？\n\n夜深，\n灾难再次来袭，不死之族降临。\n睡梦中的人类再次被惊醒。\n「我们的前程，真是光明的吗？」\n\n§l随风而去吧§r\n时光如白驹过隙，\n我的老友逐渐随风消逝，\n而我恐怕也将步其后尘。\n“雨后人去楼也空”，\n我再也无法记录下这世界的一切。\n\n伫立于皎洁的月光下，\n我曾幻想宇宙可以告诉我，\n所有这世间所有未知的秘密。\n——但可惜这只是我的幻想罢了……\n\n门前窗边，挖好坟冢，\n我终将埋葬在这异乡，\n希愿你也能踏上冒险的征程，\n探索这未知的世间。\n\n【完】\n\n§l风又起§r\n春风又起，\n是新生的时节……",
 }
 
+/**
+ * 隐藏之年 物品锈蚀 的对应表
+ */
 export const HyCorrosionMap = {
   copper_axe: new mc.ItemStack("hy:exposed_copper_axe"),
   exposed_copper_axe: new mc.ItemStack("hy:weathered_copper_axe"),
@@ -100,7 +103,7 @@ export const HyCorrosionMap = {
 };
 
 /**
- * 隐藏之年的奖励
+ * 隐藏之年 物品奖励 的数据
  */
 export const HyRewardTypes = {
   questBook1st: new mc.ItemStack("hy:quest_book"),
@@ -113,12 +116,77 @@ export const HyRewardTypes = {
   nightmareFuel: new mc.ItemStack("hy:nightmare_fuel_metal", 2),
 };
 
+/**
+ * 隐藏之年任务书 第一辑·初入三界 的数据
+ */
 export const HyQuest1st: QuestBook = {
   typeId: "hy:quest_book",
   title: { translate: "hy.quest.title1" },
   description: { translate: "hy.quest.body1" },
-  questItems: [],
-  rewardItems: [],
+  questItems: [
+    ["stick", { translate: "item.stick.name" }],
+    ["hy:over_metal_ingot", { translate: "hy.item.over_metal_ingot" }],
+    ["iron_ingot", { translate: "item.iron_ingot.name" }],
+    ["copper_ingot", { translate: "item.copper_ingot.name" }],
+    ["hy:iron_hammer", { translate: "hy.item.iron_hammer" }],
+    ["hy:iron_crowbar", { translate: "hy.item.iron_crowbar" }],
+    ["hy:iron_knife", { translate: "hy.item.iron_knife" }],
+    ["hy:iron_dagger", { translate: "hy.item.iron_dagger" }],
+    ["iron_sword", { translate: "item.iron_sword.name" }],
+    ["hy:fuel_metal", { translate: "hy.item.fuel_metal" }],
+    ["hy:nightmare_fuel_metal", { translate: "hy.item.nightmare_fuel_metal" }],
+    ["hy:steel_ingot", { translate: "hy.item.steel_ingot" }],
+    ["totem_of_undying", { translate: "item.totem.name" }],
+    ["obsidian", { translate: "tile.obsidian.name" }],
+    ["gold_ingot", { translate: "item.gold_ingot.name" }],
+    ["ghast_tear", { translate: "item.ghast_tear.name" }],
+    ["netherite_scrap", { translate: "item.netherite_scrap.name" }],
+    ["lodestone", { translate: "tile.lodestone.name" }],
+    ["respawn_anchor", { translate: "tile.respawn_anchor.name" }],
+    ["blaze_rod", { translate: "item.blaze_rod.name" }],
+    ["nether_star", { translate: "item.netherStar.name" }],
+    ["ender_pearl", { translate: "item.ender_pearl.name" }],
+    ["dragon_breath", { translate: "item.dragon_breath.name" }],
+    ["dragon_egg", { translate: "tile.dragon_egg.name" }],
+    ["hy:ruby", { translate: "hy.item.ruby" }],
+    ["hy:ruby_chestplate", { translate: "hy.item.ruby_chestplate" }],
+    ["hy:ruby_bag", { translate: "hy.item.ruby_bag" }],
+    ["hy:ruby_runes", { translate: "hy.item.ruby_runes" }],
+  ],
+  rewardItems: [
+    ["hy:gold_coin", 5, { translate: "hy.item.gold_coin" }],
+    ["hy:gold_coin", 6, { translate: "hy.item.gold_coin" }],
+    ["hy:gold_coin", 10, { translate: "hy.item.gold_coin" }],
+    ["hy:quest_book2", 1, { translate: "hy.quest.title2" }],
+    ["iron_pickaxe", 1, { translate: "item.iron_pickaxe.name" }],
+    ["hy:gold_coin", 16, { translate: "hy.item.gold_coin" }],
+    ["hy:gold_coin", 18, { translate: "hy.item.gold_coin" }],
+    ["hy:gold_coin", 20, { translate: "hy.item.gold_coin" }],
+    ["golden_apple", 3, { translate: "item.golden_apple.name" }],
+    ["hy:fuel_metal_stick", 3, { translate: "hy.item.fuel_metal_stick" }],
+    ["hy:lab_table", 1, { translate: "hy.block.lab_table" }],
+    ["hy:gold_coin", 25, { translate: "hy.item.gold_coin" }],
+    ["hy:story_book", 1, { translate: "hy.item.story_book" }],
+    ["hy:diamond_coin", 3, { translate: "hy.item.diamond_coin" }],
+    ["hy:gold_coin", 8, { translate: "hy.item.gold_coin" }],
+    ["golden_apple", 5, { translate: "item.golden_apple.name" }],
+    [
+      "netherite_upgrade_smithing_template",
+      1,
+      { translate: "item.netherite_upgrade_smithing_template.name" },
+    ],
+    ["hy:gold_coin", 30, { translate: "hy.item.gold_coin" }],
+    ["hy:copper_badge", 1, { translate: "hy.item.copper_badge" }],
+    ["hy:gold_badge", 1, { translate: "hy.item.gold_badge" }],
+    ["beacon", 1, { translate: "tile.beacon.name" }],
+    ["ender_eye", 4, { translate: "item.ender_eye.name" }],
+    ["hy:diamond_badge", 1, { translate: "hy.item.diamond_badge" }],
+    ["diamond", 32, { translate: "item.diamond.name" }],
+    ["diamond", 2, { translate: "item.diamond.name" }],
+    ["diamond", 4, { translate: "item.diamond.name" }],
+    ["diamond", 6, { translate: "item.diamond.name" }],
+    ["netherite_ingot", 3, { translate: "item.netherite_ingot.name" }],
+  ],
   questName: [
     { translate: "hy.quest.stick.title" },
     { translate: "hy.quest.over_metal_ingot.title" },

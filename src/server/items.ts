@@ -2,9 +2,12 @@ import * as mc from "@minecraft/server";
 import * as hyApi from "./utils.js";
 import * as hyData from "./data.js";
 
-/** 注册任务书及阅读物 */
+/** 
+ * 注册任务书及阅读物 
+ */
 export function questRegister() {
   hyApi.createQuestBook(hyData.HyQuest1st);
+  hyApi.createQuestBook(hyData.HyQuest2nd);
   hyApi.createStoryForm("hy:story_book");
   for (let i = 0; i <= 10; i++) {
     hyApi.createLetterForm(
@@ -17,6 +20,9 @@ export function questRegister() {
   }
 }
 
+/**
+ * 监听物品耐久事件
+ */
 export function itemDurabilityMonitor() {
   mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
     const ENTITY = event.player;
@@ -62,6 +68,9 @@ export function itemDurabilityMonitor() {
   });
 }
 
+/**
+ * 监听物品使用事件
+ */
 export function itemUseMonitor() {
   /** 范围伤害 */
   mc.world.afterEvents.itemUse.subscribe((event) => {
