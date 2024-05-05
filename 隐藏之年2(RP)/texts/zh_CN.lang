@@ -13,10 +13,10 @@ container.stonecutter_block=切割机	#
 tile.stonecutter.name=切割机	#
 tile.stonecutter_block.name=切割机	#
 
-hy.message.tetanus=你获得了§b『破伤风』§r效果！
-hy.message.oxidising.exposed=此工具变得§b『斑驳』§r
-hy.message.oxidising.weathered=此工具变得§b『锈蚀』§r
-hy.message.oxidising.oxidized=此工具已经§b『完全氧化』§r
+hy.message.tetanus=你获得了§b「破伤风」§r效果！
+hy.message.oxidising.exposed=此工具变得§b「斑驳」§r
+hy.message.oxidising.weathered=此工具变得§b「锈蚀」§r
+hy.message.oxidising.oxidized=此工具已经§b「完全氧化」§r
 
 entity.hy:gemstone_trader.name=宝石商人
 item.spawn_egg.entity.hy:gemstone_trader.name=宝石商人刷怪蛋
@@ -481,7 +481,7 @@ hy.item.ruby_runes=红宝石符文
 hy.item.ruby_bag=红宝石谜袋
 hy.item.calamity_bag.experience=灾厄谜袋·经验
 hy.block.ruby_stone_bricks=嵌入红宝石的石砖
-hy.bossdead.ruby=§b『红宝石之王』§r陨落了，世界都沉默了下来……
+hy.bossdead.ruby=§b「红宝石之王」§r陨落了，世界都沉默了下来……
 
 entity.hy:ruby_zombie.name=红宝石僵尸
 item.spawn_egg.entity.hy:ruby_zombie.name=红宝石僵尸刷怪蛋
@@ -499,7 +499,7 @@ hy.item.flash_metal_boardsword.embryo=闪金阔剑原胚
 hy.item.corrosion_boardsword.embryo=腐蚀阔剑原胚
 hy.item.ruby_boardsword.embryo=红宝石阔剑原胚
 
-hy.message.no_exp=你没有足够的经验来进行§b『法术爆发』§r
+hy.message.no_exp=你没有足够的经验来进行§b「法术爆发」§r
 
 hy.item.raw_flash_copper_ingot=粗闪铜锭
 hy.item.raw_flash_metal_ingot=粗闪金锭
@@ -510,9 +510,9 @@ hy.message.need_crowbar=此矿石需要撬棍挖掘！
 hy.message.condition.item_not_enough=物品不足
 hy.message.unexpected_error=出现了意外错误
 
-hy.quest.title1=主线任务§b『第一辑·初入三界』§r
+hy.quest.title1=主线任务§b「第一辑·初入三界」§r
 hy.quest.body1=书页间跃动的不仅仅是文字，还有一路上的冒险之旅
-hy.quest.title2=主线任务§b『间幕·与风同行』§r
+hy.quest.title2=主线任务§b「间幕·与风同行」§r
 hy.quest.body2=这是一本任务书，大概是吧
 
 hy.quest.stick.title=§d[序幕]§r 一切的开始
@@ -551,3 +551,41 @@ hy.quest.copper_essence.title=§d[策划大失败]§r 飞·雾冬溪
 hy.quest.copper_apple.body=将铜锭与苹果捏合到一起，就会有神奇的事情发生……不过听说吃多了会中毒哦～
 hy.quest.metal_star.body=这个东西理论上可以引雷，啊嘞，怎么引不了了……
 hy.quest.copper_essence.body=恭喜你，获得了此模组最没有用的东西！！！（甚至作者在写这个任务的时候都忘了这个东西叫啥了）
+
+hy.quest.stick.body=这是树上新生的枝桠，亦是你旅途的起点……
+hy.quest.over_metal_ingot.body=「岩金」，由各种号称「无用之材」的石头凝结而成，不过所制成之物使用效果却意外的好？
+hy.quest.iron_ingot.body=这些金属来自于星海之间，现如今成为了三界之间最常见、最可靠的物质
+hy.quest.copper_ingot.body=大量存在于世界的金属，可以合成工具盔甲，不过容易因时间而「锈蚀」
+hy.quest.iron_hammer.body=挖掘石头最高效的工具，需要特殊的「木柄」才可以合成，但是挖掘矿石的话可能会有一点小困难……
+hy.quest.iron_crowbar.body=盗贼常用的工具，经常被用来撬走金属方块，不过一些特殊矿石需要撬棍才可以撬下来
+hy.quest.iron_knife.body=用这把小刀给你的朋友一些惊喜吧§o(没有朋友的除外awa)§r
+hy.quest.iron_dagger.body=燧石使刀更为锋利的同时也更加脆弱，人也是这样的吗？
+hy.quest.iron_sword.body=最稳定、最可靠的武器，凭借其威力降妖除魔吧
+hy.quest.fuel_metal.body=这是一种神奇的物质，既可以加工为棒状的燃料、也可以加工直接用来食用
+hy.quest.nightmare_fuel_metal.body=一种奇怪的结晶，黑乎乎的外表下，蕴含着巨大的作用§o(试着吃个燃金罢)§r
+hy.quest.steel_ingot.body=一种坚硬的金属，需要熔炼两次铁锭才可以获得……
+hy.quest.end0.body0=「文字编织出一种美妙的界面，非常灵活，并且胜过凝视这屏幕后的可怕现实。」
+hy.quest.end0.body1=不死图腾，承载了旧人类终其历史所追寻的「不朽」祝颂，可当地球亦或是后继的三界的生灵得到它时才知道这并非祝福，而是「诅咒」……当你望向星空之时，是否感受到了在那之后存在着一种更强大的存在？人类千百年间的痛苦来源于此、也导致了大部分智慧的生灵如同含苞待放的菡萏般脆弱地陷入沉睡
+hy.quest.end0.body2=​但请一定记住，那菡萏之花终将于这白纸般的三界盛放
+hy.quest.end0.body3=​并以熊熊的烈火将其燃作灰烬
+hy.quest.obsidian.body=将水与岩浆混合在一起或许有别样的物质产生？
+hy.quest.gold_ingot.body=在大洞穴成为下界之前最为寻常的东西，现在已经变成了一种珍贵的金属
+hy.quest.ghast_tear.body=作为无风纪「旧人类」最倒霉的后裔，这种物质凝聚了他们祖先的愤怒与不甘……
+hy.quest.netherite_scrap.body=强大的压力使得其变得极为坚韧，成为了最强大的自然材料之一
+hy.quest.lodestone.body=一种神奇的东西
+hy.quest.respawn_anchor.body=工作原理有点令人难以理解……大概是无风纪的遗产？亦或者是来自于传说中远方的那颗星星？
+hy.quest.blaze_rod.body=这种炽热的生物本属人类，在「太古之战」后因没有即时搬迁到主世界而逐渐异化，而如今其成了你冒险路上必须经历的一个环节
+hy.quest.end1.body0=「让我们回退一点。」
+hy.quest.end1.body1=​你可听说过人偶术？这是一种精妙的技术，那些人偶师们费尽心思将这些没有生命的拙劣作品灌注智慧，让这些小玩意成为了战争机器
+hy.quest.end1.body2=凋零何尝不是人偶术的造物呢？从威力上讲，这恐怕就是人偶术的巅峰了吧……
+hy.quest.ender_pearl.body=苍穹之上、星海之下有着什么呢……
+hy.quest.dragon_breath.body=浓痰……能干啥呢……
+hy.quest.end2.body0=「在你深陷游戏之梦时，便选择以这种方式想象出形形色色的事物。」
+hy.quest.end2.body1=​你击败了末影龙，这是普通冒险家冒险生涯的终点，可也是你冒险的真正起点；经过战斗，你已经足够强大，可以探索隐藏于这个世界的秘密了。
+hy.quest.end2.body2=向着真相进发吧！
+hy.quest.ruby.body=这宝石本纯洁无瑕，直到某位术士的鲜血洒在了其上……
+hy.quest.ruby_chestplate.body=用这来之不易的宝石打造一套甲胄吧
+hy.quest.ruby_bag.body=你可以在红宝石地牢内击败红宝石怪物来获得这种袋子，当红宝石块与其相结合时，将会迸发出巨大的力量
+hy.quest.end3.body0=「让我们回溯到遥远的过去。」
+hy.quest.end3.body1=​经过一番战斗，你击败了「红宝石之王」，真相之旅迈出了可喜可贺的第一步。
+hy.quest.end3.body2=​可这远不是终点，在漫长的历史中，浩如烟海的强大存在被「迷失军团」封印于袋中，红宝石之王是其最古老的存在，阅读他们身上的信纸，一步步探求真相把。

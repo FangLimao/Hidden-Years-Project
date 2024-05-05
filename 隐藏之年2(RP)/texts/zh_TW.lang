@@ -15,10 +15,10 @@ container.stonecutter_block=切割機	#
 tile.stonecutter.name=切割機	#
 tile.stonecutter_block.name=切割機	#
 
-hy.message.tetanus=你獲得了§b『破傷風』§r效果！
-hy.message.oxidising.exposed=此工具變得§b『斑駁』§r
-hy.message.oxidising.weathered=此工具變得§b『銹蝕』§r
-hy.message.oxidising.oxidized=此工具已經§b『完全氧化』§r
+hy.message.tetanus=你獲得了§b「破傷風」§r效果！
+hy.message.oxidising.exposed=此工具變得§b「斑駁」§r
+hy.message.oxidising.weathered=此工具變得§b「銹蝕」§r
+hy.message.oxidising.oxidized=此工具已經§b「完全氧化」§r
 
 entity.hy:gemstone_trader.name=寶石商人
 item.spawn_egg.entity.hy:gemstone_trader.name=寶石商人刷怪蛋
@@ -484,7 +484,7 @@ hy.item.ruby_runes=紅寶石符文
 hy.item.ruby_bag=紅寶石謎袋
 hy.item.calamity_bag.experience=災厄謎袋·經驗
 hy.block.ruby_stone_bricks=嵌入紅寶石的石磚
-hy.bossdead.ruby=『紅寶石之王』隕落了，世界都為之沉默……
+hy.bossdead.ruby=「紅寶石之王」隕落了，世界都為之沉默……
 
 entity.hy:ruby_zombie.name=紅寶石僵屍
 item.spawn_egg.entity.hy:ruby_zombie.name=紅寶石僵屍刷怪蛋
@@ -502,7 +502,7 @@ hy.item.flash_metal_boardsword.embryo=閃金闊劍原胚
 hy.item.corrosion_boardsword.embryo=腐蝕闊劍原胚
 hy.item.ruby_boardsword.embryo=紅寶石闊劍原胚
 
-hy.message.no_exp=你沒有足夠的經驗來進行§b『法術爆發』§r
+hy.message.no_exp=你沒有足夠的經驗來進行§b「法術爆發」§r
 
 hy.item.raw_flash_copper_ingot=粗閃銅錠
 hy.item.raw_flash_metal_ingot=粗閃金錠

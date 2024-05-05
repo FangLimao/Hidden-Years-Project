@@ -14,10 +14,10 @@ container.stonecutter_block=Cutter
 tile.stonecutter.name=Cutter
 tile.stonecutter_block.name=Cutter
 
-hy.message.tetanus=You got the §b『tetanus』§reffect！
-hy.message.oxidising.exposed=This tool became §b『exposed』§r.
-hy.message.oxidising.weathered=This tool became §b『weathered』§r.
-hy.message.oxidising.oxidized=This tool is §b『oxidized』§r.
+hy.message.tetanus=You got the §b「tetanus」§reffect！
+hy.message.oxidising.exposed=This tool became §b「exposed」§r.
+hy.message.oxidising.weathered=This tool became §b「weathered」§r.
+hy.message.oxidising.oxidized=This tool is §b「oxidized」§r.
 
 entity.hy:gemstone_trader.name=Gemstone Trader
 item.spawn_egg.entity.hy:gemstone_trader.name=Gemstone Trader Spawn Egg
@@ -476,7 +476,7 @@ hy.item.ruby_runes=Ruby Runes
 hy.item.ruby_bag=Ruby Bag
 hy.item.calamity_bag.experience=Experience Calamity Bag
 hy.block.ruby_stone_bricks=Stone Bricks with Ruby
-hy.bossdead.ruby=『King of Ruby』has fallen and the world has fallen silent……
+hy.bossdead.ruby=「King of Ruby」has fallen and the world has fallen silent……
 
 entity.hy:ruby_zombie.name=Ruby Zombie
 item.spawn_egg.entity.hy:ruby_zombie.name=Ruby Zombie Spawn Egg
