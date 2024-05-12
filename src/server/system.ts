@@ -3,7 +3,7 @@ import * as mc from "@minecraft/server";
 /**
  * 监听系统事件
  */
-export function systemMonitor() {
+export function systemMonitor(): void {
   /** 清除铜食物食用次数 */
   mc.system.runInterval(() => {
     const PLAYERS = mc.world.getPlayers();

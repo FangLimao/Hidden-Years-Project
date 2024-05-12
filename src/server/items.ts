@@ -2,7 +2,7 @@ import * as mc from "@minecraft/server";
 import * as hyApi from "./utils.js";
 import * as hyData from "./data.js";
 import * as mcui from "@minecraft/server-ui";
-import { QuestBook, Quest, QuestTypes } from "./quest.js";
+import { QuestBook, Quest } from "./quest.js";
 
 /**
  * 注册任务书
@@ -14,7 +14,6 @@ export function questRegister() {
     "iron_ingot",
     "铁锭",
     "原神",
-    QuestTypes.QUEST,
     {
       itemData: {
         name: "铁锭",

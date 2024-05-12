@@ -3,9 +3,7 @@ import * as mc from "@minecraft/server";
 import {
   MessageFormData,
   ActionFormData,
-  ModalFormData,
   ActionFormResponse,
-  MessageFormResponse,
 } from "@minecraft/server-ui";
 import * as hyApi from "./utils.js";
 
@@ -14,7 +12,7 @@ import * as hyApi from "./utils.js";
  */
 export class QuestBook {
   /**
-   * 任务书唯一的Id
+   * 任务书的Id
    */
   readonly id: string;
   /**
@@ -33,13 +31,17 @@ export class QuestBook {
     id: string,
     title: string,
     body: string | RawMessage,
-    quests: Quest[],
+    quests: Quest[]
   ) {
     this.id = id;
     this.title = title;
     this.body = body;
     this.quests = quests;
   }
+  /**
+   * 向玩家展示任务书
+   * @param player 被展示的玩家
+   */
   display(player: Player): void {
     const mainForm: ActionFormData = new ActionFormData();
     mainForm.title(this.title);
@@ -47,7 +49,7 @@ export class QuestBook {
     this.quests.forEach((quest: Quest) => {
       mainForm.button(
         quest.title + (quest.isCompleted(player) ? " §2✔" : ""),
-        quest.icon,
+        quest.icon
       );
     });
     mainForm.show(player).then((response: ActionFormResponse) => {
@@ -61,7 +63,7 @@ export class QuestBook {
   /**
    * 添加一个任务
    * @param quest 要添加的任务
-   * @param message 完成后要向世界发送的消息
+   * @param message 添加完成后要向世界发送的消息
    */
   addQuest(quest: Quest, message?: string | RawMessage): void {
     this.quests.push(quest);
@@ -76,7 +78,7 @@ export class QuestBook {
   }
   /**
    * 根据Id获取任务
-   * @param id
+   * @param id 任务的Id
    */
   getQuest(id: string): Quest | undefined {
     return this.quests.find((quest: Quest) => quest.id === id);
@@ -98,96 +100,88 @@ export class QuestBook {
 }
 
 /**
- * Create a Quest (or Message).
+ * 创建一个任务
  */
 export class Quest {
   /**
-   * The unique id of the Quest.
+   * 任务的Id
    */
   readonly id: string;
   /**
-   * The title the Quest.
+   * 任务的标题
    */
   protected _title: string | RawMessage;
   /**
-   * The content the Quest.
+   * 任务的描述
    */
-  protected _body: string | RawMessage;
+  protected _body: string;
   /**
-   * The type the Quest.
-   */
-  type: QuestTypes;
-  /**
-   * The condition to complete the quest / unlock the message.
+   * 完成任务的条件
+   * @todo 添加更多完成条件
    */
   condition: QuestCondition;
   /**
-   * It will be called when the quest is completed by the player.
+   * 完成任务后的奖励
+   * @todo 添加更多种类的奖励
    */
-  award?: QuestAward;
+  award: QuestAward;
   /**
-   * The icon of the Quest.
-   * It should be the path from the root of the resource pack.
+   * 任务的图标，值应该为资源包内的图片路径
    * @example texture/gui/example_pic
    */
   icon?: string;
+  /**
+   * 任务的表单
+   */
   private form: MessageFormData;
   constructor(
     id: string,
     title: string | RawMessage,
-    body: string | RawMessage,
-    type: QuestTypes,
+    body: string,
     condition: QuestCondition,
     award: QuestAward,
-    icon?: string,
+    icon?: string
   ) {
     this.id = id;
     this._title = title;
     this._body = body;
-    this.type = type;
     this.icon = icon;
     this.condition = condition;
     this.award = award;
     this.form = new MessageFormData();
   }
-  set body(content: string | RawMessage) {
-    this._body = content;
-    this.form.body(content);
-  }
-  get body() {
-    return this._body;
-  }
-  set title(content: string | RawMessage) {
-    this._title = content;
-    this.form.title(content);
-  }
-  get title() {
-    return this._title;
-  }
+  /**
+   * 使一个玩家完成任务
+   * @param player 要完成任务的玩家
+   */
   complete(player: Player): void {
     player.addTag(`hy-q:${this.id}`);
   }
+  /**
+   * 初始化任务表单
+   * @param player 要被展示表单的玩家，表单的内容将随玩家自身是否完成任务而变化
+   */
   initForm(player: Player): void {
     if (this.isCompleted(player)) {
       this.form
         .body(
-          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name}\n§e状态: §r已完成`,
+          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name}\n§e状态: §r已完成`
         )
         .button1({ translate: "gui.back" })
         .button2({ translate: "gui.quest_done" });
     } else {
       this.form
         .body(
-          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name} × ${this.award.itemData.item.amount} \n§e状态: §r未完成`,
+          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name} × ${this.award.itemData.item.amount} \n§e状态: §r未完成`
         )
         .button1({ translate: "gui.back" })
         .button2({ translate: "gui.check" });
     }
   }
   /**
-   * Display the form to a player.
-   * @param player
-   * @param book if specific, the book will be opened after canceled.
+   * 向玩家展示表单
+   * @param player 要被展示表单的玩家
+   * @param book 如果指定，任务书将在关闭表单后展示给玩家
    */
   display(player: Player, book?: QuestBook): void {
     this.initForm(player);
@@ -205,7 +199,7 @@ export class Quest {
         if (
           hyApi.getItemAmountInContainer(
             CONTAINER,
-            this.condition.itemData.item.typeId,
+            this.condition.itemData.item.typeId
           ) >= this.condition.itemData.item.amount
         ) {
           player.dimension.spawnItem(this.award.itemData.item, player.location);
@@ -214,7 +208,7 @@ export class Quest {
           this.complete(player);
         } else {
           player.sendMessage(
-            `材料不足，你需要${this.award.itemData.item.amount}个${this.condition.itemData.name}才能完成这个任务`,
+            `材料不足，你需要${this.award.itemData.item.amount}个${this.condition.itemData.name}才能完成这个任务`
           );
         }
       }
@@ -227,20 +221,20 @@ export class Quest {
   isCompleted(player: Player): boolean {
     return player.hasTag(`hy-q:${this.id}`);
   }
-  /**
-   * Check if the type is INFO
-   */
-  isMessage(): boolean {
-    return this.type === QuestTypes.INFO;
+  set body(content: string) {
+    this._body = content;
+    this.form.body(content);
   }
-}
-
-/**
- * The type of the quest.
- */
-export enum QuestTypes {
-  INFO,
-  QUEST,
+  set title(content: string | RawMessage) {
+    this._title = content;
+    this.form.title(content);
+  }
+  get body() {
+    return this._body;
+  }
+  get title() {
+    return this._title;
+  }
 }
 
 export interface QuestCondition {
@@ -256,12 +250,6 @@ export interface QuestCondition {
    * The specific point will be required to unlock the quest.
    */
   playerXpPoint?: number;
-  /**
-   * Your custom function to check condition.
-   * the string (or RawMessage) will be displayed to the player as the quest can not be completed.
-   * Return undefined if the quest can be completed.
-   */
-  custom?: (player: Player) => string | RawMessage | undefined;
 }
 
 export interface QuestAward {
@@ -283,8 +271,20 @@ export interface QuestAward {
   custom?: (player: Player) => void;
 }
 
+/**
+ * 物品数据
+ */
 export interface ItemData {
+  /**
+   * 物品的本地化字符串
+   */
   translateString?: string;
+  /**
+   * 物品的名称
+   */
   name?: string;
+  /**
+   * 物品自身
+   */
   item: ItemStack;
 }
