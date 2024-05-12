@@ -6,7 +6,6 @@
 import * as mc from "@minecraft/server";
 import * as mcui from "@minecraft/server-ui";
 import * as hyData from "./data.js";
-import { QuestBook } from "./data.js";
 
 /**
  * 获取物品栏中指定物品的数量
@@ -268,70 +267,44 @@ export function createLetterForm(title: string, body: string, typeId: string) {
 }
 
 /**
- * 生成隐藏的故事
- * @param typeId 故事书的物品Id
- * @since v0.1.0
- */
-export function createStoryForm(typeId: string) {
-  mc.world.afterEvents.itemUse.subscribe((event) => {
-    const PLAYER = event.source;
-    if (event.itemStack.typeId === typeId) {
-      const story = new mcui.ActionFormData()
-        .title("隐藏的故事")
-        .body("这本书记载了一些模糊的上古旧事……\n请选择章节")
-        .button(hyData.HyStoryTitle.section0)
-        .button(hyData.HyStoryTitle.section1)
-        .button(hyData.HyStoryTitle.section2);
-      story.show(PLAYER).then((response) => {
-        switch (response.selection) {
-          case 0:
-            const storySection0 = new mcui.ActionFormData()
-              .title(hyData.HyStoryTitle.section0)
-              .body(hyData.HyStoryBody.section0)
-              .button({translate: "gui.ok"});
-            storySection0.show(PLAYER);
-            break;
-          case 1:
-            const storySection1 = new mcui.ActionFormData()
-              .title(hyData.HyStoryTitle.section1)
-              .body(hyData.HyStoryBody.section1)
-              .button({ translate: "gui.ok" });
-            storySection1.show(PLAYER);
-            break;
-          case 2:
-            const storySection2 = new mcui.ActionFormData()
-              .title(hyData.HyStoryTitle.section2)
-              .body(hyData.HyStoryBody.section2)
-              .button({ translate: "gui.ok" });
-            storySection2.show(PLAYER);
-            break;
-          default:
-            break;
-        }
-      });
-      if (!PLAYER.hasTag("hy:get_first_letter")) {
-        PLAYER.dimension.spawnItem(
-          hyData.HyRewardTypes.letter1st,
-          PLAYER.location,
-        );
-        PLAYER.addTag("hy:get_first_letter");
-      }
-    }
-  });
-}
-
-/**
  * 生成一本任务书
  * @param data 任务书具体的数据
  * @author dave
  * @since v0.1.0
- */
+ *
 export function createQuestBook(data: QuestBook) {
+  const formMain = (player: mc.Player) => {
+    const form = new mcui.ActionFormData()
+      .title(data.title)
+      .button({ translate: "gui.about" });
+    data.questName.forEach((arg) => {
+      formMain.button(arg);
+    });
+
+    /*const LIST = [];
+    let COUNT = 0;
+    for (const thisItems of data.questItems[COUNT][0]) {
+      const hasTag = player.hasTag(thisItems);
+      const title = data.questName[COUNT];
+      const button = hasTag ? title + "\n §2已完成" : title;
+      form.button(button);
+      LIST.push(COUNT);
+      COUNT++;
+    }
+    form.show(player).then((response) => {
+      if (response.selection === 0) {
+        formAbout(player);
+      }
+      if (response.selection) {
+        formSelection(player, response.selection);
+      }
+    });
+  };
   const formAbout = (player: mc.Player) => {
     const form = new mcui.ActionFormData()
       .title(data.title)
       .body(data.description)
-      .button({translate: "gui.back"});
+      .button({ translate: "gui.back" });
     form.show(player).then((response) => {
       if (response.selection === 0) {
         formMain(player);
@@ -349,20 +322,18 @@ export function createQuestBook(data: QuestBook) {
             data.rewardItems[numberId - 1][1]
           }\n§e状态: §r已完成`,
         )
-        .button({translate: "gui.back"});
+        .button({ translate: "gui.back" });
     } else {
       form2
         .body(
           `${data.questDescription[numberId - 1]}\n\n§e需要物品: §r${
             data.questItems[numberId - 1][1]
-          }\n§e奖励物品: §r${
-            data.rewardItems[numberId - 1][2] 
-          }× ${
-            data.rewardItems[numberId - 1][1] 
+          }\n§e奖励物品: §r${data.rewardItems[numberId - 1][2]}× ${
+            data.rewardItems[numberId - 1][1]
           }\n§e状态: §r未完成`,
-          )    
-        .button({translate: "gui.back"})
-        .button({translate: "gui.check"});
+        )
+        .button({ translate: "gui.back" })
+        .button({ translate: "gui.check" });
     }
     form2.show(player).then((response2) => {
       if (!response2.canceled) {
@@ -396,29 +367,6 @@ export function createQuestBook(data: QuestBook) {
       }
     });
   };
-  const formMain = (player: mc.Player) => {
-    const form = new mcui.ActionFormData()
-      .title(data.title)
-      .button({translate: "gui.about"});
-    const LIST = [];
-    let COUNT = 0;
-    for (const thisItems of data.questItems[COUNT][0]) {
-      const hasTag = player.hasTag(thisItems);
-      const title = data.questName[COUNT];
-      const button = hasTag ? title + "\n §2已完成" : title;
-      form.button(button);
-      LIST.push(COUNT);
-      COUNT++;
-    }
-    form.show(player).then((response) => {
-      if (response.selection === 0) {
-        formAbout(player);
-      }
-      if (response.selection) {
-        formSelection(player, response.selection);
-      }
-    });
-  };
   mc.world.beforeEvents.itemUse.subscribe((event) => {
     const { itemStack: ITEM, source: PLAYER } = event;
     if (ITEM.typeId === data.typeId) {
@@ -428,3 +376,4 @@ export function createQuestBook(data: QuestBook) {
     }
   });
 }
+**/

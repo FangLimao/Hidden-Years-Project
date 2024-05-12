@@ -2,6 +2,7 @@ import { blockMonitor } from "./server/blocks.js";
 import { entityEventsMonitor, playerSpawnMonitor } from "./server/entities.js";
 import {
   questRegister,
+  bookRegister,
   itemUseMonitor,
   itemDurabilityMonitor,
 } from "./server/items.js";
@@ -14,3 +15,4 @@ playerSpawnMonitor();
 itemDurabilityMonitor();
 itemUseMonitor();
 questRegister();
+bookRegister();

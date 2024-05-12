@@ -1,23 +1,100 @@
 import * as mc from "@minecraft/server";
 import * as hyApi from "./utils.js";
 import * as hyData from "./data.js";
+import * as mcui from "@minecraft/server-ui";
+import { QuestBook, Quest, QuestTypes } from "./quest.js";
 
-/** 
- * 注册任务书及阅读物 
+/**
+ * 注册任务书
  */
 export function questRegister() {
-  hyApi.createQuestBook(hyData.HyQuest1st);
-  hyApi.createQuestBook(hyData.HyQuest2nd);
-  hyApi.createStoryForm("hy:story_book");
+  const IRON_INGOT = new mc.ItemStack("iron_ingot");
+  const GOLD_COIN = new mc.ItemStack("hy:gold_coin", 3);
+  const EXAMPLE_QUEST = new Quest(
+    "iron_ingot",
+    "铁锭",
+    "原神",
+    QuestTypes.QUEST,
+    {
+      itemData: {
+        name: "铁锭",
+        item: IRON_INGOT,
+      },
+    },
+    {
+      itemData: {
+        name: "金币",
+        item: GOLD_COIN,
+      },
+    },
+  );
+  const EXAMPLE_QUEST_BOOK = new QuestBook(
+    "hy:quest_book",
+    "测试",
+    "原神，启动！",
+    [EXAMPLE_QUEST],
+  );
+  EXAMPLE_QUEST_BOOK.register();
+}
+
+/**
+ * 注册书籍
+ */
+export function bookRegister() {
   for (let i = 0; i <= 10; i++) {
     hyApi.createLetterForm(
       // @ts-ignore
-      HyLetterTitle[i],
+      hyData.HyLetterTitle[i],
       // @ts-ignore
-      HyLetterBody[i],
+      hyData.HyLetterBody[i],
       `hy:letter_${i}`,
     );
   }
+  mc.world.afterEvents.itemUse.subscribe((event) => {
+    const PLAYER = event.source;
+    if (event.itemStack.typeId === "hy:story_book") {
+      const story = new mcui.ActionFormData()
+        .title({ translate: "hy.item.story_book" })
+        .body("这本书记载了一些模糊的上古旧事……\n请选择章节")
+        .button({ translate: "hy.story.hs.title1" })
+        .button({ translate: "hy.story.hs.title2" })
+        .button({ translate: "hy.story.hs.title3" });
+      story.show(PLAYER).then((response) => {
+        switch (response.selection) {
+          case 0:
+            const storySection0 = new mcui.ActionFormData()
+              .title({ translate: "hy.story.hs.title1" })
+              .body(hyData.HyStoryBody.section0)
+              .button({ translate: "gui.ok" });
+            storySection0.show(PLAYER);
+            break;
+          case 1:
+            const storySection1 = new mcui.ActionFormData()
+              .title({ translate: "hy.story.hs.title2" })
+              .body(hyData.HyStoryBody.section1)
+              .button({ translate: "gui.ok" });
+            storySection1.show(PLAYER);
+            break;
+          case 2:
+            const storySection2 = new mcui.ActionFormData()
+              .title({ translate: "hy.story.hs.title3" })
+              .body(hyData.HyStoryBody.section2)
+              .button({ translate: "gui.ok" });
+            storySection2.show(PLAYER);
+            break;
+          default:
+            break;
+        }
+      });
+      if (!PLAYER.hasTag("hy:get_first_letter")) {
+        PLAYER.dimension.spawnItem(
+          hyData.HyRewardTypes.letter1st,
+          PLAYER.location,
+        );
+        PLAYER.addTag("hy:get_first_letter");
+      }
+    }
+  });
 }
 
 /**
@@ -335,7 +412,7 @@ export function itemUseMonitor() {
             excludeFamilies: ["noaoe"],
           };
           if (PLAYER.isSneaking) {
-            PLAYER.dimension.playSound("copper_horn.sneak", PLAYER.location);
+            mc.world.playSound("copper_horn.sneak", PLAYER.location);
             hyApi.affectEntities(
               PLAYER.dimension,
               HORN_OPINION,
@@ -350,7 +427,7 @@ export function itemUseMonitor() {
               amplifier: 2,
             });
           } else {
-            PLAYER.dimension.playSound("copper_horn.walk", PLAYER.location);
+            mc.world.playSound("copper_horn.walk", PLAYER.location);
             hyApi.affectEntities(PLAYER.dimension, HORN_OPINION, "speed", 300, {
               amplifier: 2,
             });

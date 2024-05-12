@@ -1,27 +1,6 @@
 import * as mc from "@minecraft/server";
 
 /**
- * 隐藏之年任务书的配置
- * @interface
- */
-export interface QuestBook {
-  /** 任务书的物品ID */
-  typeId: string;
-  /** 任务书的标题 */
-  title: string | mc.RawMessage;
-  /** 任务书的描述，将在关于页面展示 */
-  description: string | mc.RawMessage;
-  /** 任务书的需求物品 */
-  questItems: [string, string | mc.RawMessage][];
-  /** 任务书的奖励物品 */
-  rewardItems: [string, number, string | mc.RawMessage][];
-  /** 任务名字 */
-  questName: string | mc.RawMessage[];
-  /** 任务描述 */
-  questDescription: string | mc.RawMessage[][];
-}
-
-/**
  * 隐藏之年阅读物的标题
  * @enum
  */
@@ -119,7 +98,7 @@ export const HyRewardTypes = {
 /**
  * 隐藏之年任务书 第一辑·初入三界 的数据
  */
-export const HyQuest1st: QuestBook = {
+export const HyQuest1st = {
   typeId: "hy:quest_book",
   title: { translate: "hy.quest.title1" },
   description: { translate: "hy.quest.body1" },
@@ -218,67 +197,61 @@ export const HyQuest1st: QuestBook = {
     { translate: "hy.quest.end3.title" },
   ],
   questDescription: [
-    [{ translate: "hy.quest.stick.body" }],
-    [{ translate: "hy.quest.over_metal_ingot.body" }],
-    [{ translate: "hy.quest.iron_ingot.body" }],
-    [{ translate: "hy.quest.copper_ingot.body" }],
-    [{ translate: "hy.quest.iron_hammer.body" }],
-    [{ translate: "hy.quest.iron_crowbar.body" }],
-    [{ translate: "hy.quest.iron_knife.body" }],
-    [{ translate: "hy.quest.iron_dagger.body" }],
-    [{ translate: "hy.quest.iron_sword.body" }],
-    [{ translate: "hy.quest.fuel_metal.body" }],
-    [{ translate: "hy.quest.nightmare_fuel_metal.body" }],
-    [{ translate: "hy.quest.steel_ingot.body" }],
-    [
-      { translate: "hy.quest.end0.body0" },
-      { text: "\n" },
+    { translate: "hy.quest.stick.body" },
+    { translate: "hy.quest.over_metal_ingot.body" },
+    { translate: "hy.quest.iron_ingot.body" },
+    { translate: "hy.quest.copper_ingot.body" },
+    { translate: "hy.quest.iron_hammer.body" },
+    { translate: "hy.quest.iron_crowbar.body" },
+    { translate: "hy.quest.iron_knife.body" },
+    { translate: "hy.quest.iron_dagger.body" },
+    { translate: "hy.quest.iron_sword.body" },
+    { translate: "hy.quest.fuel_metal.body" },
+    { translate: "hy.quest.nightmare_fuel_metal.body" },
+    { translate: "hy.quest.steel_ingot.body" },
+    { translate: "hy.quest.end0.body0" },
+    /*      { text: "\n" },
       { translate: "hy.quest.end0.body1" },
       { text: "\n" },
       { translate: "hy.quest.end0.body2" },
       { text: "\n" },
-      { translate: "hy.quest.end0.body3" },
-    ],
-    [{ translate: "hy.quest.obsidian.body" }],
-    [{ translate: "hy.quest.gold_ingot.body" }],
-    [{ translate: "hy.quest.ghast_tear.body" }],
-    [{ translate: "hy.quest.netherite_scrap.body" }],
-    [{ translate: "hy.quest.lodestone.body" }],
-    [{ translate: "hy.quest.respawn_anchor.body" }],
-    [{ translate: "hy.quest.blaze_rod.body" }],
-    [
-      { translate: "hy.quest.end1.body0" },
-      { text: "\n" },
+      { translate: "hy.quest.end0.body3" },*/
+    { translate: "hy.quest.obsidian.body" },
+    { translate: "hy.quest.gold_ingot.body" },
+    { translate: "hy.quest.ghast_tear.body" },
+    { translate: "hy.quest.netherite_scrap.body" },
+    { translate: "hy.quest.lodestone.body" },
+    { translate: "hy.quest.respawn_anchor.body" },
+    { translate: "hy.quest.blaze_rod.body" },
+
+    { translate: "hy.quest.end1.body0" },
+    /*{ text: "\n" },
       { translate: "hy.quest.end1.body1" },
       { text: "\n" },
-      { translate: "hy.quest.end1.body2" },
-    ],
-    [{ translate: "hy.quest.ender_pearl.body" }],
-    [{ translate: "hy.quest.dragon_breath.body" }],
-    [
-      { translate: "hy.quest.end2.body0" },
-      { text: "\n" },
+      { translate: "hy.quest.end1.body2" },*/
+    { translate: "hy.quest.ender_pearl.body" },
+    { translate: "hy.quest.dragon_breath.body" },
+    { translate: "hy.quest.end2.body0" },
+    /*{ text: "\n" },
       { translate: "hy.quest.end2.body1" },
       { text: "\n" },
-      { translate: "hy.quest.end2.body2" },
-    ],
-    [{ translate: "hy.quest.ruby.body" }],
-    [{ translate: "hy.quest.ruby_chestplate.body" }],
-    [{ translate: "hy.quest.ruby_bag.body" }],
-    [
-      { translate: "hy.quest.end3.body0" },
-      { text: "\n" },
+      { translate: "hy.quest.end2.body2" },*/
+    { translate: "hy.quest.ruby.body" },
+    { translate: "hy.quest.ruby_chestplate.body" },
+    { translate: "hy.quest.ruby_bag.body" },
+
+    { translate: "hy.quest.end3.body0" },
+    /*  { text: "\n" },
       { translate: "hy.quest.end3.body1" },
       { text: "\n" },
-      { translate: "hy.quest.end3.body2" },
-    ],
+      { translate: "hy.quest.end3.body2" },*/
   ],
 };
 
 /**
  * 隐藏之年任务书 间幕·与风同行 的数据
  */
-export const HyQuest2nd: QuestBook = {
+export const HyQuest2nd = {
   typeId: "hy:quest_book2",
   title: { translate: "hy.quest.title2" },
   description: { translate: "hy.quest.body2" },
@@ -298,8 +271,8 @@ export const HyQuest2nd: QuestBook = {
     { translate: "hy.quest.copper_essence.title" },
   ],
   questDescription: [
-    [{ translate: "hy.quest.copper_apple.body" }],
-    [{ translate: "hy.quest.metal_star.body" }],
-    [{ translate: "hy.quest.copper_essence.body" }],
+    { translate: "hy.quest.copper_apple.body" },
+    { translate: "hy.quest.metal_star.body" },
+    { translate: "hy.quest.copper_essence.body" },
   ],
 };

@@ -6,7 +6,7 @@
     "target": "es2022",
     "module": "ES2022",
     "moduleResolution": "node10",
-    "declaration": true,
+    //"declaration": true,
     "outDir": "./隐藏之年2(BP)/scripts",
     "removeComments": true,
     "esModuleInterop": true,
