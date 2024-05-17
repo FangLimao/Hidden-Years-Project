@@ -1,3 +1,9 @@
+/** hy2-quest Api
+ * @version v0.1.0
+ * @author FangLimao <mucigames@outlook.com>
+ * @author RawDiamondMC <RawDiamondMC@outlook.com>
+ * @license BSD-3
+ */
 import { ItemStack, Player, RawMessage, world } from "@minecraft/server";
 import * as mc from "@minecraft/server";
 import {
@@ -5,7 +11,7 @@ import {
   ActionFormData,
   ActionFormResponse,
 } from "@minecraft/server-ui";
-import * as hyApi from "./utils.js";
+import * as hyApi from "./hy2Utils.js";
 
 /**
  * 创建一本任务书

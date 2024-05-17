@@ -1,39 +1,14 @@
 import * as mc from "@minecraft/server";
-import * as hyApi from "./utils.js";
+import * as hyApi from "../dependencies/hy2Utils.js";
 import * as hyData from "./data.js";
 import * as mcui from "@minecraft/server-ui";
-import { QuestBook, Quest } from "./quest.js";
+import { QuestBook, Quest } from "../dependencies/hy2Quest.js";
 
 /**
  * 注册任务书
+ * @todo 迁移任务书数据
  */
 export function questRegister() {
-  const IRON_INGOT = new mc.ItemStack("iron_ingot");
-  const GOLD_COIN = new mc.ItemStack("hy:gold_coin", 3);
-  const EXAMPLE_QUEST = new Quest(
-    "iron_ingot",
-    "铁锭",
-    "原神",
-    {
-      itemData: {
-        name: "铁锭",
-        item: IRON_INGOT,
-      },
-    },
-    {
-      itemData: {
-        name: "金币",
-        item: GOLD_COIN,
-      },
-    },
-  );
-  const EXAMPLE_QUEST_BOOK = new QuestBook(
-    "hy:quest_book",
-    "测试",
-    "原神，启动！",
-    [EXAMPLE_QUEST],
-  );
-  EXAMPLE_QUEST_BOOK.register();
 }
 
 /**

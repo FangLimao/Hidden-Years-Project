@@ -1,11 +1,12 @@
-/** hy-utils
+/** hy2-utils
  * @version v0.1.0
  * @author FangLimao <mucigames@outlook.com>
  * @author RawDiamondMC <RawDiamondMC@outlook.com>
+ * @license BSD-3
  */
 import * as mc from "@minecraft/server";
 import * as mcui from "@minecraft/server-ui";
-import * as hyData from "./data.js";
+import * as hyData from "../server/data.js";
 
 /**
  * 获取物品栏中指定物品的数量

@@ -1,5 +1,5 @@
 import * as mc from "@minecraft/server";
-import * as hyApi from "./utils.js";
+import * as hyApi from "../dependencies/hy2Utils.js";
 
 /** 监听方块事件 */
 export function blockMonitor() {
