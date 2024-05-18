@@ -82,15 +82,69 @@ export const HyCorrosionMap = {
 };
 
 export const HyQuestAward = {
+  diamond2: {
+    itemData: {
+      name: "钻石",
+      item: new mc.ItemStack("diamond", 2),
+    },
+  },
+  diamond4: {
+    itemData: {
+      name: "钻石",
+      item: new mc.ItemStack("diamond", 4),
+    },
+  },
+  diamond6: {
+    itemData: {
+      name: "钻石",
+      item: new mc.ItemStack("diamond", 6),
+    },
+  },
+  letter1: {
+    itemData: {
+      name: "一张散落的信纸",
+      item: new mc.ItemStack("hy:letter_1"),
+    },
+  },
+  diamondBlock6: {
+    itemData: {
+      name: "钻石块",
+      item: new mc.ItemStack("diamond_block", 6),
+    },
+  },
+  netheriteBlock6: {
+    itemData: {
+      name: "下界合金块",
+      item: new mc.ItemStack("netherite_block", 6),
+    },
+  },
+  enchantedGoldenApple3: {
+    itemData: {
+      name: "金光闪闪而又充满魔法的苹果",
+      item: new mc.ItemStack("enchanted_golden_apple", 3),
+    },
+  },
   goldenApple3: {
     itemData: {
       name: "金光闪闪的苹果",
       item: new mc.ItemStack("golden_apple", 3),
     },
   },
+  goldenApple5: {
+    itemData: {
+      name: "金光闪闪的苹果",
+      item: new mc.ItemStack("golden_apple", 5),
+    },
+  },
+  diamondCoin3: {
+    itemData: {
+      name: "三枚钻石币",
+      item: new mc.ItemStack("hy:diamond_coin", 3),
+    },
+  },
   diamondCoin9: {
     itemData: {
-      name: "钻石币",
+      name: "九枚钻石币",
       item: new mc.ItemStack("hy:diamond_coin", 9),
     },
   },
@@ -98,6 +152,108 @@ export const HyQuestAward = {
     itemData: {
       name: "泥土",
       item: new mc.ItemStack("dirt", 12),
+    },
+  },
+  goldCoin5: {
+    itemData: {
+      name: "五枚金币",
+      item: new mc.ItemStack("hy:gold_coin", 5),
+    },
+  },
+  goldCoin6: {
+    itemData: {
+      name: "六枚金币",
+      item: new mc.ItemStack("hy:gold_coin", 6),
+    },
+  },
+  goldCoin10: {
+    itemData: {
+      name: "一串金币",
+      item: new mc.ItemStack("hy:gold_coin", 10),
+    },
+  },
+  questBook1: {
+    itemData: {
+      name: "一本奇怪的书",
+      item: new mc.ItemStack("hy:quest_book1"),
+    },
+  },
+  goldCoin12: {
+    itemData: {
+      name: "十二枚金币",
+      item: new mc.ItemStack("hy:gold_coin", 12),
+    },
+  },
+  goldCoin16: {
+    itemData: {
+      name: "十六枚金币",
+      item: new mc.ItemStack("hy:gold_coin", 16),
+    },
+  },
+  goldCoin18: {
+    itemData: {
+      name: "十八枚金币",
+      item: new mc.ItemStack("hy:gold_coin", 18),
+    },
+  },
+  goldCoin20: {
+    itemData: {
+      name: "两串金币",
+      item: new mc.ItemStack("hy:gold_coin", 20),
+    },
+  },
+  goldCoin25: {
+    itemData: {
+      name: "二十五枚金币",
+      item: new mc.ItemStack("hy:gold_coin", 25),
+    },
+  },
+  goldCoin30: {
+    itemData: {
+      name: "三串金币",
+      item: new mc.ItemStack("hy:gold_coin", 30),
+    },
+  },
+  labTable: {
+    itemData: {
+      name: "炼金台",
+      item: new mc.ItemStack("hy:lab_table"),
+    },
+  },
+  storyBook: {
+    itemData: {
+      name: "一本旧书",
+      item: new mc.ItemStack("hy:story_book"),
+    },
+  },
+  netheriteTemplate: {
+    itemData: {
+      name: "下界合金升级模板",
+      item: new mc.ItemStack("netherite_upgrade_smithing_template"),
+    },
+  },
+  copperBadge: {
+    itemData: {
+      name: "铜徽章",
+      item: new mc.ItemStack("hy:copper_badge"),
+    },
+  },
+  goldenBadge: {
+    itemData: {
+      name: "金徽章",
+      item: new mc.ItemStack("hy:golden_badge"),
+    },
+  },
+  diamondBadge: {
+    itemData: {
+      name: "钻石徽章",
+      item: new mc.ItemStack("hy:diamond_badge"),
+    },
+  },
+  enderEye4: {
+    itemData: {
+      name: "四颗末影珍珠",
+      item: new mc.ItemStack("ender_eye", 4),
     },
   },
 };
@@ -119,6 +275,180 @@ export const HyQuestCondition = {
     itemData: {
       name: "铜之精华",
       item: new mc.ItemStack("hy:copper_essence"),
+    },
+  },
+  stick: {
+    itemData: {
+      name: "木棍",
+      item: new mc.ItemStack("stick"),
+    },
+  },
+  overMetalIngot: {
+    itemData: {
+      name: "岩金锭",
+      item: new mc.ItemStack("hy:over_metal_ingot"),
+    },
+  },
+  ironIngot: {
+    itemData: {
+      name: "铁锭",
+      item: new mc.ItemStack("iron_ingot"),
+    },
+  },
+  copperIngot: {
+    itemData: {
+      name: "铜锭",
+      item: new mc.ItemStack("copper_ingot"),
+    },
+  },
+  ironHammer: {
+    itemData: {
+      name: "铁锤",
+      item: new mc.ItemStack("hy:iron_hammer"),
+    },
+  },
+  ironCrowbar: {
+    itemData: {
+      name: "铁撬棍",
+      item: new mc.ItemStack("hy:iron_crowbar"),
+    },
+  },
+  ironCrowbar: {
+    itemData: {
+      name: "铁撬棍",
+      item: new mc.ItemStack("hy:iron_crowbar"),
+    },
+  },
+  ironKnife: {
+    itemData: {
+      name: "铁小刀",
+      item: new mc.ItemStack("hy:iron_knife"),
+    },
+  },
+  ironDagger: {
+    itemData: {
+      name: "铁匕首",
+      item: new mc.ItemStack("hy:iron_dagger"),
+    },
+  },
+  ironSword: {
+    itemData: {
+      name: "铁剑",
+      item: new mc.ItemStack("hy:iron_sword"),
+    },
+  },
+  fuelMetal: {
+    itemData: {
+      name: "燃金",
+      item: new mc.ItemStack("hy:fuel_metal"),
+    },
+  },
+  nightmareFuelMetal: {
+    itemData: {
+      name: "魇化燃金",
+      item: new mc.ItemStack("hy:nightmare_fuel_metal"),
+    },
+  },
+  steelIngot: {
+    itemData: {
+      name: "钢锭",
+      item: new mc.ItemStack("hy:steel_ingot"),
+    },
+  },
+  totem: {
+    itemData: {
+      name: "不死图腾",
+      item: new mc.ItemStack("totem_of_undying"),
+    },
+  },
+  obsidian: {
+    itemData: {
+      name: "黑曜石",
+      item: new mc.ItemStack("obsidian"),
+    },
+  },
+  goldIngot: {
+    itemData: {
+      name: "金锭",
+      item: new mc.ItemStack("gold_ingot"),
+    },
+  },
+  ghastTear: {
+    itemData: {
+      name: "恶魂之泪",
+      item: new mc.ItemStack("ghast_tear"),
+    },
+  },
+  netheriteScrap: {
+    itemData: {
+      name: "下界合金碎片",
+      item: new mc.ItemStack("netherite_scrap"),
+    },
+  },
+  lodestone: {
+    itemData: {
+      name: "磁石",
+      item: new mc.ItemStack("lodestone"),
+    },
+  },
+  respawnAnchor: {
+    itemData: {
+      name: "重生猫",
+      item: new mc.ItemStack("respawn_anchor"),
+    },
+  },
+  blazeRod: {
+    itemData: {
+      name: "烈焰棒",
+      item: new mc.ItemStack("blaze_rod"),
+    },
+  },
+  netherStar: {
+    itemData: {
+      name: "下界之星",
+      item: new mc.ItemStack("nether_star"),
+    },
+  },
+  enderPearl: {
+    itemData: {
+      name: "末影珍珠",
+      item: new mc.ItemStack("ender_pearl"),
+    },
+  },
+  dragonBreath: {
+    itemData: {
+      name: "龙息",
+      item: new mc.ItemStack("dragon_breath"),
+    },
+  },
+  dragonEgg: {
+    itemData: {
+      name: "龙蛋",
+      item: new mc.ItemStack("dragon_egg"),
+    },
+  },
+  ruby: {
+    itemData: {
+      name: "红宝石",
+      item: new mc.ItemStack("hy:ruby"),
+    },
+  },
+  rubyChestplate: {
+    itemData: {
+      name: "红宝石胸甲",
+      item: new mc.ItemStack("hy:ruby_chestplate"),
+    },
+  },
+  rubyBag: {
+    itemData: {
+      name: "红宝石谜袋",
+      item: new mc.ItemStack("hy:ruby_bag"),
+    },
+  },
+  rubyRunes: {
+    itemData: {
+      name: "红宝石符文",
+      item: new mc.ItemStack("hy:ruby_runes"),
     },
   },
 };

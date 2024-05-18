@@ -13,15 +13,26 @@ export class Job {
    * 循环给予状态效果
    */
   cycleGetEffect: cycleEffectType;
+  hasJob(player: mc.Player): boolean {
+    return player.hasTag(this.id);
+  }
+  giveJob(player: mc.Player): void {
+    player.addTag(this.id);
+  }
+  /**
+   * 自定义效果
+   */
+  custom?: () => void;
   /**
    * 注册职业
    */
   register(): void {
+    this.custom();
     /** 循环给予状态效果 */
     if (this.cycleGetEffect !== undefined) {
       mc.system.runInterval(() => {
         mc.world.getAllPlayers().forEach((player) => {
-          if (player.hasTag(this.id)) {
+          if (this.hasJob(player)) {
             player.addEffect(
               this.cycleGetEffect.typeId,
               6000,

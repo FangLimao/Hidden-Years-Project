@@ -24,16 +24,21 @@ export class QuestBook {
   /**
    * 任务书的标题
    */
-  title: string| RawMessage;
+  title: string | RawMessage;
   /**
    * 任务书的描述
    */
-  body: string| RawMessage;
+  body: string | RawMessage;
   /**
    * 任务书的任务
    */
   private readonly quests: Quest[];
-  constructor(id: string, title: string| RawMessage, body: string| RawMessage, quests: Quest[]) {
+  constructor(
+    id: string,
+    title: string | RawMessage,
+    body: string | RawMessage,
+    quests: Quest[],
+  ) {
     this.id = id;
     this.title = title;
     this.body = body;
@@ -209,7 +214,7 @@ export class Quest {
           this.complete(player);
         } else {
           player.sendMessage(
-            `材料不足，你需要${this.award.itemData.item.amount}个${this.condition.itemData.name}才能完成这个任务`,
+            `材料不足，你需要${this.condition.itemData.item.amount}个${this.condition.itemData.name}才能完成这个任务`,
           );
         }
       }
