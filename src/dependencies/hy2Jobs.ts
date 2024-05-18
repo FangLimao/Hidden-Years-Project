@@ -25,7 +25,7 @@ export class Job {
             player.addEffect(
               this.cycleGetEffect.typeId,
               6000,
-              this.cycleGetEffect.options
+              this.cycleGetEffect.options,
             );
           }
         });

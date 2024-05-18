@@ -791,8 +791,11 @@
     "hy.calamity_bag": {
       "textures": "textures/items/treasures/bags/calamity_bag"
     },
-    "hy.quest_book": {
-      "textures": "textures/items/treasures/quest_book"
+    "hy.quest_book.0": {
+      "textures": "textures/items/treasures/books/0"
+    },
+    "hy.quest_book.1": {
+      "textures": "textures/items/treasures/books/1"
     },
     "hy.spawn_eggs": {
       "textures": [

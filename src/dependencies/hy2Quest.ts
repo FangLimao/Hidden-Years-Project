@@ -24,21 +24,16 @@ export class QuestBook {
   /**
    * 任务书的标题
    */
-  title: string | RawMessage;
+  title: string| RawMessage;
   /**
    * 任务书的描述
    */
-  body: string | RawMessage;
+  body: string| RawMessage;
   /**
    * 任务书的任务
    */
   private readonly quests: Quest[];
-  constructor(
-    id: string,
-    title: string,
-    body: string | RawMessage,
-    quests: Quest[]
-  ) {
+  constructor(id: string, title: string| RawMessage, body: string| RawMessage, quests: Quest[]) {
     this.id = id;
     this.title = title;
     this.body = body;
@@ -55,7 +50,7 @@ export class QuestBook {
     this.quests.forEach((quest: Quest) => {
       mainForm.button(
         quest.title + (quest.isCompleted(player) ? " §2✔" : ""),
-        quest.icon
+        quest.icon,
       );
     });
     mainForm.show(player).then((response: ActionFormResponse) => {
@@ -116,7 +111,7 @@ export class Quest {
   /**
    * 任务的标题
    */
-  protected _title: string | RawMessage;
+  protected _title: string;
   /**
    * 任务的描述
    */
@@ -142,11 +137,11 @@ export class Quest {
   private form: MessageFormData;
   constructor(
     id: string,
-    title: string | RawMessage,
+    title: string,
     body: string,
     condition: QuestCondition,
     award: QuestAward,
-    icon?: string
+    icon?: string,
   ) {
     this.id = id;
     this._title = title;
@@ -171,14 +166,14 @@ export class Quest {
     if (this.isCompleted(player)) {
       this.form
         .body(
-          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name}\n§e状态: §r已完成`
+          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name}\n§e状态: §r已完成`,
         )
         .button1({ translate: "gui.back" })
         .button2({ translate: "gui.quest_done" });
     } else {
       this.form
         .body(
-          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name} × ${this.award.itemData.item.amount} \n§e状态: §r未完成`
+          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name} × ${this.award.itemData.item.amount} \n§e状态: §r未完成`,
         )
         .button1({ translate: "gui.back" })
         .button2({ translate: "gui.check" });
@@ -205,7 +200,7 @@ export class Quest {
         if (
           hyApi.getItemAmountInContainer(
             CONTAINER,
-            this.condition.itemData.item.typeId
+            this.condition.itemData.item.typeId,
           ) >= this.condition.itemData.item.amount
         ) {
           player.dimension.spawnItem(this.award.itemData.item, player.location);
@@ -214,7 +209,7 @@ export class Quest {
           this.complete(player);
         } else {
           player.sendMessage(
-            `材料不足，你需要${this.award.itemData.item.amount}个${this.condition.itemData.name}才能完成这个任务`
+            `材料不足，你需要${this.award.itemData.item.amount}个${this.condition.itemData.name}才能完成这个任务`,
           );
         }
       }
@@ -231,7 +226,7 @@ export class Quest {
     this._body = content;
     this.form.body(content);
   }
-  set title(content: string | RawMessage) {
+  set title(content: string) {
     this._title = content;
     this.form.title(content);
   }

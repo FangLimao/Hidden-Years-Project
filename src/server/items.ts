@@ -2,6 +2,7 @@ import * as mc from "@minecraft/server";
 import * as hyApi from "../dependencies/hy2Utils.js";
 import * as hyData from "./data.js";
 import * as mcui from "@minecraft/server-ui";
+import * as quests from "./quests.js";
 import { QuestBook, Quest } from "../dependencies/hy2Quest.js";
 
 /**
@@ -9,6 +10,13 @@ import { QuestBook, Quest } from "../dependencies/hy2Quest.js";
  * @todo 迁移任务书数据
  */
 export function questRegister() {
+  const QUEST_BOOK1 = new QuestBook(
+    "hy:quest_book1",
+    { translate: "hy.quest.title2" },
+    { translate: "hy.quest.body2" },
+    [quests.COPPER_APPLE, quests.METAL_STAR, quests.COPPER_ESSENCE],
+  );
+  QUEST_BOOK1.register();
 }
 
 /**

@@ -81,12 +81,6 @@ export const HyCorrosionMap = {
   weathered_copper_sword: new mc.ItemStack("hy:oxidized_copper_sword"),
 };
 
-export const HyQuestConditionItems = {
-  copperApple: new mc.ItemStack("hy:diamond_apple"),
-  metalStar: new mc.ItemStack("hy:metal_star"),
-  copperEssence: new mc.ItemStack("hy:copper_essence"),
-};
-
 export const HyQuestAward = {
   goldenApple3: {
     itemData: {
@@ -115,20 +109,19 @@ export const HyQuestCondition = {
       item: new mc.ItemStack("hy:copper_apple"),
     },
   },
-  metalStar:{
+  metalStar: {
     itemData: {
       name: "金属之星",
       item: new mc.ItemStack("hy:metal_star"),
     },
-  }, 
-  copperEssence:{
+  },
+  copperEssence: {
     itemData: {
       name: "铜之精华",
       item: new mc.ItemStack("hy:copper_essence"),
     },
-  },  
+  },
 };
-
 
 /**
  * 隐藏之年 物品奖励 的数据
