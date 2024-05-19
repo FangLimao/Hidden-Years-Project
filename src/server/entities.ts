@@ -1,6 +1,6 @@
 import * as mc from "@minecraft/server";
 import * as hyApi from "../dependencies/hy2Utils.js";
-import * as hyData from "./data.js";
+import * as hyData from "../data/data.js";
 
 /**
  * 监听玩家生成事件

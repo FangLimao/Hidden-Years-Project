@@ -82,6 +82,12 @@ export const HyCorrosionMap = {
 };
 
 export const HyQuestAward = {
+  netheriteIngot3: {
+    itemData: {
+      name: "下界合金锭",
+      item: new mc.ItemStack("netherite_ingot", 3),
+    },
+  },
   diamond2: {
     itemData: {
       name: "钻石",
@@ -305,12 +311,6 @@ export const HyQuestCondition = {
     itemData: {
       name: "铁锤",
       item: new mc.ItemStack("hy:iron_hammer"),
-    },
-  },
-  ironCrowbar: {
-    itemData: {
-      name: "铁撬棍",
-      item: new mc.ItemStack("hy:iron_crowbar"),
     },
   },
   ironCrowbar: {

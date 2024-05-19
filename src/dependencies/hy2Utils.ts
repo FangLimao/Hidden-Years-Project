@@ -6,7 +6,7 @@
  */
 import * as mc from "@minecraft/server";
 import * as mcui from "@minecraft/server-ui";
-import * as hyData from "../server/data.js";
+import * as hyData from "../data/data.js";
 
 /**
  * 获取物品栏中指定物品的数量

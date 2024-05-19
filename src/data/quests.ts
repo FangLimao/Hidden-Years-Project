@@ -1,5 +1,3 @@
-import * as mc from "@minecraft/server";
-import * as hyApi from "../dependencies/hy2Utils.js";
 import { HyQuestCondition, HyQuestAward } from "./data.js";
 import { Quest } from "../dependencies/hy2Quest.js";
 
