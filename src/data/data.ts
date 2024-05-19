@@ -334,7 +334,7 @@ export const HyQuestCondition = {
   ironSword: {
     itemData: {
       name: "铁剑",
-      item: new mc.ItemStack("hy:iron_sword"),
+      item: new mc.ItemStack("iron_sword"),
     },
   },
   fuelMetal: {
