@@ -43,6 +43,9 @@ export class QuestBook {
     this.title = title;
     this.body = body;
     this.quests = quests;
+    mc.world.afterEvents.itemUse.subscribe((event) => {
+      if (event.itemStack.typeId === this.id) this.display(event.source);
+    });
   }
   /**
    * 向玩家展示任务书
@@ -97,11 +100,9 @@ export class QuestBook {
   }
   /**
    * 注册任务书
+   * @deprecated 现在`constructor`方法已经包括物品的事件监听，无需再单独注册
    */
-  register(): void {
-    mc.world.afterEvents.itemUse.subscribe((event) => {
-      if (event.itemStack.typeId === this.id) this.display(event.source);
-    });
+  register(): void {  
   }
 }
 
