@@ -171,15 +171,17 @@ export class Quest {
   initForm(player: Player): void {
     if (this.isCompleted(player)) {
       this.form
-        .body(
+       .title(this.title)
+       .body(
           `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name}\n§e状态: §r已完成`,
         )
         .button1({ translate: "gui.back" })
         .button2({ translate: "gui.quest_done" });
     } else {
       this.form
+        .title(this.title)
         .body(
-          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name} × ${this.award.itemData.item.amount} \n§e状态: §r未完成`,
+          `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name}\n§e状态: §r未完成`,
         )
         .button1({ translate: "gui.back" })
         .button2({ translate: "gui.check" });

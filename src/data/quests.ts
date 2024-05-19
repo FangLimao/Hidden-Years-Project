@@ -186,7 +186,7 @@ export const BLAZE_ROD = new Quest(
 export const NETHER_STAR = new Quest(
   "nether_star",
   "§d[最初的家园 最终任务]§r 人偶术的巅峰",
-  "「让我们回退一点。」\n​你可听说过人偶术？这是一种精妙的技术，那些人偶师们费尽心思将这些没有生命的拙劣作品灌注智慧，让这些小玩意成为了战争机器\n凋零何尝不是人偶术的造物呢？从威力上讲，这恐怕就是人偶术的巅峰了吧……",
+  "「让我们回退一点。」\n\n你可听说过人偶术？这是一种精妙的技术，那些人偶师们费尽心思将这些没有生命的拙劣作品灌注智慧，让这些小玩意成为了战争机器\n凋零何尝不是人偶术的造物呢？从威力上讲，这恐怕就是人偶术的巅峰了吧……",
   HyQuestCondition.netherStar,
   HyQuestAward.diamondBlock6,
 );
@@ -210,7 +210,7 @@ export const DRAGON_BREATH = new Quest(
 export const DRAGON_EGG = new Quest(
   "dragon_egg",
   "§d[空中群岛 最终任务]§r 起点亦或是终点",
-  "「在你深陷游戏之梦时，便选择以这种方式想象出形形色色的事物。」​\n​你击败了末影龙，这是普通冒险家冒险生涯的终点，可也是你冒险的真正起点；经过战斗，你已经足够强大，可以探索隐藏于这个世界的秘密了。\n向着真相进发吧！",
+  "「在你深陷游戏之梦时，便选择以这种方式想象出形形色色的事物。」\n\n你击败了末影龙，这是普通冒险家冒险生涯的终点，可也是你冒险的真正起点；经过战斗，你已经足够强大，可以探索隐藏于这个世界的秘密了。\n\n向着真相进发吧！",
   HyQuestCondition.dragonEgg,
   HyQuestAward.netheriteBlock6,
 );
@@ -242,7 +242,7 @@ export const RUBY_BAG = new Quest(
 export const RUBY_RUNES = new Quest(
   "ruby_runes",
   "§d[淬血的刚玉 最终任务]§r 力量与鲜血之歌",
-  "「让我们回溯到遥远的过去。」\n在漫长的历史中，浩如烟海的强大存在被「迷失军团」封印于袋中，红宝石之王是其最古老的存在，阅读他们身上的信纸，一步步探求真相吧。",
+  "「让我们回溯到遥远的过去。」\n\n在漫长的历史中，浩如烟海的强大存在被「迷失军团」封印于袋中，红宝石之王是其最古老的存在，阅读他们身上的信纸，一步步探求真相吧。",
   HyQuestCondition.rubyRunes,
   HyQuestAward.netheriteIngot3,
 );
