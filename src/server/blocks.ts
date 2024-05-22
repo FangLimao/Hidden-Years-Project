@@ -1,12 +1,13 @@
 import * as mc from "@minecraft/server";
 import * as hyApi from "../dependencies/hy2Utils.js";
+import * as sapi from "sapi-utils";
 
 /** 监听方块事件 */
 export function blockMonitor() {
   mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
     const BLOCK = event.brokenBlockPermutation;
     const PLAYER = event.player;
-    const ITEM = hyApi.getEquipmentItem(PLAYER) as unknown as mc.ItemStack;
+    const ITEM = hyApi.getEquipmentItem(PLAYER);
     if (BLOCK.hasTag("hy:experience_ores")) {
       PLAYER.dimension.spawnEntity("xp_orb", PLAYER.location);
     }
@@ -22,7 +23,7 @@ export function blockMonitor() {
       BLOCK.hasTag("hy:suspicious_ores") &&
       ITEM.hasTag("minecraft:is_pickaxe")
     ) {
-      if (hyApi.getRandomChance() <= 8) {
+      if (sapi.randomInteger(10, 1) <= 8) {
         PLAYER.dimension.spawnEntity("silverfish", PLAYER.location);
         PLAYER.dimension.spawnEntity("silverfish", PLAYER.location);
       } else {

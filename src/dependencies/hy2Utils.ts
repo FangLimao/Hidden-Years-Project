@@ -7,27 +7,7 @@
 import * as mc from "@minecraft/server";
 import * as mcui from "@minecraft/server-ui";
 import * as hyData from "../data/data.js";
-
-/**
- * 获取物品栏中指定物品的数量
- * @param container 要检查的物品栏
- * @param item 物品Id
- * @author RawDiamondMC <RawDiamondMC@outlook.com>
- * @since v0.1.0
- */
-export function getItemAmountInContainer(
-  container: mc.Container,
-  item: string,
-) {
-  let amount: number = 0;
-  for (let slot = 0; slot < container.size; slot++) {
-    const itemStack: undefined | mc.ItemStack = container.getItem(slot);
-    if (itemStack?.typeId === item) {
-      amount++;
-    }
-  }
-  return amount;
-}
+import * as sapi from "sapi-utils";
 
 /**
  * 让物品堆开始冷却
@@ -88,7 +68,7 @@ export function affectEntities(
  * @since v0.1.0
  */
 export function applyImitationDamage(entity: mc.Entity) {
-  switch (getRandomChance()) {
+  switch (sapi.randomInteger(10, 1)) {
     case 1:
       entity?.applyDamage(2);
       if (entity instanceof mc.Player) {
@@ -114,96 +94,6 @@ export function applyImitationDamage(entity: mc.Entity) {
  */
 export function error(data: any) {
   console.error(`[HY2] ${data}`);
-}
-
-/**
- * 为实体移除状态效果
- * @param entity 要移除状态效果的实体
- * @param effectType 要移除的状态效果，除了原版效果外还可填`bad`、`good`、`all`
- * @since v0.1.0
- */
-export function clearEffect(
-  entity: mc.Entity,
-  effectType: mc.EffectType | string,
-) {
-  switch (effectType) {
-    case "all":
-      entity.getEffects().forEach((effect) => {
-        entity.removeEffect(effect.typeId);
-      });
-      break;
-    case "bad":
-      entity.removeEffect("slowness");
-      entity.removeEffect("mining_fatigue");
-      entity.removeEffect("instant_damage");
-      entity.removeEffect("nausea");
-      entity.removeEffect("blindness");
-      entity.removeEffect("hunger");
-      entity.removeEffect("weakness");
-      entity.removeEffect("poison");
-      entity.removeEffect("wither");
-      entity.removeEffect("fatal_poison");
-      entity.removeEffect("bad_omen");
-      entity.removeEffect("levitation");
-      entity.removeEffect("darkness");
-      break;
-    case "good":
-      entity.removeEffect("speed");
-      entity.removeEffect("haste");
-      entity.removeEffect("strength");
-      entity.removeEffect("instant_health");
-      entity.removeEffect("regeneration");
-      entity.removeEffect("jump_boost");
-      entity.removeEffect("invisibility");
-      entity.removeEffect("water_breathing");
-      entity.removeEffect("health_boost");
-      entity.removeEffect("night_vision");
-      entity.removeEffect("saturation");
-      entity.removeEffect("absorption");
-      entity.removeEffect("village_hero");
-      entity.removeEffect("conduit_power");
-      entity.removeEffect("slow_falling");
-      break;
-    default:
-      entity.removeEffect(effectType);
-      break;
-  }
-}
-
-/**
- * 生成一个随机数
- * @param max 随机数最大值，小数将被解析为整数
- * @param min 随机数最小值，小数将被解析为整数
- * @returns 一个范围内的随机数
- * @throws 当max<min时抛出RangeError
- * @author RawDiamondMC <RawDiamondMC@outlook.com>
- * @since v0.1.0
- */
-export function rand(max: number, min?: number) {
-  if (min == undefined) min = 0;
-  max = parseInt(String(max));
-  min = parseInt(String(min));
-  if (max < min) {
-    throw new RangeError(
-      `rand() is used incorrectly ! Expect:any numbers higher than ${min}. Current: ${max}`,
-    );
-  }
-  if (max == min) {
-    return max;
-  }
-  const random: number = mc.system.currentTick + Math.random() * max;
-  return parseInt(String(random / max)) + min;
-}
-
-/**
- * 获取1-10随机整数
- * @returns 1-10随机整数
- * @since v0.1.0
- */
-export function getRandomChance() {
-  let randomChance = Math.ceil(Math.random() * 10);
-  console.warn("Random chance is " + randomChance);
-  return randomChance;
 }
 
 /**
@@ -244,8 +134,8 @@ export function consumeDurability(
  */
 export function getEquipmentItem(entity: mc.Entity) {
   return entity
-    ?.getComponent("minecraft:equippable")
-    ?.getEquipment(mc.EquipmentSlot.Mainhand);
+    .getComponent("minecraft:equippable")
+    .getEquipment(mc.EquipmentSlot.Mainhand);
 }
 
 /**
