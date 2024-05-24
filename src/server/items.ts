@@ -15,7 +15,6 @@ export function questRegister() {
     { translate: "hy.quest.body2" },
     [quests.COPPER_APPLE, quests.METAL_STAR, quests.COPPER_ESSENCE]
   );
-  QUEST_BOOK1.register();
   const QUEST_BOOK = new QuestBook(
     "hy:quest_book",
     { translate: "hy.quest.title1" },
@@ -34,24 +33,23 @@ export function questRegister() {
       quests.NIGHTMARE_FUEL_METAL,
       quests.STEEL_INGOT,
       quests.TOTEM,
-      quests.OBSIDIAN,
-      quests.GOLD_INGOT,
-      quests.GHAST_TEAR,
-      quests.NETHERITE_SCRAP,
-      quests.LODESTONE,
-      quests.RESPAWN_ANCHOR,
-      quests.BLAZE_ROD,
-      quests.NETHER_STAR,
-      quests.ENDER_PEARL,
-      quests.DRAGON_BREATH,
-      quests.DRAGON_EGG,
       quests.RUBY,
       quests.RUBY_CHESTPLATE,
       quests.RUBY_BAG,
       quests.RUBY_RUNES,
+      quests.OBSIDIAN,
+      quests.GOLD_INGOT,
+      quests.GHAST_TEAR,
+      quests.NETHERITE_SCRAP,
+      quests.BLAZE_ROD,
+      quests.ENDER_PEARL,
+      quests.DRAGON_BREATH,
+      quests.DRAGON_EGG,
+      quests.LODESTONE,
+      quests.RESPAWN_ANCHOR,
+      quests.NETHER_STAR,
     ]
   );
-  QUEST_BOOK.register();
 }
 
 /**
