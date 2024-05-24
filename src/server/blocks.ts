@@ -6,7 +6,7 @@ export function blockMonitor() {
   mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
     const BLOCK = event.brokenBlockPermutation;
     const PLAYER = event.player;
-    const ITEM = hyApi.getEquipmentItem(PLAYER) as unknown as mc.ItemStack;
+    const ITEM = hyApi.getEquipmentItem(PLAYER);
     if (BLOCK.hasTag("hy:experience_ores")) {
       PLAYER.dimension.spawnEntity("xp_orb", PLAYER.location);
     }
