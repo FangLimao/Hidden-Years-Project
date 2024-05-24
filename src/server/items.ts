@@ -6,6 +6,29 @@ import * as quests from "../data/quests.js";
 import { QuestBook } from "../dependencies/hy2Quest.js";
 
 /**
+ * 造成仿制伤害
+ * @param entity 使用了仿制工具的实体
+ */
+export function applyImitationDamage(entity: mc.Entity): void {
+  switch (hyApi.getRandomChance()) {
+    case 1:
+      entity?.applyDamage(2);
+      if (entity instanceof mc.Player) {
+        entity?.sendMessage([{ translate: "hy.message.imitation_damage.1" }]);
+      }
+      break;
+    case 2:
+      entity?.applyDamage(8);
+      if (entity instanceof mc.Player) {
+        entity?.sendMessage([{ translate: "hy.message.imitation_damage.2" }]);
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+/**
  * 注册任务书
  */
 export function questRegister() {
@@ -133,7 +156,7 @@ export function itemDurabilityMonitor() {
       );
     }
     if (ITEM?.hasTag("hy:imitation_tools")) {
-      hyApi.applyImitationDamage(ENTITY);
+      applyImitationDamage(ENTITY);
     }
   });
 
@@ -155,7 +178,7 @@ export function itemDurabilityMonitor() {
       );
     }
     if (ITEM?.hasTag("hy:imitation_tools")) {
-      hyApi.applyImitationDamage(ENTITY);
+      applyImitationDamage(ENTITY);
     }
   });
 }

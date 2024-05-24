@@ -83,30 +83,6 @@ export function affectEntities(
 }
 
 /**
- * 造成仿制伤害
- * @param entity 使用了仿制工具的实体
- * @since v0.1.0
- */
-export function applyImitationDamage(entity: mc.Entity) {
-  switch (getRandomChance()) {
-    case 1:
-      entity?.applyDamage(2);
-      if (entity instanceof mc.Player) {
-        entity?.sendMessage([{ translate: "hy.message.imitation_damage.1" }]);
-      }
-      break;
-    case 2:
-      entity?.applyDamage(8);
-      if (entity instanceof mc.Player) {
-        entity?.sendMessage([{ translate: "hy.message.imitation_damage.2" }]);
-      }
-      break;
-    default:
-      break;
-  }
-}
-
-/**
  * 输出一个错误
  * @param data 错误信息
  * @author RawDiamondMC <RawDiamondMC@outlook.com>
