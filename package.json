@@ -6,7 +6,7 @@
   "scripts": {
     "build": "esbuild src/index.ts --bundle --format=esm --external:@minecraft/server --external:@minecraft/server-ui --minify-whitespace --minify-syntax \"--outfile=./隐藏之年2(BP)/scripts/index.js\"",
     "buildSrc": "prettier --write src&&tsc",
-    "debug": "tsc --noEmit && prettier --write .",
+    "debug": "tsc --noEmit&&prettier --write .",
     "prettier": "prettier --write .",
     "test": "tsc --noEmit"
   },
@@ -16,9 +16,7 @@
     "@minecraft/server": "1.11.0-beta.1.20.80-stable",
     "@minecraft/server-ui": "1.2.0-beta.1.20.80-stable",
     "@minecraft/vanilla-data": "1.20.80",
-    "typescript": "5.5.0-beta",
-    "esbuild": "^0.21.3",
-    "sapi-utils": "^0.2.0",
-    "sapi-ui-utils": "^0.3.0"
+    "typescript": "^5.4.5",
+    "esbuild": "^0.20.2"
   }
 }

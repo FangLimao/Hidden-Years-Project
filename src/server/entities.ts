@@ -1,7 +1,6 @@
 import * as mc from "@minecraft/server";
 import * as hyApi from "../dependencies/hy2Utils.js";
 import * as hyData from "../data/data.js";
-import * as sapi from "sapi-utils";
 
 /**
  * 监听玩家生成事件
@@ -42,7 +41,7 @@ export function entityEventsMonitor() {
       case "hy:ruby_boardsword":
         /** 红宝石阔剑会给予玩家经验值 */
         if (ATTACKER instanceof mc.Player)
-          ATTACKER.addExperience(sapi.randomInteger(4, 0));
+          ATTACKER.addExperience(hyApi.rand(4, 0));
         break;
       default:
         break;
