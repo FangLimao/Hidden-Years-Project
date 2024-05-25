@@ -4,7 +4,7 @@
   "description": "A Minecraft addon",
   "private": true,
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --format=esm --external:@minecraft/server --external:@minecraft/server-ui --minify-whitespace --minify-syntax \"--outfile=./隐藏之年2(BP)/scripts/index.js\"",
+    "build": "esbuild src/index.ts --bundle --format=esm --external:@minecraft/server --external:@minecraft/server-ui --minify-syntax \"--outfile=./隐藏之年2(BP)/scripts/index.js\"",
     "buildSrc": "prettier --write src&&tsc",
     "debug": "tsc --noEmit&&prettier --write .",
     "prettier": "prettier --write .",
