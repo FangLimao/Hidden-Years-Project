@@ -806,6 +806,9 @@
         "textures/items/spawn_eggs/egg_gemstone_trader",
         "textures/items/spawn_eggs/egg_hidden_trader"
       ]
-    }
+    },
+    "hy.imitimitation_diadiamond": {
+      "textures": "textures/items/materials/imitations/diamond"
+    },
   }
 }

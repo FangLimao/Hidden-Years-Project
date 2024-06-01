@@ -1,15 +1,52 @@
 import * as mc from "@minecraft/server";
-import * as hyApi from "../dependencies/hy2Utils.js";
+import * as hyApi from "hy2-toolchain";
 import * as hyData from "../data/data.js";
 import * as mcui from "@minecraft/server-ui";
 import * as quests from "../data/quests.js";
 import { QuestBook } from "../dependencies/hy2Quest.js";
 
 /**
+ * 为物品消耗耐久值
+ * @param itemStack 要消耗耐久的物品
+ * @param value 要消耗的耐久值
+ * @param entity 破坏工具的生物
+ * @returns 消耗耐久值完毕的物品
+ */
+function consumeDurabilityMixed(
+  itemStack: mc.ItemStack,
+  value: number,
+  entity?: mc.Entity,
+) {
+  let durability = itemStack.getComponent("minecraft:durability");
+  if (durability === undefined) return itemStack;
+  if (durability.damage + value >= durability.maxDurability) {
+    if (itemStack.hasTag("hy:corrosive_tools")) {
+      // @ts-ignore
+      return hyData.HyCorrosionMap[itemStack.typeId.replace("hy:", "")];
+    }
+    if (entity instanceof mc.Player) {
+      entity.playSound("random.break");
+    }
+    return undefined;
+  } else {
+    durability.damage += value;
+    return itemStack;
+  }
+}
+
+function createLetterForm(
+    id: string,
+    title: string | mc.RawMessage,
+    body: string | mc.RawMessage,
+  ){
+const LETTER =new hyApi.SimpleReading(id,title,body);
+}
+
+/**
  * 造成仿制伤害
  * @param entity 使用了仿制工具的实体
  */
-export function applyImitationDamage(entity: mc.Entity): void {
+function applyImitationDamage(entity: mc.Entity): void {
   switch (hyApi.getRandomChance()) {
     case 1:
       entity?.applyDamage(2);
@@ -28,6 +65,9 @@ export function applyImitationDamage(entity: mc.Entity): void {
   }
 }
 
+
+export class Items{}
+
 /**
  * 注册任务书
  */
@@ -36,7 +76,7 @@ export function questRegister() {
     "hy:quest_book1",
     { translate: "hy.quest.title2" },
     { translate: "hy.quest.body2" },
-    [quests.COPPER_APPLE, quests.METAL_STAR, quests.COPPER_ESSENCE]
+    [quests.COPPER_APPLE, quests.METAL_STAR, quests.COPPER_ESSENCE],
   );
   const QUEST_BOOK = new QuestBook(
     "hy:quest_book",
@@ -71,7 +111,7 @@ export function questRegister() {
       quests.LODESTONE,
       quests.RESPAWN_ANCHOR,
       quests.NETHER_STAR,
-    ]
+    ],
   );
 }
 
@@ -79,13 +119,13 @@ export function questRegister() {
  * 注册书籍
  */
 export function bookRegister() {
-  for (let i = 0; i <= 10; i++) {
-    hyApi.createLetterForm(
+  for (let i = 0; i <= 10; i++) {    
+     createLetterForm(
+      `hy:letter_${i}`,
       // @ts-ignore
       hyData.HyLetterTitle[i],
       // @ts-ignore
       hyData.HyLetterBody[i],
-      `hy:letter_${i}`
     );
   }
   mc.world.afterEvents.itemUse.subscribe((event) => {
@@ -127,7 +167,7 @@ export function bookRegister() {
       if (!PLAYER.hasTag("hy:get_first_letter")) {
         PLAYER.dimension.spawnItem(
           hyData.HyRewardTypes.letter1st,
-          PLAYER.location
+          PLAYER.location,
         );
         PLAYER.addTag("hy:get_first_letter");
       }
@@ -143,16 +183,16 @@ export function itemDurabilityMonitor() {
     const ENTITY = event.player;
     let ITEM = hyApi.getEquipmentItem(ENTITY);
     if (ITEM?.hasTag("hy:custom_tools")) {
-      const NEW_ITEM = hyApi.consumeDurability(ITEM, 1, ENTITY);
+      const NEW_ITEM = consumeDurabilityMixed(ITEM, 1, ENTITY);
       ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM
+        NEW_ITEM,
       );
     } else if (ITEM?.hasTag("hy:custom_weapons")) {
-      const NEW_ITEM = hyApi.consumeDurability(ITEM, 2, ENTITY);
+      const NEW_ITEM = consumeDurabilityMixed(ITEM, 2, ENTITY);
       ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM
+        NEW_ITEM,
       );
     }
     if (ITEM?.hasTag("hy:imitation_tools")) {
@@ -164,17 +204,17 @@ export function itemDurabilityMonitor() {
     const ENTITY = event.damagingEntity;
     let ITEM = hyApi.getEquipmentItem(event.damagingEntity);
     if (ITEM?.hasTag("hy:custom_weapons")) {
-      const NEW_ITEM = hyApi.consumeDurability(ITEM, 1);
+      const NEW_ITEM = consumeDurabilityMixed(ITEM, 1);
       ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM
+        NEW_ITEM,
       );
     }
     if (ITEM?.hasTag("hy:custom_tools")) {
-      const NEW_ITEM = hyApi.consumeDurability(ITEM, 2);
+      const NEW_ITEM = consumeDurabilityMixed(ITEM, 2);
       ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM
+        NEW_ITEM,
       );
     }
     if (ITEM?.hasTag("hy:imitation_tools")) {
@@ -222,11 +262,10 @@ export function itemUseMonitor() {
     ) {
       if (PLAYER.level > 1) {
         PLAYER.addTag("hy.magic_explode");
-        const NEW_ITEM = hyApi.consumeDurability(ITEM, 1, PLAYER);
-        hyApi.startCooldown(NEW_ITEM, PLAYER);
+        const NEW_ITEM = consumeDurabilityMixed(ITEM, 1, PLAYER);
         PLAYER.getComponent("minecraft:equippable")?.setEquipment(
           mc.EquipmentSlot.Mainhand,
-          NEW_ITEM
+          NEW_ITEM,
         );
         PLAYER.addLevels(-1);
         const ALL_OPTION: mc.EntityQueryOptions = {
@@ -250,7 +289,7 @@ export function itemUseMonitor() {
               PLAYER.dimension,
               SKELETON_OPINION,
               "weakness",
-              300
+              300,
             );
             break;
           case "hy:flash_metal_boardsword":
@@ -268,7 +307,7 @@ export function itemUseMonitor() {
               PLAYER.dimension,
               UNDEAD_OPINION,
               "weakness",
-              300
+              300,
             );
             break;
           case "hy:emerald_boardsword":
@@ -282,7 +321,7 @@ export function itemUseMonitor() {
               PLAYER.dimension,
               ILLAGER_OPINION,
               "weakness",
-              300
+              300,
             );
             break;
           case "hy:flash_copper_boardsword":
@@ -296,7 +335,7 @@ export function itemUseMonitor() {
               PLAYER.dimension,
               ARTHROPOD_OPINION,
               "weakness",
-              300
+              300,
             );
             break;
           case "hy:amethyst_boardsword":
@@ -310,7 +349,7 @@ export function itemUseMonitor() {
               PLAYER.dimension,
               POULTRY_OPINION,
               "weakness",
-              300
+              300,
             );
             break;
           case "hy:ruby_boardsword":
@@ -324,7 +363,7 @@ export function itemUseMonitor() {
               PLAYER.dimension,
               RUBY_OPINION,
               "weakness",
-              300
+              300,
             );
             break;
           default:
@@ -346,7 +385,7 @@ export function itemUseMonitor() {
     if (ITEM.hasTag("hy:single_use")) {
       PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        undefined
+        undefined,
       );
       /** 在这下面添加物品的使用效果 */
       switch (ITEM.typeId) {
@@ -356,7 +395,7 @@ export function itemUseMonitor() {
             case 2:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.diamondBlock,
-                PLAYER.location
+                PLAYER.location,
               );
               break;
             case 3:
@@ -364,25 +403,25 @@ export function itemUseMonitor() {
             case 5:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.goldBlock,
-                PLAYER.location
+                PLAYER.location,
               );
               break;
             case 6:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.scrap,
-                PLAYER.location
+                PLAYER.location,
               );
               break;
             case 7:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.template,
-                PLAYER.location
+                PLAYER.location,
               );
               break;
             default:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.apple,
-                PLAYER.location
+                PLAYER.location,
               );
           }
           break;
@@ -421,10 +460,10 @@ export function itemUseMonitor() {
     const ITEM: mc.ItemStack = event.itemStack;
     const PLAYER: mc.Player = event.source;
     if (ITEM.hasTag("hy:durability_use")) {
-      const NEW_ITEM = hyApi.consumeDurability(ITEM, 1, PLAYER);
+      const NEW_ITEM = consumeDurabilityMixed(ITEM, 1, PLAYER);
       PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM
+        NEW_ITEM,
       );
       /** 在这下面添加物品的使用效果 */
       switch (ITEM.typeId) {
@@ -458,7 +497,7 @@ export function itemUseMonitor() {
               300,
               {
                 amplifier: 2,
-              }
+              },
             );
             PLAYER.removeEffect("slowness");
             PLAYER.addEffect("speed", 300, {
@@ -610,7 +649,7 @@ export function itemUseMonitor() {
       case "hy:mineral_fuel_metal":
         PLAYER.dimension.spawnItem(
           hyData.HyRewardTypes.nightmareFuel,
-          PLAYER.location
+          PLAYER.location,
         );
         PLAYER.addEffect("fatal_poison", 800, {
           amplifier: 1,

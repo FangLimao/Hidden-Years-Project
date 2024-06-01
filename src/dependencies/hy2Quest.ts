@@ -102,8 +102,7 @@ export class QuestBook {
    * 注册任务书
    * @deprecated 现在`constructor`方法已经包括物品的事件监听，无需再单独注册
    */
-  register(): void {  
-  }
+  register(): void {}
 }
 
 /**
@@ -171,8 +170,8 @@ export class Quest {
   initForm(player: Player): void {
     if (this.isCompleted(player)) {
       this.form
-       .title(this.title)
-       .body(
+        .title(this.title)
+        .body(
           `${this._body}\n\n§e需要物品: §r${this.condition.itemData.name}\n§e奖励物品: §r${this.award.itemData.name}\n§e状态: §r已完成`,
         )
         .button1({ translate: "gui.back" })

@@ -3,9 +3,14 @@ import * as hyApi from "../dependencies/hy2Utils.js";
 import * as hyData from "../data/data.js";
 
 /**
+ * 实体监听器
+ */
+export class EntityMonitor{
+
+ /**
  * 监听玩家生成事件
  */
-export function playerSpawnMonitor() {
+playerSpawnMonitor() {
   mc.world.afterEvents.playerSpawn.subscribe((event) => {
     const PLAYER = event.player;
     if (!PLAYER.hasTag("hy:get_quest_book")) {
@@ -19,11 +24,10 @@ export function playerSpawnMonitor() {
     }
   });
 }
-
 /**
  * 监听实体事件
  */
-export function entityEventsMonitor() {
+entityEventsMonitor() {
   mc.world.afterEvents.entityDie.subscribe((event) => {
     const ENTITY = event.deadEntity;
     /** 红宝石之王死亡时的事件 */
@@ -56,3 +60,7 @@ export function entityEventsMonitor() {
     }
   });
 }
+}
+
+
+
