@@ -17,6 +17,7 @@
         "max_durability": 1561
       },
       "minecraft:damage": 8,
+      "minecraft:hover_text_color": "gold",
       "minecraft:digger": {
         "use_efficiency": true,
         "destroy_speeds": [

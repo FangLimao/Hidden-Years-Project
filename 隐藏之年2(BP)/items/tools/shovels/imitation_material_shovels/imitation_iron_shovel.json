@@ -16,6 +16,7 @@
       },
       "minecraft:mining_speed": 1,
       "minecraft:damage": 4,
+      "minecraft:hover_text_color": "gold",
       "minecraft:enchantable": {
         "value": 4,
         "slot": "shovel"

@@ -18,6 +18,7 @@
       "minecraft:fuel": {
         "duration": 10
       },
+      "minecraft:hover_text_color": "gold",
       "tag:dict:materials.imitation": {}
     }
   }

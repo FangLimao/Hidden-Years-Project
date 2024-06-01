@@ -13,6 +13,7 @@
         "parent": "equipment"
       },
       "minecraft:max_stack_size": 1,
+      "minecraft:hover_text_color": "gold",
       "minecraft:hand_equipped": true,
       "minecraft:durability": {
         "max_durability": 300
