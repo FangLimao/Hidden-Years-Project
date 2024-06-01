@@ -7,7 +7,7 @@
     },
     "components": {
       "minecraft:icon": {
-        "texture": "diamond"
+        "texture": "hy.imitation_diamond"
       },
       "minecraft:display_name": {
         "value": "hy.item.imitation_diamond"

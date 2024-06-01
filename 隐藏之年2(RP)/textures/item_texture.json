@@ -807,8 +807,17 @@
         "textures/items/spawn_eggs/egg_hidden_trader"
       ]
     },
-    "hy.imitimitation_diadiamond": {
+    "hy.imitation_diamond": {
       "textures": "textures/items/materials/imitations/diamond"
     },
+    "hy.imitation_iron_ingot": {
+      "textures": "textures/items/materials/imitations/iron_ingot"
+    },
+    "hy.imitation_gold_ingot": {
+      "textures": "textures/items/materials/imitations/gold_ingot"
+    },
+    "hy.imitation_amethyst_ingot": {
+      "textures": "textures/items/materials/imitations/amethyst_ingot"
+    }
   }
 }
