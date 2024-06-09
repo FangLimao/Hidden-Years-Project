@@ -33,7 +33,7 @@
         ]
       },
       "minecraft:icon": {
-        "texture": "hy.amethyst_hoe"
+        "texture": "hy.imitation_amethyst_hoe"
       },
       "minecraft:creative_category": {
         "parent": "itemGroup.name.hoe"

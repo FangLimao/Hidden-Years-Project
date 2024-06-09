@@ -19,7 +19,7 @@
         "max_durability": 250
       },
       "minecraft:icon": {
-        "texture": "mc.iron_pickaxe"
+        "texture": "hy.imitation_iron_pickaxe"
       },
       "minecraft:repairable": {
         "repair_items": [

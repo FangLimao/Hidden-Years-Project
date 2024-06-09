@@ -117,7 +117,7 @@
         ]
       },
       "minecraft:icon": {
-        "texture": "mc.iron_axe"
+        "texture": "hy.imitation_iron_axe"
       },
       "minecraft:creative_category": {
         "parent": "itemGroup.name.axe"

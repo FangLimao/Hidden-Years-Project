@@ -117,7 +117,7 @@
         ]
       },
       "minecraft:icon": {
-        "texture": "hy.amethyst_axe"
+        "texture": "hy.imitation_amethyst_axe"
       },
       "minecraft:creative_category": {
         "parent": "itemGroup.name.axe"

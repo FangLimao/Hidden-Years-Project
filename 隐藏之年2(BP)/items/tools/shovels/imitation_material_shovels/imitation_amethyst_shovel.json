@@ -53,7 +53,7 @@
         ]
       },
       "minecraft:icon": {
-        "texture": "hy.amethyst_shovel"
+        "texture": "hy.imitation_amethyst_shovel"
       },
       "minecraft:creative_category": {
         "parent": "itemGroup.name.shovel"

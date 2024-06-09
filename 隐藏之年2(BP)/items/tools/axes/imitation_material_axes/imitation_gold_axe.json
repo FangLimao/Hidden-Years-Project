@@ -117,7 +117,7 @@
         ]
       },
       "minecraft:icon": {
-        "texture": "mc.gold_axe"
+        "texture": "hy.imitation_gold_axe"
       },
       "minecraft:creative_category": {
         "parent": "itemGroup.name.axe"

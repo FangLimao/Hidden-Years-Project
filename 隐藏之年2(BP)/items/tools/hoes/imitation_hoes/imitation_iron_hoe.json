@@ -33,7 +33,7 @@
         ]
       },
       "minecraft:icon": {
-        "texture": "mc.iron_hoe"
+        "texture": "hy.imitation_iron_hoe"
       },
       "minecraft:creative_category": {
         "parent": "itemGroup.name.hoe"
