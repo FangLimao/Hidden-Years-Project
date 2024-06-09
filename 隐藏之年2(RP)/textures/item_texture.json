@@ -818,6 +818,9 @@
     },
     "hy.imitation_amethyst_ingot": {
       "textures": "textures/items/materials/imitations/amethyst_ingot"
+    },
+    "hy.suffering_sword": {
+      "textures": "textures/items/tools/weapons/swords/suffering_sword"
     }
   }
 }

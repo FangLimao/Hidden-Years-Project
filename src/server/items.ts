@@ -35,11 +35,11 @@ function consumeDurabilityMixed(
 }
 
 function createLetterForm(
-    id: string,
-    title: string | mc.RawMessage,
-    body: string | mc.RawMessage,
-  ){
-const LETTER =new hyApi.SimpleReading(id,title,body);
+  id: string,
+  title: string | mc.RawMessage,
+  body: string | mc.RawMessage,
+) {
+  const LETTER = new hyApi.SimpleReading(id, title, body);
 }
 
 /**
@@ -64,9 +64,6 @@ function applyImitationDamage(entity: mc.Entity): void {
       break;
   }
 }
-
-
-export class Items{}
 
 /**
  * 注册任务书
@@ -119,8 +116,8 @@ export function questRegister() {
  * 注册书籍
  */
 export function bookRegister() {
-  for (let i = 0; i <= 10; i++) {    
-     createLetterForm(
+  for (let i = 0; i <= 10; i++) {
+    createLetterForm(
       `hy:letter_${i}`,
       // @ts-ignore
       hyData.HyLetterTitle[i],

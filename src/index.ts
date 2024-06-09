@@ -1,5 +1,5 @@
 import { blockMonitor } from "./server/blocks.js";
-import { EntityMonitor} from "./server/entities.js";
+import { EntityMonitor } from "./server/entities.js";
 import {
   questRegister,
   bookRegister,
