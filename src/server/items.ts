@@ -1,9 +1,9 @@
 import * as mc from "@minecraft/server";
-import * as hyApi from "hy2-toolchain";
+import * as lantern from "project-lantern";
 import * as hyData from "../data/data.js";
 import * as mcui from "@minecraft/server-ui";
 import * as quests from "../data/quests.js";
-import { QuestBook } from "../dependencies/hy2Quest.js";
+import { QuestBook } from "project-lantern";
 
 /**
  * 为物品消耗耐久值
@@ -15,8 +15,8 @@ import { QuestBook } from "../dependencies/hy2Quest.js";
 function consumeDurabilityMixed(
   itemStack: mc.ItemStack,
   value: number,
-  entity?: mc.Entity,
-) {
+  entity?: mc.Entity
+): mc.ItemStack | undefined {
   let durability = itemStack.getComponent("minecraft:durability");
   if (durability === undefined) return itemStack;
   if (durability.damage + value >= durability.maxDurability) {
@@ -37,9 +37,9 @@ function consumeDurabilityMixed(
 function createLetterForm(
   id: string,
   title: string | mc.RawMessage,
-  body: string | mc.RawMessage,
-) {
-  const LETTER = new hyApi.SimpleReading(id, title, body);
+  body: string | mc.RawMessage
+): void {
+  const LETTER = new lantern.SimpleReading(id, title, body);
 }
 
 /**
@@ -47,7 +47,7 @@ function createLetterForm(
  * @param entity 使用了仿制工具的实体
  */
 function applyImitationDamage(entity: mc.Entity): void {
-  switch (hyApi.getRandomChance()) {
+  switch (lantern.getRandomChance()) {
     case 1:
       entity?.applyDamage(2);
       if (entity instanceof mc.Player) {
@@ -73,7 +73,7 @@ export function questRegister() {
     "hy:quest_book1",
     { translate: "hy.quest.title2" },
     { translate: "hy.quest.body2" },
-    [quests.COPPER_APPLE, quests.METAL_STAR, quests.COPPER_ESSENCE],
+    [quests.COPPER_APPLE, quests.METAL_STAR, quests.COPPER_ESSENCE]
   );
   const QUEST_BOOK = new QuestBook(
     "hy:quest_book",
@@ -108,7 +108,7 @@ export function questRegister() {
       quests.LODESTONE,
       quests.RESPAWN_ANCHOR,
       quests.NETHER_STAR,
-    ],
+    ]
   );
 }
 
@@ -122,54 +122,33 @@ export function bookRegister() {
       // @ts-ignore
       hyData.HyLetterTitle[i],
       // @ts-ignore
-      hyData.HyLetterBody[i],
+      hyData.HyLetterBody[i]
     );
   }
-  mc.world.afterEvents.itemUse.subscribe((event) => {
-    const PLAYER = event.source;
-    if (event.itemStack.typeId === "hy:story_book") {
-      const story = new mcui.ActionFormData()
-        .title({ translate: "hy.item.story_book" })
-        .body("这本书记载了一些模糊的上古旧事……\n请选择章节")
-        .button({ translate: "hy.story.hs.title1" })
-        .button({ translate: "hy.story.hs.title2" })
-        .button({ translate: "hy.story.hs.title3" });
-      story.show(PLAYER).then((response) => {
-        switch (response.selection) {
-          case 0:
-            const storySection0 = new mcui.ActionFormData()
-              .title({ translate: "hy.story.hs.title1" })
-              .body(hyData.HyStoryBody.section0)
-              .button({ translate: "gui.ok" });
-            storySection0.show(PLAYER);
-            break;
-          case 1:
-            const storySection1 = new mcui.ActionFormData()
-              .title({ translate: "hy.story.hs.title2" })
-              .body(hyData.HyStoryBody.section1)
-              .button({ translate: "gui.ok" });
-            storySection1.show(PLAYER);
-            break;
-          case 2:
-            const storySection2 = new mcui.ActionFormData()
-              .title({ translate: "hy.story.hs.title3" })
-              .body(hyData.HyStoryBody.section2)
-              .button({ translate: "gui.ok" });
-            storySection2.show(PLAYER);
-            break;
-          default:
-            break;
-        }
-      });
-      if (!PLAYER.hasTag("hy:get_first_letter")) {
-        PLAYER.dimension.spawnItem(
-          hyData.HyRewardTypes.letter1st,
-          PLAYER.location,
-        );
-        PLAYER.addTag("hy:get_first_letter");
-      }
-    }
-  });
+  const CHAPTER_1 = new lantern.SimpleReading(
+    "hy:chapter_1",
+    { translate: "hy.story.hs.title1" },
+    hyData.HyStoryBody.section0,
+    true
+  );
+  const CHAPTER_2 = new lantern.SimpleReading(
+    "hy:chapter_2",
+    { translate: "hy.story.hs.title2" },
+    hyData.HyStoryBody.section1,
+    true
+  );
+  const CHAPTER_3 = new lantern.SimpleReading(
+    "hy:chapter_3",
+    { translate: "hy.story.hs.title3" },
+    hyData.HyStoryBody.section2,
+    true
+  );
+  const HIDDEN_STORIES = new lantern.ChapterReading(
+    "hy:story_book",
+    { translate: "hy.item.story_book" },
+    { translate: "hy.story.hs.body" },
+    [CHAPTER_1, CHAPTER_2, CHAPTER_3]
+  );
 }
 
 /**
@@ -178,18 +157,18 @@ export function bookRegister() {
 export function itemDurabilityMonitor() {
   mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
     const ENTITY = event.player;
-    let ITEM = hyApi.getEquipmentItem(ENTITY);
+    let ITEM = lantern.getEquipmentItem(ENTITY);
     if (ITEM?.hasTag("hy:custom_tools")) {
       const NEW_ITEM = consumeDurabilityMixed(ITEM, 1, ENTITY);
       ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM,
+        NEW_ITEM
       );
     } else if (ITEM?.hasTag("hy:custom_weapons")) {
       const NEW_ITEM = consumeDurabilityMixed(ITEM, 2, ENTITY);
       ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM,
+        NEW_ITEM
       );
     }
     if (ITEM?.hasTag("hy:imitation_tools")) {
@@ -199,19 +178,19 @@ export function itemDurabilityMonitor() {
 
   mc.world.afterEvents.entityHitEntity.subscribe((event) => {
     const ENTITY = event.damagingEntity;
-    let ITEM = hyApi.getEquipmentItem(event.damagingEntity);
+    let ITEM = lantern.getEquipmentItem(event.damagingEntity);
     if (ITEM?.hasTag("hy:custom_weapons")) {
       const NEW_ITEM = consumeDurabilityMixed(ITEM, 1);
       ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM,
+        NEW_ITEM
       );
     }
     if (ITEM?.hasTag("hy:custom_tools")) {
       const NEW_ITEM = consumeDurabilityMixed(ITEM, 2);
       ENTITY?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM,
+        NEW_ITEM
       );
     }
     if (ITEM?.hasTag("hy:imitation_tools")) {
@@ -237,11 +216,11 @@ export function itemUseMonitor() {
         excludeTags: ["hy.tetanus_attacker"],
         excludeFamilies: ["noaoe"],
       };
-      hyApi.affectEntities(PLAYER.dimension, TETANUS_OPINION, "poison", 300);
-      hyApi.affectEntities(PLAYER.dimension, TETANUS_OPINION, "nausea", 600, {
+      lantern.affectEntities(PLAYER.dimension, TETANUS_OPINION, "poison", 300);
+      lantern.affectEntities(PLAYER.dimension, TETANUS_OPINION, "nausea", 600, {
         amplifier: 1,
       });
-      hyApi.affectEntities(PLAYER.dimension, TETANUS_OPINION, "wither", 6);
+      lantern.affectEntities(PLAYER.dimension, TETANUS_OPINION, "wither", 6);
       PLAYER.removeTag("hy.tetanus_attacker");
     }
     /** 法器相关
@@ -262,7 +241,7 @@ export function itemUseMonitor() {
         const NEW_ITEM = consumeDurabilityMixed(ITEM, 1, PLAYER);
         PLAYER.getComponent("minecraft:equippable")?.setEquipment(
           mc.EquipmentSlot.Mainhand,
-          NEW_ITEM,
+          NEW_ITEM
         );
         PLAYER.addLevels(-1);
         const ALL_OPTION: mc.EntityQueryOptions = {
@@ -271,7 +250,7 @@ export function itemUseMonitor() {
           excludeTags: ["hy.magic_explode"],
           excludeFamilies: ["noaoe"],
         };
-        hyApi.damageEntities(PLAYER.dimension, ALL_OPTION, 10);
+        lantern.damageEntities(PLAYER.dimension, ALL_OPTION, 10);
         switch (ITEM.typeId) {
           case "hy:diamond_bone":
           case "hy:gold_bone":
@@ -281,17 +260,22 @@ export function itemUseMonitor() {
               maxDistance: 18,
               families: ["skeleton"],
             };
-            hyApi.damageEntities(PLAYER.dimension, SKELETON_OPINION, 8);
-            hyApi.affectEntities(
+            lantern.damageEntities(PLAYER.dimension, SKELETON_OPINION, 8);
+            lantern.affectEntities(
               PLAYER.dimension,
               SKELETON_OPINION,
               "weakness",
-              300,
+              300
             );
             break;
           case "hy:flash_metal_boardsword":
-            hyApi.damageEntities(PLAYER.dimension, ALL_OPTION, 8);
-            hyApi.affectEntities(PLAYER.dimension, ALL_OPTION, "weakness", 300);
+            lantern.damageEntities(PLAYER.dimension, ALL_OPTION, 8);
+            lantern.affectEntities(
+              PLAYER.dimension,
+              ALL_OPTION,
+              "weakness",
+              300
+            );
             break;
           case "hy:corrosion_boardsword":
             const UNDEAD_OPINION: mc.EntityQueryOptions = {
@@ -299,12 +283,12 @@ export function itemUseMonitor() {
               maxDistance: 18,
               families: ["undead"],
             };
-            hyApi.damageEntities(PLAYER.dimension, UNDEAD_OPINION, 8);
-            hyApi.affectEntities(
+            lantern.damageEntities(PLAYER.dimension, UNDEAD_OPINION, 8);
+            lantern.affectEntities(
               PLAYER.dimension,
               UNDEAD_OPINION,
               "weakness",
-              300,
+              300
             );
             break;
           case "hy:emerald_boardsword":
@@ -313,12 +297,12 @@ export function itemUseMonitor() {
               maxDistance: 18,
               families: ["illager"],
             };
-            hyApi.damageEntities(PLAYER.dimension, ILLAGER_OPINION, 8);
-            hyApi.affectEntities(
+            lantern.damageEntities(PLAYER.dimension, ILLAGER_OPINION, 8);
+            lantern.affectEntities(
               PLAYER.dimension,
               ILLAGER_OPINION,
               "weakness",
-              300,
+              300
             );
             break;
           case "hy:flash_copper_boardsword":
@@ -327,12 +311,12 @@ export function itemUseMonitor() {
               maxDistance: 18,
               families: ["arthropod"],
             };
-            hyApi.damageEntities(PLAYER.dimension, ARTHROPOD_OPINION, 8);
-            hyApi.affectEntities(
+            lantern.damageEntities(PLAYER.dimension, ARTHROPOD_OPINION, 8);
+            lantern.affectEntities(
               PLAYER.dimension,
               ARTHROPOD_OPINION,
               "weakness",
-              300,
+              300
             );
             break;
           case "hy:amethyst_boardsword":
@@ -341,12 +325,12 @@ export function itemUseMonitor() {
               maxDistance: 18,
               families: ["poultry"],
             };
-            hyApi.damageEntities(PLAYER.dimension, POULTRY_OPINION, 8);
-            hyApi.affectEntities(
+            lantern.damageEntities(PLAYER.dimension, POULTRY_OPINION, 8);
+            lantern.affectEntities(
               PLAYER.dimension,
               POULTRY_OPINION,
               "weakness",
-              300,
+              300
             );
             break;
           case "hy:ruby_boardsword":
@@ -355,12 +339,12 @@ export function itemUseMonitor() {
               maxDistance: 18,
               families: ["ruby"],
             };
-            hyApi.damageEntities(PLAYER.dimension, RUBY_OPINION, 8);
-            hyApi.affectEntities(
+            lantern.damageEntities(PLAYER.dimension, RUBY_OPINION, 8);
+            lantern.affectEntities(
               PLAYER.dimension,
               RUBY_OPINION,
               "weakness",
-              300,
+              300
             );
             break;
           default:
@@ -382,17 +366,17 @@ export function itemUseMonitor() {
     if (ITEM.hasTag("hy:single_use")) {
       PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        undefined,
+        undefined
       );
       /** 在这下面添加物品的使用效果 */
       switch (ITEM.typeId) {
         case "hy:ruby_bag":
-          switch (hyApi.getRandomChance()) {
+          switch (lantern.getRandomChance()) {
             case 1:
             case 2:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.diamondBlock,
-                PLAYER.location,
+                PLAYER.location
               );
               break;
             case 3:
@@ -400,25 +384,25 @@ export function itemUseMonitor() {
             case 5:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.goldBlock,
-                PLAYER.location,
+                PLAYER.location
               );
               break;
             case 6:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.scrap,
-                PLAYER.location,
+                PLAYER.location
               );
               break;
             case 7:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.template,
-                PLAYER.location,
+                PLAYER.location
               );
               break;
             default:
               PLAYER.dimension.spawnItem(
                 hyData.HyRewardTypes.apple,
-                PLAYER.location,
+                PLAYER.location
               );
           }
           break;
@@ -426,7 +410,7 @@ export function itemUseMonitor() {
           PLAYER.dimension.spawnEntity("hy:king_of_ruby", PLAYER.location);
           break;
         case "hy:ruby_runes":
-          PLAYER.addLevels(hyApi.getRandomChance());
+          PLAYER.addLevels(lantern.getRandomChance());
           PLAYER.playSound("random.orb");
           PLAYER.addEffect("fire_resistance", 1200);
           PLAYER.addEffect("resistance", 1200);
@@ -460,7 +444,7 @@ export function itemUseMonitor() {
       const NEW_ITEM = consumeDurabilityMixed(ITEM, 1, PLAYER);
       PLAYER?.getComponent("minecraft:equippable")?.setEquipment(
         mc.EquipmentSlot.Mainhand,
-        NEW_ITEM,
+        NEW_ITEM
       );
       /** 在这下面添加物品的使用效果 */
       switch (ITEM.typeId) {
@@ -487,14 +471,14 @@ export function itemUseMonitor() {
           };
           if (PLAYER.isSneaking) {
             mc.world.playSound("copper_horn.sneak", PLAYER.location);
-            hyApi.affectEntities(
+            lantern.affectEntities(
               PLAYER.dimension,
               HORN_OPINION,
               "slowness",
               300,
               {
                 amplifier: 2,
-              },
+              }
             );
             PLAYER.removeEffect("slowness");
             PLAYER.addEffect("speed", 300, {
@@ -502,9 +486,15 @@ export function itemUseMonitor() {
             });
           } else {
             mc.world.playSound("copper_horn.walk", PLAYER.location);
-            hyApi.affectEntities(PLAYER.dimension, HORN_OPINION, "speed", 300, {
-              amplifier: 2,
-            });
+            lantern.affectEntities(
+              PLAYER.dimension,
+              HORN_OPINION,
+              "speed",
+              300,
+              {
+                amplifier: 2,
+              }
+            );
             PLAYER.removeEffect("speed");
             PLAYER.addEffect("slowness", 300, {
               amplifier: 2,
@@ -544,7 +534,7 @@ export function itemUseMonitor() {
         PLAYER.addEffect("fire_resistance", 900);
         break;
       case "hy:milk_chocolate":
-        hyApi.clearEffect(PLAYER, "all");
+        lantern.clearEffect(PLAYER, "all");
         break;
       case "hy:sweet_berry_chocolate":
         PLAYER.addEffect("instant_health", 1, {
@@ -555,7 +545,7 @@ export function itemUseMonitor() {
         PLAYER.addLevels(2);
         break;
       case "hy:marshmallow":
-        if (hyApi.getRandomChance() > 5) {
+        if (lantern.getRandomChance() > 5) {
           PLAYER.addEffect("levitation", 100);
         }
         break;
@@ -571,7 +561,7 @@ export function itemUseMonitor() {
         PLAYER.addEffect("saturation", 400);
         break;
       case "hy:medicine_2":
-        hyApi.clearEffect(PLAYER, "bad");
+        lantern.clearEffect(PLAYER, "bad");
         break;
       case "hy:medicine_3":
         PLAYER.removeEffect("darkness");
@@ -610,7 +600,7 @@ export function itemUseMonitor() {
         PLAYER.kill();
         break;
       case "hy:medicine_11":
-        hyApi.clearEffect(PLAYER, "good");
+        lantern.clearEffect(PLAYER, "good");
         break;
       case "hy:medicine_12":
         PLAYER.removeEffect("bad_omen");
@@ -646,7 +636,7 @@ export function itemUseMonitor() {
       case "hy:mineral_fuel_metal":
         PLAYER.dimension.spawnItem(
           hyData.HyRewardTypes.nightmareFuel,
-          PLAYER.location,
+          PLAYER.location
         );
         PLAYER.addEffect("fatal_poison", 800, {
           amplifier: 1,
