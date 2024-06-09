@@ -1,6 +1,6 @@
 {
   "name": "hy2",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "A Minecraft addon",
   "private": true,
   "scripts": {
@@ -16,6 +16,7 @@
     "@minecraft/server": "1.11.0-beta.1.20.80-stable",
     "@minecraft/server-ui": "1.2.0-beta.1.20.80-stable",
     "@minecraft/vanilla-data": "1.20.80",
+    "project-lantern": "1.0.0-alpha",
     "typescript": "^5.4.5",
     "esbuild": "^0.20.2"
   }

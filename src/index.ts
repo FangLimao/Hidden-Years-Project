@@ -1,5 +1,5 @@
 import { blockMonitor } from "./server/blocks.js";
-import { EntityMonitor } from "./server/entities.js";
+import { entityEventsMonitor, playerSpawnMonitor } from "./server/entities.js";
 import {
   questRegister,
   bookRegister,
@@ -10,8 +10,8 @@ import { systemMonitor } from "./server/system.js";
 
 systemMonitor();
 blockMonitor();
-EntityMonitor.entityEventsMonitor();
-EntityMonitor.playerSpawnMonitor();
+entityEventsMonitor();
+playerSpawnMonitor();
 itemDurabilityMonitor();
 itemUseMonitor();
 questRegister();
