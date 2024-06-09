@@ -598,3 +598,8 @@ hy.story.hs.title1=千年迷梦
 hy.story.hs.title2=诞生于毁灭的新生
 hy.story.hs.title3=探索这世间
 hy.story.hs.body=这本书记载了一些模糊的上古旧事……
+
+entity.hy:sprite.name=精灵
+item.spawn_egg.entity.hy:sprite.name=精灵刷怪蛋
+entity.hy:ferocious_sprite.name=恶灵
+item.spawn_egg.entity.hy:ferocious_sprite.name=恶灵刷怪蛋

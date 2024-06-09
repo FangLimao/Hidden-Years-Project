@@ -2,11 +2,11 @@
   "format_version": "1.8.0",
   "minecraft:client_entity": {
     "description": {
-      "identifier": "hy:ferocious_sprite",
+      "identifier": "hy:sprite",
       "min_engine_version": "1.8.0",
       "materials": { "default": "vex" },
       "textures": {
-        "default": "textures/entity/ferocious_sprite"
+        "default": "textures/entity/sprite"
       },
       "geometry": {
         "default": "geometry.vex.v1.8"

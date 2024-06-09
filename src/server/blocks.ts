@@ -6,7 +6,7 @@ export function blockMonitor() {
   mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
     const BLOCK = event.brokenBlockPermutation;
     const PLAYER = event.player;
-    const ITEM =  lantern.getEquipmentItem(PLAYER);
+    const ITEM = lantern.getEquipmentItem(PLAYER);
     if (BLOCK.hasTag("hy:experience_ores")) {
       PLAYER.dimension.spawnEntity("xp_orb", PLAYER.location);
     }
@@ -22,7 +22,7 @@ export function blockMonitor() {
       BLOCK.hasTag("hy:suspicious_ores") &&
       ITEM.hasTag("minecraft:is_pickaxe")
     ) {
-      if ( lantern.getRandomChance() <= 8) {
+      if (lantern.getRandomChance() <= 8) {
         PLAYER.dimension.spawnEntity("silverfish", PLAYER.location);
         PLAYER.dimension.spawnEntity("silverfish", PLAYER.location);
       } else {

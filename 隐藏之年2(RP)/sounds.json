@@ -91,6 +91,26 @@
           },
           "celebrate": "mob.evocation_illager.celebrate"
         }
+      },
+      "hy:sprite": {
+        "volume": 1,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "hurt": "mob.allay.hurt",
+          "death": "mob.allay.death",
+          "ambient": "mob.allay.idle",
+          "ambient.tame": "mob.allay.idle_holding"
+        }
+      },
+      "hy:ferocious_sprite": {
+        "volume": 1.0,
+        "pitch": [0.8, 1.2],
+        "events": {
+          "ambient": "mob.vex.ambient",
+          "death": "mob.vex.death",
+          "hurt": "mob.vex.hurt",
+          "charge": "mob.vex.charge"
+        }
       }
     }
   }

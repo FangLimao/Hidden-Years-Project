@@ -3,8 +3,8 @@ import * as lantern from "project-lantern";
 import * as hyData from "../data/data.js";
 
 /**
-   * 监听玩家生成事件
-   */
+ * 监听玩家生成事件
+ */
 export function playerSpawnMonitor(): void {
   mc.world.afterEvents.playerSpawn.subscribe((event) => {
     const PLAYER = event.player;
@@ -13,14 +13,14 @@ export function playerSpawnMonitor(): void {
       hyData.HyRewardTypes.questBook1st.lockMode = mc.ItemLockMode.inventory;
       PLAYER.dimension.spawnItem(
         hyData.HyRewardTypes.questBook1st,
-        PLAYER.location
+        PLAYER.location,
       );
       PLAYER.addTag("hy:get_quest_book");
     }
     if (!PLAYER.hasTag("hy:get_first_letter")) {
       PLAYER.dimension.spawnItem(
         hyData.HyRewardTypes.letter1st,
-        PLAYER.location
+        PLAYER.location,
       );
       PLAYER.addTag("hy:get_first_letter");
     }
