@@ -34,7 +34,7 @@ function consumeDurabilityMixed(
   }
 }
 
-function createLetterForm(
+export function createLetterForm(
   id: string,
   title: string | mc.RawMessage,
   body: string | mc.RawMessage,
@@ -109,45 +109,6 @@ export function questRegister() {
       quests.RESPAWN_ANCHOR,
       quests.NETHER_STAR,
     ],
-  );
-}
-
-/**
- * 注册书籍
- */
-export function bookRegister() {
-  for (let i = 0; i <= 10; i++) {
-    createLetterForm(
-      `hy:letter_${i}`,
-      // @ts-ignore
-      hyData.HyLetterTitle[i],
-      // @ts-ignore
-      hyData.HyLetterBody[i],
-    );
-  }
-  const CHAPTER_1 = new lantern.SimpleReading(
-    "hy:chapter_1",
-    { translate: "hy.story.hs.title1" },
-    hyData.HyStoryBody.section0,
-    true,
-  );
-  const CHAPTER_2 = new lantern.SimpleReading(
-    "hy:chapter_2",
-    { translate: "hy.story.hs.title2" },
-    hyData.HyStoryBody.section1,
-    true,
-  );
-  const CHAPTER_3 = new lantern.SimpleReading(
-    "hy:chapter_3",
-    { translate: "hy.story.hs.title3" },
-    hyData.HyStoryBody.section2,
-    true,
-  );
-  const HIDDEN_STORIES = new lantern.ChapterReading(
-    "hy:story_book",
-    { translate: "hy.item.story_book" },
-    { translate: "hy.story.hs.body" },
-    [CHAPTER_1, CHAPTER_2, CHAPTER_3],
   );
 }
 

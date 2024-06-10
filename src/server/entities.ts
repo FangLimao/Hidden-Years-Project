@@ -41,9 +41,7 @@ export function entityEventsMonitor(): void {
   });
   /** 实体击打实体时的事件 */
   mc.world.afterEvents.entityHitEntity.subscribe((event) => {
-    const ATTACKER = event.damagingEntity;
-    const TARGET = event.hitEntity;
-    const ITEM = lantern.getEquipmentItem(ATTACKER);
+    const [ATTACKER,TARGET, ITEM] = [event.damagingEntity,event.hitEntity,lantern.getEquipmentItem(event.damagingEntity)];
     switch (ITEM?.typeId) {
       case "hy:ruby_boardsword":
         /** 红宝石阔剑会给予玩家经验值 */

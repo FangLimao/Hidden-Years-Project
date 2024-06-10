@@ -1,12 +1,12 @@
-import { blockMonitor } from "./server/blocks.js";
-import { entityEventsMonitor, playerSpawnMonitor } from "./server/entities.js";
+import { blockMonitor } from "./server/blocks";
+import { entityEventsMonitor, playerSpawnMonitor } from "./server/entities";
 import {
-  questRegister,
-  bookRegister,
+  questRegister, 
   itemUseMonitor,
   itemDurabilityMonitor,
-} from "./server/items.js";
-import { systemMonitor } from "./server/system.js";
+} from "./server/items";
+import { bookRegister } from "./server/readings"
+import { systemMonitor } from "./server/system";
 
 systemMonitor();
 blockMonitor();

@@ -7,109 +7,228 @@
       "is_summonable": true,
       "is_experimental": false
     },
+    "component_groups": {
+      "hy:sprite_wild": {
+        "minecraft:tameable": {
+          "probability": 0.33,
+          "tame_items": "amethyst_shard",
+          "tame_event": {
+            "event": "minecraft:on_tame",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.random_hover": {
+        "priority": 4,
+        "xz_dist": 8,
+        "y_dist": 8,
+        "y_offset": -1,
+        "interval": 1,
+        "hover_height": [1, 4]
+      }
+      },
+      "hy:sprite_tame": {
+      "minecraft:behavior.random_hover": {
+        "priority": 2,
+        "xz_dist": 4,
+        "y_dist": 4,
+        "y_offset": -1,
+        "interval": 1,
+        "hover_height": [1, 4]
+      },
+        "minecraft:is_tamed": {},
+        "minecraft:health": {
+          "value": 35,
+          "max": 35
+        },
+        "minecraft:inventory": {
+    "container_type": "minecart_chest",
+    "inventory_size": 15
+      },
+        "minecraft:behavior.follow_owner": {
+          "priority": 10,
+          "speed_multiplier": 1.0,
+          "start_distance": 24,
+          "stop_distance": 2
+        },
+        "minecraft:attack": {
+          "damage": 5
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 2
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 5,
+          "must_see": true,
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "illager"
+              },
+              "max_dist": 16
+            }
+          ]
+        }
+      }
+    },
     "components": {
+      "minecraft:behavior.tempt": {
+        "priority": 10,
+        "speed_multiplier": 1.2,
+        "items": [
+        "amethyst_shard",
+        "hy:amethyst_ingot",
+        "hy:imitation_amethyst_ingot"
+        ]
+      },
       "minecraft:is_hidden_when_invisible": {},
-      "minecraft:experience_reward": {
-        "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-      },
-      "minecraft:nameable": {},
       "minecraft:type_family": {
-        "family": ["sprite", "monster", "mob"]
-      },
-      "minecraft:health": {
-        "value": 14,
-        "max": 14
-      },
-      "minecraft:attack": {
-        "damage": 3
+        "family": ["sprite", "mob"]
       },
       "minecraft:collision_box": {
-        "width": 0.4,
-        "height": 0.8
+        "width": 0.35,
+        "height": 0.6
+      },
+      "minecraft:balloonable": {
+        "mass": 0.5
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
+      "minecraft:nameable": {},
+      "minecraft:leashable": {
+        "soft_distance": 4.0,
+        "hard_distance": 6.0,
+        "max_distance": 10.0
+      },
+      "minecraft:health": {
+        "value": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "is_owner",
+                    "subject": "other",
+                    "value": true
+                  }
+                ]
+              }
+            },
+            "deals_damage": false
+          }
+        ]
       },
       "minecraft:movement": {
-        "value": 1.0
+        "value": 0.1
       },
-      "minecraft:navigation.walk": {
-        "can_path_over_water": true
+      "minecraft:flying_speed": {
+        "value": 0.1
       },
-      "minecraft:movement.basic": {},
-      "minecraft:jump.static": {},
-      "minecraft:can_climb": {},
-      "minecraft:fire_immune": {},
-      "minecraft:despawn": {
-        "despawn_from_distance": {}
+      "minecraft:navigation.hover": {
+        "can_path_over_water": true,
+        "can_sink": false,
+        "can_pass_doors": false,
+        "can_path_from_air": true,
+        "avoid_water": true,
+        "avoid_damage_blocks": true,
+        "avoid_sun": false
       },
-      "minecraft:behavior.float": {
-        "priority": 0
+      "minecraft:movement.hover": {},
+      "minecraft:follow_range": {
+        "value": 1024
       },
-      "minecraft:behavior.charge_attack": {
-        "priority": 4
-      },
-      "minecraft:behavior.nearest_attackable_target": {
-        "priority": 3,
-        "entity_types": [
+      "minecraft:ambient_sound_interval": {
+        "value": 5.0,
+        "range": 5.0,
+        "event_name": "ambient",
+        "event_names": [
           {
-            "filters": {
-              "any_of": [
-                { "test": "is_family", "subject": "other", "value": "player" },
-                {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "irongolem"
-                },
-                {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "wandering_trader"
-                }
-              ]
-            },
-            "max_dist": 70
+            "event_name": "ambient.tame",
+            "condition": "query.is_using_item"
           },
           {
-            "filters": {
-              "all_of": [
-                {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "villager"
-                },
-                {
-                  "test": "has_component",
-                  "subject": "other",
-                  "operator": "!=",
-                  "value": "minecraft:is_baby"
-                }
-              ]
-            },
-            "max_dist": 70
+            "event_name": "ambient",
+            "condition": "!query.is_using_item"
           }
-        ],
-        "must_see": true
+        ]
       },
-      "minecraft:behavior.look_at_player": {
-        "priority": 9,
-        "look_distance": 6.0,
-        "probability": 0.02
-      },
-      "minecraft:behavior.look_at_entity": {
-        "priority": 9,
-        "look_distance": 6.0,
-        "probability": 0.02,
-        "filters": { "test": "is_family", "subject": "other", "value": "mob" }
-      },
-      "minecraft:behavior.hurt_by_target": {
-        "priority": 1
-      },
+      "minecraft:jump.static": {},
+      "minecraft:can_fly": {},
       "minecraft:physics": {
-        "has_gravity": false,
-        "has_collision": false
+        "has_gravity": false
       },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:vibration_listener": {},
       "minecraft:conditional_bandwidth_optimization": {},
       "minecraft:game_event_movement_tracking": {
-        "emit_move": false,
-        "emit_swim": false
+        "emit_flap": true
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 2.0
+      },
+      "minecraft:behavior.stay_near_noteblock": {
+        "priority": 5,
+        "speed": 8,
+        "start_distance": 16,
+        "stop_distance": 4
+      },
+      "minecraft:behavior.float": {
+        "priority": 7
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "target_distance": 6.0,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 8
+      }      
+    },
+    "events": {
+      "minecraft:on_tame": {
+        "remove": {
+          "component_groups": ["hy:sprite_wild"]
+        },
+        "add": {
+          "component_groups": ["hy:sprite_tame"]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["hy:sprite_wild"]
+        }
       }
     }
   }

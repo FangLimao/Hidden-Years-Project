@@ -103,7 +103,7 @@
         "filters": { "test": "is_family", "subject": "other", "value": "mob" }
       },
       "minecraft:behavior.hurt_by_target": {
-        "priority": 1
+        "priority": 6
       },
       "minecraft:physics": {
         "has_gravity": false,
