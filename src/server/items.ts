@@ -211,10 +211,7 @@ export function itemUseMonitor() {
           excludeFamilies: ["noaoe"],
         };
         lantern.damageEntities(PLAYER.dimension, ALL_OPTION, 10);
-        switch (ITEM.typeId) {
-          case "hy:soul_letter_sprite":
-            PLAYER.dimension.spawnEntity("hy:sprite", PLAYER.location);
-            break;
+        switch (ITEM.typeId) {          
           case "hy:diamond_bone":
           case "hy:gold_bone":
           case "hy:iron_bone":
@@ -333,6 +330,9 @@ export function itemUseMonitor() {
       );
       /** 在这下面添加物品的使用效果 */
       switch (ITEM.typeId) {
+        case "hy:soul_letter_sprite":
+            PLAYER.dimension.spawnEntity("hy:sprite", PLAYER.location);
+            break;
         case "hy:ruby_bag":
           switch (lantern.getRandomChance()) {
             case 1:
