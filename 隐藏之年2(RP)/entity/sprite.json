@@ -29,8 +29,8 @@
       "render_controllers": ["controller.render.sprite"],
       "held_item_ignores_lighting": true,
       "spawn_egg": {
-        "texture": "spawn_egg",
-        "texture_index": 41
+        "texture": "hy.spawn_eggs",
+        "texture_index": 6
       }
     }
   }

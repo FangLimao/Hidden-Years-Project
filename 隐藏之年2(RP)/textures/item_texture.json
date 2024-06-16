@@ -804,7 +804,9 @@
         "textures/items/spawn_eggs/egg_ruby_zombie",
         "textures/items/spawn_eggs/egg_ruby_skeleton",
         "textures/items/spawn_eggs/egg_gemstone_trader",
-        "textures/items/spawn_eggs/egg_hidden_trader"
+        "textures/items/spawn_eggs/egg_hidden_trader",
+        "textures/items/spawn_eggs/egg_sprite",
+        "textures/items/spawn_eggs/egg_ferocious_sprite"
       ]
     },
     "hy.imitation_diamond": {
