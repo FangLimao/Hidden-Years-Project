@@ -18,32 +18,32 @@
           }
         },
         "minecraft:behavior.random_hover": {
-        "priority": 4,
-        "xz_dist": 8,
-        "y_dist": 8,
-        "y_offset": -1,
-        "interval": 1,
-        "hover_height": [1, 4]
-      }
+          "priority": 4,
+          "xz_dist": 8,
+          "y_dist": 8,
+          "y_offset": -1,
+          "interval": 1,
+          "hover_height": [1, 4]
+        }
       },
       "hy:sprite_tame": {
-      "minecraft:behavior.random_hover": {
-        "priority": 2,
-        "xz_dist": 4,
-        "y_dist": 4,
-        "y_offset": -1,
-        "interval": 1,
-        "hover_height": [1, 4]
-      },
+        "minecraft:behavior.random_hover": {
+          "priority": 2,
+          "xz_dist": 4,
+          "y_dist": 4,
+          "y_offset": -1,
+          "interval": 1,
+          "hover_height": [1, 4]
+        },
         "minecraft:is_tamed": {},
         "minecraft:health": {
           "value": 35,
           "max": 35
         },
         "minecraft:inventory": {
-    "container_type": "minecart_chest",
-    "inventory_size": 15
-      },
+          "container_type": "minecart_chest",
+          "inventory_size": 15
+        },
         "minecraft:behavior.follow_owner": {
           "priority": 10,
           "speed_multiplier": 1.0,
@@ -80,9 +80,9 @@
         "priority": 10,
         "speed_multiplier": 1.2,
         "items": [
-        "amethyst_shard",
-        "hy:amethyst_ingot",
-        "hy:imitation_amethyst_ingot"
+          "amethyst_shard",
+          "hy:amethyst_ingot",
+          "hy:imitation_amethyst_ingot"
         ]
       },
       "minecraft:is_hidden_when_invisible": {},
@@ -214,7 +214,7 @@
       },
       "minecraft:behavior.random_look_around": {
         "priority": 8
-      }      
+      }
     },
     "events": {
       "minecraft:on_tame": {

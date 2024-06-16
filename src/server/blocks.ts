@@ -4,7 +4,11 @@ import * as lantern from "project-lantern";
 /** 监听方块事件 */
 export function blockMonitor() {
   mc.world.afterEvents.playerBreakBlock.subscribe((event) => {
-    const [BLOCK, PLAYER, ITEM] = [event.brokenBlockPermutation,event.player,lantern.getEquipmentItem(event.player)];
+    const [BLOCK, PLAYER, ITEM] = [
+      event.brokenBlockPermutation,
+      event.player,
+      lantern.getEquipmentItem(event.player),
+    ];
     if (BLOCK.hasTag("hy:experience_ores")) {
       PLAYER.dimension.spawnEntity("xp_orb", PLAYER.location);
     }

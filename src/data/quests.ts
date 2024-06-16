@@ -111,6 +111,14 @@ export const NIGHTMARE_FUEL_METAL = new Quest(
   HyQuestAward.labTable,
 );
 
+export const SUFFERING_SWORD = new Quest(
+  "suffering_sword",
+  "§d[序幕]§r 善良的与邪恶的",
+  "这些生物原本是「精灵」一族的侍卫，却最终被灾厄之族驯化成了战争机器——正因如此，他们手中的剑不再锐利，而是充盈着被屠杀者的痛苦……",
+  HyQuestCondition.sufferingSword,
+  HyQuestAward.diamond5,
+);
+
 export const STEEL_INGOT = new Quest(
   "steel_ingot",
   "§d[序幕]§r 百炼成钢",
@@ -245,4 +253,28 @@ export const RUBY_RUNES = new Quest(
   "「让我们回溯到遥远的过去。」\n\n在漫长的历史中，浩如烟海的强大存在被「迷失军团」封印于袋中，红宝石之王是其最古老的存在，阅读他们身上的信纸，一步步探求真相吧。",
   HyQuestCondition.rubyRunes,
   HyQuestAward.netheriteIngot3,
+);
+
+export const STORY_BOOK = new Quest(
+  "story_book",
+  "§d[书海无涯]§r 故事的起点",
+  "获得隐藏的故事",
+  HyQuestCondition.storyBook,
+  HyQuestAward.diamond1,
+);
+
+export const LETTER_0 = new Quest(
+  "letter_0",
+  "§d[书海无涯]§r 千里之行始于足下",
+  "获得散落的信纸·千里之行与脚下之路",
+  HyQuestCondition.letter0,
+  HyQuestAward.diamond2,
+);
+
+export const LETTER_11 = new Quest(
+  "letter_11",
+  "§d[书海无涯]§r 大历史学家",
+  "搜刮黑森林中某处囚笼，获得精灵史摘要",
+  HyQuestCondition.letter11,
+  HyQuestAward.diamond2,
 );

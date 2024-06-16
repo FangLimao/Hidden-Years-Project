@@ -34,14 +34,6 @@ function consumeDurabilityMixed(
   }
 }
 
-export function createLetterForm(
-  id: string,
-  title: string | mc.RawMessage,
-  body: string | mc.RawMessage,
-): void {
-  const LETTER = new lantern.SimpleReading(id, title, body);
-}
-
 /**
  * 造成仿制伤害
  * @param entity 使用了仿制工具的实体
@@ -91,6 +83,7 @@ export function questRegister() {
       quests.IRON_SWORD,
       quests.FUEL_METAL,
       quests.NIGHTMARE_FUEL_METAL,
+      quests.SUFFERING_SWORD,
       quests.STEEL_INGOT,
       quests.TOTEM,
       quests.RUBY,
@@ -109,6 +102,16 @@ export function questRegister() {
       quests.RESPAWN_ANCHOR,
       quests.NETHER_STAR,
     ],
+  );
+  const LETTER_0 = new QuestBook(
+    `hy:letter_0`,
+    hyData.HyLetterTitle[0],
+    hyData.HyLetterBody[0],
+    [
+     quests.STORY_BOOK,
+     quests.LETTER_0,
+     quests.LETTER_11,
+    ]
   );
 }
 

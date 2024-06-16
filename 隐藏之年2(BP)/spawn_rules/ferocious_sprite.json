@@ -10,7 +10,7 @@
         "minecraft:spawns_on_surface": {},
         "minecraft:brightness_filter": {
           "min": 0,
-          "max": 3,
+          "max": 15,
           "adjust_for_weather": true
         },
         "minecraft:difficulty_filter": {
@@ -18,14 +18,16 @@
           "max": "hard"
         },
         "minecraft:weight": {
-          "default": 15
+          "default": 50
         },
         "minecraft:herd": {
           "min_size": 1,
           "max_size": 2
         },
         "minecraft:biome_filter": {
-          "test": "has_biome_tag", "operator": "==", "value": "roofed"
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "roofed"
         }
       }
     ]

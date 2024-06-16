@@ -1,11 +1,11 @@
 import { blockMonitor } from "./server/blocks";
 import { entityEventsMonitor, playerSpawnMonitor } from "./server/entities";
 import {
-  questRegister, 
+  questRegister,
   itemUseMonitor,
   itemDurabilityMonitor,
 } from "./server/items";
-import { bookRegister } from "./server/readings"
+import { bookRegister } from "./server/readings";
 import { systemMonitor } from "./server/system";
 
 systemMonitor();

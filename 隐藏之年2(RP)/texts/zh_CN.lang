@@ -1,5 +1,5 @@
 pack.name=隐藏之年²
-pack.description=为你而来的附加包 ｜ 正式版2.2.0 [§l本包需要基岩版1.20.8X并开启§6假日创造者功能、自定义生物群系、测试版API§r实验性玩法]
+pack.description=为你而来的附加包 ｜ 正式版2.2.1 [§l本包需要基岩版1.20.8X并开启§6假日创造者功能、自定义生物群系、测试版API§r实验性玩法]
 
 gui.check=提交任务
 gui.about=关于
@@ -530,6 +530,7 @@ hy.quest.iron_dagger.title=§d[序幕]§r 致命一击
 hy.quest.iron_sword.title=§d[序幕]§r 赶尽杀绝
 hy.quest.fuel_metal.title=§d[序幕]§r 燃料与食物
 hy.quest.nightmare_fuel_metal.title=§d[序幕]§r 「不洁」的结晶
+hy.quest.suffering_sword.title=[序幕]善良的与邪恶的
 hy.quest.steel_ingot.title=§d[序幕]§r 百炼成钢
 hy.quest.end0.title=§d[序幕 最终任务]§r 终将于白纸间盛开的菡萏之花
 hy.quest.obsidian.title=§d[最初的家园]§r 水火交融
@@ -547,6 +548,9 @@ hy.quest.ruby.title=§d[淬血的刚玉]§r 沾满鲜血的宝石
 hy.quest.ruby_chestplate.title=§d[淬血的刚玉]§r 瑰丽的甲胄
 hy.quest.ruby_bag.title=§d[淬血的刚玉]§r 经验之袋
 hy.quest.end3.title=§d[淬血的刚玉 最终任务]§r 力量与鲜血之歌
+hy.quest.readings1.title=§d[书海无涯] §r故事的起点
+hy.quest.readings2.title=§d[书海无涯] §r千里之行始于足下
+hy.quest.readings3.title=§d[书海无涯] §r大历史学家
 
 hy.quest.copper_apple.title=§d[超级美食家]§r 重金属超标
 hy.quest.metal_star.title=§d[策划大失败]§r 半吊子引雷士
@@ -567,6 +571,7 @@ hy.quest.iron_dagger.body=燧石使刀更为锋利的同时也更加脆弱，人
 hy.quest.iron_sword.body=最稳定、最可靠的武器，凭借其威力降妖除魔吧
 hy.quest.fuel_metal.body=这是一种神奇的物质，既可以加工为棒状的燃料、也可以加工直接用来食用
 hy.quest.nightmare_fuel_metal.body=一种奇怪的结晶，黑乎乎的外表下，蕴含着巨大的作用§o(试着吃个燃金罢)§r
+hy.quest.suffering_sword.body=这些生物原本是「精灵」一族的侍卫，却最终被灾厄之族驯化成了战争机器——正因如此，他们手中的剑不再锐利，而是充盈着被屠杀者的痛苦……
 hy.quest.steel_ingot.body=一种坚硬的金属，需要熔炼两次铁锭才可以获得……
 hy.quest.end0.body0=「文字编织出一种美妙的界面，非常灵活，并且胜过凝视这屏幕后的可怕现实。」
 hy.quest.end0.body1=不死图腾，承载了旧人类终其历史所追寻的「不朽」祝颂，可当地球亦或是后继的三界的生灵得到它时才知道这并非祝福，而是「诅咒」……当你望向星空之时，是否感受到了在那之后存在着一种更强大的存在？人类千百年间的痛苦来源于此、也导致了大部分智慧的生灵如同含苞待放的菡萏般脆弱地陷入沉睡
@@ -593,6 +598,9 @@ hy.quest.ruby_bag.body=你可以在红宝石地牢内击败红宝石怪物来获
 hy.quest.end3.body0=「让我们回溯到遥远的过去。」
 hy.quest.end3.body1=​经过一番战斗，你击败了「红宝石之王」，真相之旅迈出了可喜可贺的第一步。
 hy.quest.end3.body2=​可这远不是终点，在漫长的历史中，浩如烟海的强大存在被「迷失军团」封印于袋中，红宝石之王是其最古老的存在，阅读他们身上的信纸，一步步探求真相把。
+hy.quest.readings1.body=获得隐藏的故事
+hy.quest.readings2.body=获得散落的信纸·千里之行与脚下之路
+hy.quest.readings3.body=搜刮黑森林中某处囚笼，获得精灵史摘要
 
 hy.story.hs.title1=千年迷梦
 hy.story.hs.title2=诞生于毁灭的新生
@@ -605,3 +613,5 @@ entity.hy:ferocious_sprite.name=恶灵
 item.spawn_egg.entity.hy:ferocious_sprite.name=恶灵刷怪蛋
 hy.item.suffering_sword=痛苦之剑
 hy.item.sprite_history=精灵史摘要
+
+message.quest_finished=你完成了任务
