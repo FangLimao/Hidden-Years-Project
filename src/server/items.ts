@@ -107,11 +107,7 @@ export function questRegister() {
     `hy:letter_0`,
     hyData.HyLetterTitle[0],
     hyData.HyLetterBody[0],
-    [
-     quests.STORY_BOOK,
-     quests.LETTER_0,
-     quests.LETTER_11,
-    ]
+    [quests.STORY_BOOK, quests.LETTER_0, quests.LETTER_11],
   );
 }
 
@@ -216,6 +212,9 @@ export function itemUseMonitor() {
         };
         lantern.damageEntities(PLAYER.dimension, ALL_OPTION, 10);
         switch (ITEM.typeId) {
+          case "hy:soul_letter_sprite":
+            PLAYER.dimension.spawnEntity("hy:sprite", PLAYER.location);
+            break;
           case "hy:diamond_bone":
           case "hy:gold_bone":
           case "hy:iron_bone":

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "hy:soul_letter_sprite",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:icon": "hy.lost_letter",
+      "minecraft:max_stack_size": 1,
+      "minecraft:display_name": {
+        "value": "hy.item.soul_letter.sprite"
+      },
+      "minecraft:glint": true,
+      "minecraft:hover_text_color": "light_purple"
+    }
+  }
+}
